@@ -1,0 +1,241 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 0,
+    "height": 0,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "universal_law_background.png",
+          "use1Xscale": false,
+          "x": 114,
+          "y": 29
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cre",
+          "text": "Create",
+          "isUndecorated": false,
+          "width": 40,
+          "height": 20,
+          "x": 119,
+          "y": 82
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_universal_law",
+          "text": {
+            "fixedValue": "Universal Law"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 180,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty",
+          "text": {
+            "fixedValue": "empty"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 87
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty1",
+          "text": {
+            "fixedValue": "empty"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 114
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty2",
+          "text": {
+            "fixedValue": "empty"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 141
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty3",
+          "text": {
+            "fixedValue": "empty"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 167
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_empty4",
+          "text": {
+            "fixedValue": "empty"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 191
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "X",
+          "isUndecorated": false,
+          "width": 25,
+          "height": 20,
+          "x": 284,
+          "y": 82
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "X",
+          "isUndecorated": false,
+          "width": 25,
+          "height": 20,
+          "x": 284,
+          "y": 109
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty2",
+          "text": "X",
+          "isUndecorated": false,
+          "width": 25,
+          "height": 20,
+          "x": 284,
+          "y": 136
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty3",
+          "text": "X",
+          "isUndecorated": false,
+          "width": 25,
+          "height": 20,
+          "x": 284,
+          "y": 162
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty4",
+          "text": "X",
+          "isUndecorated": false,
+          "width": 25,
+          "height": 20,
+          "x": 284,
+          "y": 187
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cre1",
+          "text": "Create",
+          "isUndecorated": false,
+          "width": 40,
+          "height": 20,
+          "x": 119,
+          "y": 109
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cre2",
+          "text": "Create",
+          "isUndecorated": false,
+          "width": 40,
+          "height": 20,
+          "x": 119,
+          "y": 136
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cre3",
+          "text": "Create",
+          "isUndecorated": false,
+          "width": 40,
+          "height": 20,
+          "x": 119,
+          "y": 162
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cre4",
+          "text": "Create",
+          "isUndecorated": false,
+          "width": 40,
+          "height": 20,
+          "x": 119,
+          "y": 187
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

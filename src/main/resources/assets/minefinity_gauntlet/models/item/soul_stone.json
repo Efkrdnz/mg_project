@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "minefinity_gauntlet:item/soulstone"
+  }
+}

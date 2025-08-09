@@ -1,0 +1,50 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="Apache License version 2.0"
+
+[[mods]]
+modId="minefinity_gauntlet"
+version="1.0.1"
+displayName="minefinity gauntlet"
+displayURL="https://mcreator.net"
+credits="efkrdnz"
+authors="Efkrdnz"
+description="infinity gauntlet hell yeah"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.minefinity_gauntlet]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.65,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.minefinity_gauntlet]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.minefinity_gauntlet]]
+modId="geckolib"
+type="required"
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.minefinity_gauntlet]]
+modId="geckolib"
+type="optional"
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
+
+
+[[mixins]]
+    config="mixins.minefinity_gauntlet.json"
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

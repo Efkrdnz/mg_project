@@ -1,0 +1,7 @@
+{
+  "parent": "minefinity_gauntlet:custom/infinity_gauntlet",
+  "textures": {
+    "0": "minefinity_gauntlet:block/minefinitygauntlet",
+    "particle": "minefinity_gauntlet:item/ctab"
+  }
+}

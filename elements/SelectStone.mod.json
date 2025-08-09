@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Select Stone",
+    "keyBindingCategoryKey": "minefinity_gauntlet",
+    "onKeyPressed": {
+      "name": "SelectStoneOnKeyPressed"
+    }
+  }
+}

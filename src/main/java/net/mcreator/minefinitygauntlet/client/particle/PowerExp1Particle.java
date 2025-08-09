@@ -1,0 +1,66 @@
+
+package net.mcreator.minefinitygauntlet.client.particle;
+
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.client.particle.TextureSheetParticle;
+import net.minecraft.client.particle.SpriteSet;
+import net.minecraft.client.particle.ParticleRenderType;
+import net.minecraft.client.particle.ParticleProvider;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.client.multiplayer.ClientLevel;
+
+@OnlyIn(Dist.CLIENT)
+public class PowerExp1Particle extends TextureSheetParticle {
+	public static PowerExp1ParticleProvider provider(SpriteSet spriteSet) {
+		return new PowerExp1ParticleProvider(spriteSet);
+	}
+
+	public static class PowerExp1ParticleProvider implements ParticleProvider<SimpleParticleType> {
+		private final SpriteSet spriteSet;
+
+		public PowerExp1ParticleProvider(SpriteSet spriteSet) {
+			this.spriteSet = spriteSet;
+		}
+
+		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
+			return new PowerExp1Particle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+		}
+	}
+
+	private final SpriteSet spriteSet;
+
+	protected PowerExp1Particle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
+		super(world, x, y, z);
+		this.spriteSet = spriteSet;
+		this.setSize(7f, 7f);
+		this.quadSize *= 10f;
+		this.lifetime = 8;
+		this.gravity = 0f;
+		this.hasPhysics = false;
+		this.xd = vx * 0;
+		this.yd = vy * 0;
+		this.zd = vz * 0;
+		this.setSpriteFromAge(spriteSet);
+	}
+
+	@Override
+	public int getLightColor(float partialTick) {
+		return 15728880;
+	}
+
+	@Override
+	public ParticleRenderType getRenderType() {
+		return ParticleRenderType.PARTICLE_SHEET_LIT;
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+		if (!this.removed) {
+			this.setSprite(this.spriteSet.get((this.age / 2) % 4 + 1, 4));
+		}
+	}
+}

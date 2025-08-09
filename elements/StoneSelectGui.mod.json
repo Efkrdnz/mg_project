@@ -1,0 +1,110 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 120,
+    "height": 120,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_mindstone",
+          "image": "button_mindstone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneSelectMind"
+          },
+          "x": 235,
+          "y": 106
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_powerstone",
+          "image": "button_powerstone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneSelectPower"
+          },
+          "x": 218,
+          "y": 71
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_realitystone",
+          "image": "button_realitystone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneSelectReality"
+          },
+          "x": 163,
+          "y": 106
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_space",
+          "image": "button_space.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneSelectSpace"
+          },
+          "x": 180,
+          "y": 141
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_timestone",
+          "image": "button_timestone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneSelectTime"
+          },
+          "x": 218,
+          "y": 141
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_soulstone",
+          "image": "button_soulstone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneSelectSoul"
+          },
+          "x": 180,
+          "y": 71
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_infinity",
+          "image": "button_infinity.png",
+          "hoveredImage": "",
+          "x": 199,
+          "y": 106
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

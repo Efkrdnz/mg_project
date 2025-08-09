@@ -1,0 +1,5557 @@
+{
+  "mod_elements": [
+    {
+      "name": "TestItem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/TestItemItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/test_item.json"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerPunch"
+    },
+    {
+      "name": "TestItemRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "test_item_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/TestItemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerPunch"
+    },
+    {
+      "name": "PowerExp1",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_exp_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/particles/power_exp_1.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/particle/PowerExp1Particle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PowerExp2",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_exp_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/particle/PowerExp2Particle.java",
+          "src/main/resources/assets/minefinity_gauntlet/particles/power_exp_2.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PowerExp3",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_exp_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/particle/PowerExp3Particle.java",
+          "src/main/resources/assets/minefinity_gauntlet/particles/power_exp_3.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PowerExp4",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_exp_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/particle/PowerExp4Particle.java",
+          "src/main/resources/assets/minefinity_gauntlet/particles/power_exp_4.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "InvWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inv_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InvWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerPunch"
+    },
+    {
+      "name": "Inv",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inv",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/entity/InvEntity.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/renderer/InvRenderer.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerPunch"
+    },
+    {
+      "name": "Exp",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/exp_spawn_egg.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/entity/ExpEntity.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/renderer/ExpRenderer.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerPunch"
+    },
+    {
+      "name": "ExpOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/ExpOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerPunch"
+    },
+    {
+      "name": "ExpOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/ExpOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerPunch"
+    },
+    {
+      "name": "InvProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "inv_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InvProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerPunch"
+    },
+    {
+      "name": "P2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "p_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/p_2.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/P2Item.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerLaunch"
+    },
+    {
+      "name": "PowerLaunch",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_launch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/PowerLaunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerLaunch"
+    },
+    {
+      "name": "PowerLaunchLanding",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_launch_landing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/PowerLaunchLandingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerLaunch"
+    },
+    {
+      "name": "ScreenShake",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_shake",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/potion/ScreenShakeMobEffect.java"
+        ]
+      },
+      "path": "~/Effects/ScreenShake"
+    },
+    {
+      "name": "ScreenShakeOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_shake_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/ScreenShakeOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Effects/ScreenShake"
+    },
+    {
+      "name": "PurpleAura1",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_aura_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/particles/purple_aura_1.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/particle/PurpleAura1Particle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "PurpleBeam1",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_beam_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/particle/PurpleBeam1Particle.java",
+          "src/main/resources/assets/minefinity_gauntlet/particles/purple_beam_1.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "P3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "p_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/p_3.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/P3Item.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerBeam"
+    },
+    {
+      "name": "P3Rightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "p_3_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/P3RightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerBeam"
+    },
+    {
+      "name": "P3BeamOnTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "p_3_beam_on_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/P3BeamOnTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerBeam"
+    },
+    {
+      "name": "P3OnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "p_3_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/P3OnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerBeam"
+    },
+    {
+      "name": "R1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/r_1.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/R1Item.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/ProjectileNegation"
+    },
+    {
+      "name": "R1Rightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_1_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/R1RightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/ProjectileNegation"
+    },
+    {
+      "name": "R1OnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_1_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/R1OnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/ProjectileNegation"
+    },
+    {
+      "name": "R1ItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_1_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/R1ItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/ProjectileNegation"
+    },
+    {
+      "name": "R2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/R2Item.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/r_2.json"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/AtmospehereShift"
+    },
+    {
+      "name": "R2Rightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_2_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/R2RightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/AtmospehereShift"
+    },
+    {
+      "name": "AtmosphereShiftEffect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atmosphere_shift_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AtmosphereShiftEffectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "dimension",
+            "type": "dimensiontype"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/AtmospehereShift"
+    },
+    {
+      "name": "S1Rightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_1_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S1RightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Warp"
+    },
+    {
+      "name": "S1",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/S1Item.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/s_1.json"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Warp"
+    },
+    {
+      "name": "PowerStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/PowerStoneItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/power_stone.json"
+        ]
+      },
+      "path": "~/InfinityStones/Power"
+    },
+    {
+      "name": "Decay",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "decay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/potion/DecayMobEffect.java"
+        ]
+      },
+      "path": "~/Effects/Decay"
+    },
+    {
+      "name": "DecayOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "decay_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/DecayOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Effects/Decay"
+    },
+    {
+      "name": "PowerStoneItemInInventoryTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_stone_item_in_inventory_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/PowerStoneItemInInventoryTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/InfinityStones/Power"
+    },
+    {
+      "name": "PowerStoneLivingEntityIsHitWithItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_stone_living_entity_is_hit_with_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/PowerStoneLivingEntityIsHitWithItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/InfinityStones/Power"
+    },
+    {
+      "name": "MinefinityTab",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minefinity_tab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/minefinity_tab.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/MinefinityTabItem.java"
+        ]
+      },
+      "path": "~/Misc/Tab"
+    },
+    {
+      "name": "MinefinityCreativeTab",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minefinity_creative_tab",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc/Tab"
+    },
+    {
+      "name": "SpaceStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/SpaceStoneItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/space_stone.json"
+        ]
+      },
+      "path": "~/InfinityStones/Space"
+    },
+    {
+      "name": "TimeStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/TimeStoneItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/time_stone.json"
+        ]
+      },
+      "path": "~/InfinityStones/Time"
+    },
+    {
+      "name": "RealityStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reality_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/RealityStoneItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/reality_stone.json"
+        ]
+      },
+      "path": "~/InfinityStones/Reality"
+    },
+    {
+      "name": "SoulStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/SoulStoneItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/soul_stone.json"
+        ]
+      },
+      "path": "~/InfinityStones/Soul"
+    },
+    {
+      "name": "MindStone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/mind_stone.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/MindStoneItem.java"
+        ]
+      },
+      "path": "~/InfinityStones/Mind"
+    },
+    {
+      "name": "S2",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/s_2.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/S2Item.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/AnchorWarp"
+    },
+    {
+      "name": "S2Rightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_2_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S2RightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/AnchorWarp"
+    },
+    {
+      "name": "S3",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/S3Item.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/s_3.json"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/AnchorWarp"
+    },
+    {
+      "name": "Portal",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/renderer/PortalRenderer.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/entity/PortalEntity.java"
+        ]
+      },
+      "path": "~/Entities/Portal"
+    },
+    {
+      "name": "S3RightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_3_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S3RightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/AnchorWarp"
+    },
+    {
+      "name": "PortalPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_player_collides_with_this_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/PortalPlayerCollidesWithThisEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Entities/Portal"
+    },
+    {
+      "name": "PortalOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/PortalOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/Portal"
+    },
+    {
+      "name": "PortalRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "portal_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/PortalRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Entities/Portal"
+    },
+    {
+      "name": "EntityHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/EntityHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "S4",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/s_4.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/S4Item.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Teleport"
+    },
+    {
+      "name": "S4GUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "s_4_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/S4GUIScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/S4GUIMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/S4GUIButtonMessage.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Teleport"
+    },
+    {
+      "name": "S4Rightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_4_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S4RightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Teleport"
+    },
+    {
+      "name": "S4GUIConfirm",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_4_gui_confirm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S4GUIConfirmProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Teleport"
+    },
+    {
+      "name": "S5",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/s_5.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/S5Item.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/TelekinesisBlock"
+    },
+    {
+      "name": "FakeBlockEntity",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fake_block_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/entity/FakeBlockEntityEntity.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/renderer/FakeBlockEntityRenderer.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/fake_block_entity_spawn_egg.json"
+        ]
+      },
+      "path": "~/Entities/FakeBlockEntity"
+    },
+    {
+      "name": "InfinityGauntlet",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_gauntlet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/infinity_gauntlet.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/InfinityGauntletItem.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet"
+    },
+    {
+      "name": "SelectStoneOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_stone_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SelectStoneOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "SelectStone",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectStoneMessage.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "SelectAbilityOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SelectAbilityOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "SelectAbility",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityMessage.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "StoneSelectGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_select_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/StoneSelectGuiScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/StoneSelectGuiButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/StoneSelectGuiMenu.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneSelect"
+    },
+    {
+      "name": "StoneSelectSpace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_select_space",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneSelectSpaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneSelect"
+    },
+    {
+      "name": "StoneSelectPower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_select_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneSelectPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneSelect"
+    },
+    {
+      "name": "StoneSelectReality",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_select_reality",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneSelectRealityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneSelect"
+    },
+    {
+      "name": "StoneSelectTime",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_select_time",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneSelectTimeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneSelect"
+    },
+    {
+      "name": "StoneSelectSoul",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_select_soul",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneSelectSoulProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneSelect"
+    },
+    {
+      "name": "StoneSelectMind",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_select_mind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneSelectMindProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneSelect"
+    },
+    {
+      "name": "SelectAbilityPower",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityPowerScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityPowerButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityPowerMenu.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Power"
+    },
+    {
+      "name": "AbilitySelectPower1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_power_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectPower1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Power"
+    },
+    {
+      "name": "InfinityGauntletRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_gauntlet_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfinityGauntletRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet"
+    },
+    {
+      "name": "InfinityGauntletRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_gauntlet_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfinityGauntletRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet"
+    },
+    {
+      "name": "InfinityGauntletOnPlayerStoppedUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_gauntlet_on_player_stopped_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfinityGauntletOnPlayerStoppedUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet"
+    },
+    {
+      "name": "InfinityGauntletItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_gauntlet_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfinityGauntletItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet"
+    },
+    {
+      "name": "SelectAbilitySpace",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_space",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilitySpaceButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilitySpaceMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilitySpaceScreen.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "AbilitySelectSpace1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_space_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSpace1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "InfinityGauntletEntitySwingsItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinity_gauntlet_entity_swings_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfinityGauntletEntitySwingsItemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Gauntlet"
+    },
+    {
+      "name": "DisableHotbarKeymapping",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "disable_hotbar_keymapping",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/mixins/DisableHotbarKeymappingMixin.java"
+        ]
+      }
+    },
+    {
+      "name": "ReturnPowerName",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_power_name",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/ReturnPowerNameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectedPowerText"
+    },
+    {
+      "name": "MainOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/MainOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlay"
+    },
+    {
+      "name": "MainOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/screens/MainOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Overlay"
+    },
+    {
+      "name": "SlotSelectPower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_select_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SlotSelectPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/slotselect"
+    },
+    {
+      "name": "SlotSelectPower2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_select_power_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SlotSelectPower2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/slotselect"
+    },
+    {
+      "name": "SlotSelectPower3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_select_power_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SlotSelectPower3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/slotselect"
+    },
+    {
+      "name": "SlotSelectPower4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_select_power_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SlotSelectPower4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/slotselect"
+    },
+    {
+      "name": "SlotSelectPower5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_select_power_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SlotSelectPower5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/slotselect"
+    },
+    {
+      "name": "SlotSelectPower6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_select_power_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SlotSelectPower6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/slotselect"
+    },
+    {
+      "name": "AbilitySelectPower2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_power_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectPower2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Power"
+    },
+    {
+      "name": "AbilitySelectPower3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_power_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectPower3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Power"
+    },
+    {
+      "name": "AbilitySelectSpace2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_space_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSpace2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "AbilitySelectSpace3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_space_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSpace3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "AbilitySelectSpace4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_space_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSpace4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "AbilitySelectSpace5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_space_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSpace5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "SelectAbilityThisGUIIsClosed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SelectAbilityThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Power"
+    },
+    {
+      "name": "QuickSlot1",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/QuickSlot1Message.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot2",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/QuickSlot2Message.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot3",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/QuickSlot3Message.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot4",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/QuickSlot4Message.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot5",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/QuickSlot5Message.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot6",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/QuickSlot6Message.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot1OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_1_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/QuickSlot1OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot2OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_2_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/QuickSlot2OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot3OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_3_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/QuickSlot3OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot4OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_4_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/QuickSlot4OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot5OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_5_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/QuickSlot5OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "QuickSlot6OnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quick_slot_6_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/QuickSlot6OnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/SelectionKeybinds"
+    },
+    {
+      "name": "SelectAbilityReality",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_reality",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityRealityButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityRealityMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityRealityScreen.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Reality"
+    },
+    {
+      "name": "StoneCycleSpace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_cycle_space",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneCycleSpaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneCycleThroughGUI"
+    },
+    {
+      "name": "StoneCyclePower",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_cycle_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneCyclePowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneCycleThroughGUI"
+    },
+    {
+      "name": "StoneCycleReality",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_cycle_reality",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneCycleRealityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneCycleThroughGUI"
+    },
+    {
+      "name": "SelectAbilityTime",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_time",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityTimeMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityTimeButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityTimeScreen.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Time"
+    },
+    {
+      "name": "SelectAbilitySoul",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_soul",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilitySoulScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilitySoulButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilitySoulMenu.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Soul"
+    },
+    {
+      "name": "SelectAbilityMind",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_mind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityMindButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityMindScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityMindMenu.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Mind"
+    },
+    {
+      "name": "AbilitySelectReality",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_reality",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectRealityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Reality"
+    },
+    {
+      "name": "EntityTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/EntityTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities"
+    },
+    {
+      "name": "S5RCOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_5_rc_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S5RCOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/TelekinesisBlock"
+    },
+    {
+      "name": "S5Rightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_5_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S5RightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/TelekinesisBlock"
+    },
+    {
+      "name": "S5LivingEntityIsHitWithItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_5_living_entity_is_hit_with_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S5LivingEntityIsHitWithItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/TelekinesisBlock"
+    },
+    {
+      "name": "S5Main",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_5_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S5MainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/TelekinesisBlock"
+    },
+    {
+      "name": "S5Shoot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_5_shoot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S5ShootProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/TelekinesisBlock"
+    },
+    {
+      "name": "Teserract",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teserract",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/teserract.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/TeserractItem.java"
+        ]
+      },
+      "path": "~/InfinityStones/Space"
+    },
+    {
+      "name": "TeserractRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teserract_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/TeserractRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/InfinityStones/Space"
+    },
+    {
+      "name": "MinefinityCreativeTab2",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minefinity_creative_tab_2",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc/Tab"
+    },
+    {
+      "name": "MinefinityCreativeTab3",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minefinity_creative_tab_3",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Misc/Tab"
+    },
+    {
+      "name": "CosmiRod",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cosmi_rod",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/CosmiRodItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/cosmi_rod.json"
+        ]
+      },
+      "path": "~/Weapons/CosmiRod"
+    },
+    {
+      "name": "CosmiRodPower",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cosmi_rod_power",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minefinity_gauntlet/models/item/cosmi_rod_power.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/item/CosmiRodPowerItem.java"
+        ]
+      },
+      "path": "~/Weapons/CosmiRod"
+    },
+    {
+      "name": "CosmiRodPowerHasItemGlowingEffect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cosmi_rod_power_has_item_glowing_effect",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/CosmiRodPowerHasItemGlowingEffectProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Weapons/CosmiRod"
+    },
+    {
+      "name": "P3BeamEffect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "p_3_beam_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/P3BeamEffectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "ticks",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/PowerBeam"
+    },
+    {
+      "name": "SlowTime",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slow_time",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SlowTimeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Time/Slow Time"
+    },
+    {
+      "name": "TimeStop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/TimeStopProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Time/Stop Time"
+    },
+    {
+      "name": "TickResume",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tick_resume",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/TickResumeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Time/Stop Time"
+    },
+    {
+      "name": "AbilitySelectTime1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_time_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectTime1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Time"
+    },
+    {
+      "name": "AbilitySelectTime2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_time_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectTime2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Time"
+    },
+    {
+      "name": "T1UseSlow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_1_use_slow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/T1UseSlowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Time/Slow Time"
+    },
+    {
+      "name": "T2UseStop",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "t_2_use_stop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/T2UseStopProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Time/Stop Time"
+    },
+    {
+      "name": "StoneCycleTime",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_cycle_time",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneCycleTimeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneCycleThroughGUI"
+    },
+    {
+      "name": "AbilitySelectReality2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_reality_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectReality2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Reality"
+    },
+    {
+      "name": "SetUpOW",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_up_ow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SetUpOWProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Reality/AtmospehereShift"
+    },
+    {
+      "name": "AthmospehereShift2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "athmospehere_shift_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AthmospehereShift2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "dimension",
+            "type": "dimensiontype"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/AtmospehereShift"
+    },
+    {
+      "name": "AthmospehereShift3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "athmospehere_shift_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AthmospehereShift3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "dimension",
+            "type": "dimensiontype"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/AtmospehereShift"
+    },
+    {
+      "name": "R3HealRC",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_3_heal_rc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/R3HealRCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/Heal"
+    },
+    {
+      "name": "AbilitySelectReality3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_reality_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectReality3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Reality"
+    },
+    {
+      "name": "So1Render",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_1_render",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/So1RenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/SoulBarrier"
+    },
+    {
+      "name": "So1UseRC",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_1_use_rc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/So1UseRCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/SoulBarrier"
+    },
+    {
+      "name": "So1UseFinishRC",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_1_use_finish_rc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/So1UseFinishRCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/SoulBarrier"
+    },
+    {
+      "name": "StoneCycleSoul",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_cycle_soul",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneCycleSoulProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneCycleThroughGUI"
+    },
+    {
+      "name": "AbilitySelectSoul1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_soul_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSoul1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Soul"
+    },
+    {
+      "name": "BarrierOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barrier_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/screens/BarrierOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/SoulBarrier"
+    },
+    {
+      "name": "SoulBarrierCon",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_barrier_con",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulBarrierConProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/SoulBarrier"
+    },
+    {
+      "name": "AthmosphereShiftGlow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "athmosphere_shift_glow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AthmosphereShiftGlowProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Reality/AtmospehereShift"
+    },
+    {
+      "name": "So2VampiricBeam",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_2_vampiric_beam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/So2VampiricBeamProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "partialTick",
+            "type": "number"
+          },
+          {
+            "name": "ticks",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/VampireBeam"
+    },
+    {
+      "name": "So2VampiricBeamUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_2_vampiric_beam_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/So2VampiricBeamUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/VampireBeam"
+    },
+    {
+      "name": "So2VampiricBeamStopUsing",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_2_vampiric_beam_stop_using",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/So2VampiricBeamStopUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/VampireBeam"
+    },
+    {
+      "name": "Vampiric",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vampiric",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minefinity_gauntlet/damage_type/vampiric.json"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/VampireBeam"
+    },
+    {
+      "name": "DTVampiricHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dt_vampiric_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/DTVampiricHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/VampireBeam"
+    },
+    {
+      "name": "So2VampiricBeamOnTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_2_vampiric_beam_on_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/So2VampiricBeamOnTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/VampireBeam"
+    },
+    {
+      "name": "AbilitySelectSoul2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_soul_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSoul2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Soul"
+    },
+    {
+      "name": "AbilitySelectedSoul3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_selected_soul_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectedSoul3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Soul"
+    },
+    {
+      "name": "So3SwapUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_3_swap_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/So3SwapUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/SoulSwap"
+    },
+    {
+      "name": "R4BlockShiftUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_4_block_shift_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/R4BlockShiftUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Reality/BlockShift"
+    },
+    {
+      "name": "AbilitySelectReality4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_reality_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectReality4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Reality"
+    },
+    {
+      "name": "S5Damage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "s_5_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/S5DamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/TelekinesisBlock"
+    },
+    {
+      "name": "StoneSelectAll",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_select_all",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneSelectAllProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneSelect"
+    },
+    {
+      "name": "SelectAbilityInfinity",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_infinity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityInfinityButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityInfinityMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityInfinityScreen.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Infinity"
+    },
+    {
+      "name": "AbilitySelectInfinity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_infinity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectInfinityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Infinity"
+    },
+    {
+      "name": "SoulBarrierCancelDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_barrier_cancel_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulBarrierCancelDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/SoulBarrier"
+    },
+    {
+      "name": "UniversalLawGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "universal_law_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/UniversalLawGuiMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/UniversalLawGuiScreen.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Infinity/UniversalLaw/GUIs"
+    },
+    {
+      "name": "CreateTestLaw",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "create_test_law",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/CreateTestLawProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Infinity/UniversalLaw"
+    },
+    {
+      "name": "UniversalLawTestitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "universal_law_testitem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/item/UniversalLawTestitemItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/universal_law_testitem.json"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Infinity/UniversalLaw"
+    },
+    {
+      "name": "UniversalLawTestitemRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "universal_law_testitem_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/UniversalLawTestitemRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Infinity/UniversalLaw"
+    },
+    {
+      "name": "LawCreationGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "law_creation_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/LawCreationGuiScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/LawCreationGuiMenu.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Infinity/UniversalLaw/GUIs"
+    },
+    {
+      "name": "UniversalLawMapInit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "universal_law_map_init",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/UniversalLawMapInitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Infinity/UniversalLaw"
+    },
+    {
+      "name": "OpenLawCreationGui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_law_creation_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/OpenLawCreationGuiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Infinity/UniversalLaw/GUIs"
+    },
+    {
+      "name": "FindTpGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "find_tp_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/FindTpGUIMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/FindTpGUIButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/FindTpGUIScreen.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/FindAndTeleport"
+    },
+    {
+      "name": "HerePortal",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "here_portal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/entity/HerePortalEntity.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/renderer/HerePortalRenderer.java"
+        ]
+      },
+      "path": "~/Entities/HerePortal"
+    },
+    {
+      "name": "HerePortalOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "here_portal_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/HerePortalOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Entities/HerePortal"
+    },
+    {
+      "name": "HerePortalRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "here_portal_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/HerePortalRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Entities/HerePortal"
+    },
+    {
+      "name": "TpHerePortalPlace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tp_here_portal_place",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/TpHerePortalPlaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/FindAndTeleport"
+    },
+    {
+      "name": "AbilitySelectSpace6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_space_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSpace6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "OpenTpHereGUI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_tp_here_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/OpenTpHereGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/FindAndTeleport"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "beamPower",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "r1rc",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "colorshift",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ancX",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ancY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ancZ",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "teleblock",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "SelectedStone",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SelectedPower",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s1s",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s1p",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s2s",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s2p",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s3s",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s3p",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s4s",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s4p",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s5s",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s5p",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "apending",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "s6s",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "s6p",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "block_to_telekinesis",
+      "type": "blockstate",
+      "scope": "player_persistent",
+      "value": "Blocks.AIR.defaultBlockState()"
+    },
+    {
+      "name": "TimeSlow",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    },
+    {
+      "name": "TimeStop",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    },
+    {
+      "name": "soul_barrier",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "beamSoul",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "universal_laws",
+      "type": "datamap",
+      "scope": "world",
+      "value": "new CompoundTag()"
+    },
+    {
+      "name": "temp_law_data",
+      "type": "datamap",
+      "scope": "global",
+      "value": "new CompoundTag()"
+    },
+    {
+      "name": "UniversalLaws",
+      "type": "datamap",
+      "scope": "map",
+      "value": "new CompoundTag()"
+    }
+  ],
+  "sound_elements": [],
+  "tag_elements": {
+    "BLOCKS:minecraft:randomblocks": [
+      "Blocks.AIR",
+      "Blocks.VOID_AIR",
+      "Blocks.CAVE_AIR",
+      "Blocks.STONE#0",
+      "Blocks.NORMAL_STONE_STAIRS",
+      "Blocks.NORMAL_STONE_SLAB",
+      "Blocks.STONE#1",
+      "Blocks.STONE#2",
+      "Blocks.GRANITE_STAIRS",
+      "Blocks.POLISHED_GRANITE_STAIRS",
+      "Blocks.GRANITE_SLAB",
+      "Blocks.POLISHED_GRANITE_SLAB",
+      "Blocks.GRANITE_WALL",
+      "Blocks.STONE#3",
+      "Blocks.DIORITE_STAIRS",
+      "Blocks.DIORITE_SLAB",
+      "Blocks.DIORITE_WALL",
+      "Blocks.STONE#4",
+      "Blocks.POLISHED_DIORITE_SLAB",
+      "Blocks.POLISHED_DIORITE_STAIRS",
+      "Blocks.STONE#5",
+      "Blocks.ANDESITE_STAIRS",
+      "Blocks.ANDESITE_SLAB",
+      "Blocks.ANDESITE_WALL",
+      "Blocks.STONE#6",
+      "Blocks.POLISHED_ANDESITE_STAIRS",
+      "Blocks.POLISHED_ANDESITE_SLAB",
+      "Blocks.SMOOTH_STONE",
+      "Blocks.DEEPSLATE",
+      "Blocks.REINFORCED_DEEPSLATE",
+      "Blocks.COBBLED_DEEPSLATE",
+      "Blocks.COBBLED_DEEPSLATE_STAIRS",
+      "Blocks.COBBLED_DEEPSLATE_SLAB",
+      "Blocks.COBBLED_DEEPSLATE_WALL",
+      "Blocks.POLISHED_DEEPSLATE",
+      "Blocks.POLISHED_DEEPSLATE_STAIRS",
+      "Blocks.POLISHED_DEEPSLATE_SLAB",
+      "Blocks.POLISHED_DEEPSLATE_WALL",
+      "Blocks.DEEPSLATE_TILES",
+      "Blocks.DEEPSLATE_TILE_STAIRS",
+      "Blocks.DEEPSLATE_TILE_SLAB",
+      "Blocks.DEEPSLATE_TILE_WALL",
+      "Blocks.DEEPSLATE_BRICKS",
+      "Blocks.DEEPSLATE_BRICK_STAIRS",
+      "Blocks.DEEPSLATE_BRICK_SLAB",
+      "Blocks.DEEPSLATE_BRICK_WALL",
+      "Blocks.CHISELED_DEEPSLATE",
+      "Blocks.CRACKED_DEEPSLATE_BRICKS",
+      "Blocks.CRACKED_DEEPSLATE_TILES",
+      "Blocks.TUFF",
+      "Blocks.TUFF_SLAB",
+      "Blocks.TUFF_STAIRS",
+      "Blocks.TUFF_WALL",
+      "Blocks.POLISHED_TUFF",
+      "Blocks.POLISHED_TUFF_SLAB",
+      "Blocks.POLISHED_TUFF_STAIRS",
+      "Blocks.POLISHED_TUFF_WALL",
+      "Blocks.CHISELED_TUFF",
+      "Blocks.TUFF_BRICKS",
+      "Blocks.TUFF_BRICK_SLAB",
+      "Blocks.TUFF_BRICK_STAIRS",
+      "Blocks.TUFF_BRICK_WALL",
+      "Blocks.CHISELED_TUFF_BRICKS",
+      "Blocks.CALCITE",
+      "Blocks.DRIPSTONE_BLOCK",
+      "Blocks.POINTED_DRIPSTONE",
+      "Blocks.GRASS",
+      "Blocks.GRASS_PATH",
+      "Blocks.MYCELIUM",
+      "Blocks.DIRT#0",
+      "Blocks.DIRT#1",
+      "Blocks.DIRT#2",
+      "Blocks.ROOTED_DIRT",
+      "Blocks.MUD",
+      "Blocks.PACKED_MUD",
+      "Blocks.MUD_BRICKS",
+      "Blocks.MUD_BRICK_STAIRS",
+      "Blocks.MUD_BRICK_SLAB",
+      "Blocks.MUD_BRICK_WALL",
+      "Blocks.COBBLESTONE",
+      "Blocks.MOSSY_COBBLESTONE",
+      "Blocks.MOSSY_COBBLESTONE_STAIRS",
+      "Blocks.MOSSY_COBBLESTONE_SLAB",
+      "Blocks.MOSS_BLOCK",
+      "Blocks.MOSS_CARPET",
+      "Blocks.PLANKS#0",
+      "Blocks.PLANKS#1",
+      "Blocks.PLANKS#2",
+      "Blocks.PLANKS#3",
+      "Blocks.PLANKS#4",
+      "Blocks.PLANKS#5",
+      "Blocks.CRIMSON_PLANKS",
+      "Blocks.WARPED_PLANKS",
+      "Blocks.MANGROVE_PLANKS",
+      "Blocks.CHERRY_PLANKS",
+      "Blocks.BAMBOO_PLANKS",
+      "Blocks.BAMBOO_MOSAIC",
+      "Blocks.SAPLING#0",
+      "Blocks.SAPLING#1",
+      "Blocks.SAPLING#2",
+      "Blocks.SAPLING#3",
+      "Blocks.SAPLING#4",
+      "Blocks.SAPLING#5",
+      "Blocks.MANGROVE_PROPAGULE",
+      "Blocks.CHERRY_SAPLING",
+      "Blocks.REEDS",
+      "Blocks.BEDROCK",
+      "Blocks.SAND#0",
+      "Blocks.SAND#1",
+      "Blocks.SUSPICIOUS_SAND",
+      "Blocks.GRAVEL",
+      "Blocks.SUSPICIOUS_GRAVEL",
+      "Blocks.FLOWING_WATER",
+      "Blocks.WATER",
+      "Blocks.BUBBLE_COLUMN",
+      "Blocks.FLOWING_LAVA",
+      "Blocks.LAVA",
+      "Blocks.MAGMA",
+      "Blocks.OBSIDIAN",
+      "Blocks.CRYING_OBSIDIAN",
+      "Blocks.BLACKSTONE",
+      "Blocks.BLACKSTONE_STAIRS",
+      "Blocks.BLACKSTONE_WALL",
+      "Blocks.BLACKSTONE_SLAB",
+      "Blocks.POLISHED_BLACKSTONE",
+      "Blocks.POLISHED_BLACKSTONE_BRICKS",
+      "Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS",
+      "Blocks.CHISELED_POLISHED_BLACKSTONE",
+      "Blocks.POLISHED_BLACKSTONE_BRICK_SLAB",
+      "Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS",
+      "Blocks.POLISHED_BLACKSTONE_BRICK_WALL",
+      "Blocks.POLISHED_BLACKSTONE_STAIRS",
+      "Blocks.POLISHED_BLACKSTONE_SLAB",
+      "Blocks.POLISHED_BLACKSTONE_WALL",
+      "Blocks.COAL_ORE",
+      "Blocks.IRON_ORE",
+      "Blocks.REDSTONE_ORE",
+      "Blocks.LIT_REDSTONE_ORE",
+      "Blocks.GOLD_ORE",
+      "Blocks.LAPIS_ORE",
+      "Blocks.DIAMOND_ORE",
+      "Blocks.EMERALD_ORE",
+      "Blocks.COPPER_ORE",
+      "Blocks.DEEPSLATE_COAL_ORE",
+      "Blocks.DEEPSLATE_IRON_ORE",
+      "Blocks.DEEPSLATE_REDSTONE_ORE",
+      "Blocks.DEEPSLATE_GOLD_ORE",
+      "Blocks.DEEPSLATE_LAPIS_ORE",
+      "Blocks.DEEPSLATE_DIAMOND_ORE",
+      "Blocks.DEEPSLATE_EMERALD_ORE",
+      "Blocks.DEEPSLATE_COPPER_ORE",
+      "Blocks.QUARTZ_ORE",
+      "Blocks.NETHER_GOLD_ORE",
+      "Blocks.GILDED_BLACKSTONE",
+      "Blocks.RAW_IRON_BLOCK",
+      "Blocks.RAW_GOLD_BLOCK",
+      "Blocks.RAW_COPPER_BLOCK",
+      "Blocks.COAL_BLOCK",
+      "Blocks.IRON_BLOCK",
+      "Blocks.COPPER_BLOCK",
+      "Blocks.EXPOSED_COPPER",
+      "Blocks.WEATHERED_COPPER",
+      "Blocks.OXIDIZED_COPPER",
+      "Blocks.CUT_COPPER",
+      "Blocks.OXIDIZED_CHISELED_COPPER",
+      "Blocks.WEATHERED_CHISELED_COPPER",
+      "Blocks.EXPOSED_CHISELED_COPPER",
+      "Blocks.CHISELED_COPPER",
+      "Blocks.WAXED_OXIDIZED_CHISELED_COPPER",
+      "Blocks.WAXED_WEATHERED_CHISELED_COPPER",
+      "Blocks.WAXED_EXPOSED_CHISELED_COPPER",
+      "Blocks.WAXED_CHISELED_COPPER",
+      "Blocks.EXPOSED_CUT_COPPER",
+      "Blocks.WEATHERED_CUT_COPPER",
+      "Blocks.OXIDIZED_CUT_COPPER",
+      "Blocks.CUT_COPPER_STAIRS",
+      "Blocks.EXPOSED_CUT_COPPER_STAIRS",
+      "Blocks.WEATHERED_CUT_COPPER_STAIRS",
+      "Blocks.OXIDIZED_CUT_COPPER_STAIRS",
+      "Blocks.CUT_COPPER_SLAB",
+      "Blocks.EXPOSED_CUT_COPPER_SLAB",
+      "Blocks.WEATHERED_CUT_COPPER_SLAB",
+      "Blocks.OXIDIZED_CUT_COPPER_SLAB",
+      "Blocks.WAXED_COPPER_BLOCK",
+      "Blocks.WAXED_EXPOSED_COPPER",
+      "Blocks.WAXED_WEATHERED_COPPER",
+      "Blocks.WAXED_OXIDIZED_COPPER",
+      "Blocks.WAXED_CUT_COPPER",
+      "Blocks.WAXED_EXPOSED_CUT_COPPER",
+      "Blocks.WAXED_WEATHERED_CUT_COPPER",
+      "Blocks.WAXED_OXIDIZED_CUT_COPPER",
+      "Blocks.WAXED_CUT_COPPER_STAIRS",
+      "Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS",
+      "Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS",
+      "Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS",
+      "Blocks.WAXED_CUT_COPPER_SLAB",
+      "Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB",
+      "Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB",
+      "Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB",
+      "Blocks.REDSTONE_BLOCK",
+      "Blocks.GOLD_BLOCK",
+      "Blocks.LAPIS_BLOCK",
+      "Blocks.DIAMOND_BLOCK",
+      "Blocks.EMERALD_BLOCK",
+      "Blocks.NETHERITE_BLOCK",
+      "Blocks.QUARTZ_BLOCK#0",
+      "Blocks.QUARTZ_BLOCK#1",
+      "Blocks.QUARTZ_BLOCK#2",
+      "Blocks.QUARTZ_BLOCK#3",
+      "Blocks.QUARTZ_BRICKS",
+      "Blocks.SMOOTH_QUARTZ_STAIRS",
+      "Blocks.SMOOTH_QUARTZ_SLAB",
+      "Blocks.SLIME_BLOCK",
+      "Blocks.ANCIENT_DEBRIS",
+      "Blocks.AMETHYST_BLOCK",
+      "Blocks.BUDDING_AMETHYST",
+      "Blocks.AMETHYST_CLUSTER",
+      "Blocks.LARGE_AMETHYST_BUD",
+      "Blocks.MEDIUM_AMETHYST_BUD",
+      "Blocks.SMALL_AMETHYST_BUD",
+      "Blocks.LOG#0",
+      "Blocks.LOG#1",
+      "Blocks.LOG#2",
+      "Blocks.LOG#3",
+      "Blocks.LOG2#0",
+      "Blocks.LOG2#1",
+      "Blocks.WARPED_STEM",
+      "Blocks.CRIMSON_STEM",
+      "Blocks.MANGROVE_LOG",
+      "Blocks.CHERRY_LOG",
+      "Blocks.BAMBOO_BLOCK",
+      "Blocks.MANGROVE_ROOTS",
+      "Blocks.MUDDY_MANGROVE_ROOTS",
+      "Blocks.STRIPPED_OAK_LOG",
+      "Blocks.STRIPPED_SPRUCE_LOG",
+      "Blocks.STRIPPED_BIRCH_LOG",
+      "Blocks.STRIPPED_JUNGLE_LOG",
+      "Blocks.STRIPPED_ACACIA_LOG",
+      "Blocks.STRIPPED_DARK_OAK_LOG",
+      "Blocks.STRIPPED_WARPED_STEM",
+      "Blocks.STRIPPED_CRIMSON_STEM",
+      "Blocks.STRIPPED_MANGROVE_LOG",
+      "Blocks.STRIPPED_CHERRY_LOG",
+      "Blocks.STRIPPED_BAMBOO_BLOCK",
+      "Blocks.OAK_WOOD",
+      "Blocks.SPRUCE_WOOD",
+      "Blocks.BIRCH_WOOD",
+      "Blocks.JUNGLE_WOOD",
+      "Blocks.ACACIA_WOOD",
+      "Blocks.DARK_OAK_WOOD",
+      "Blocks.WARPED_HYPHAE",
+      "Blocks.CRIMSON_HYPHAE",
+      "Blocks.MANGROVE_WOOD",
+      "Blocks.CHERRY_WOOD",
+      "Blocks.STRIPPED_OAK_WOOD",
+      "Blocks.STRIPPED_SPRUCE_WOOD",
+      "Blocks.STRIPPED_BIRCH_WOOD",
+      "Blocks.STRIPPED_JUNGLE_WOOD",
+      "Blocks.STRIPPED_ACACIA_WOOD",
+      "Blocks.STRIPPED_DARK_OAK_WOOD",
+      "Blocks.STRIPPED_WARPED_HYPHAE",
+      "Blocks.STRIPPED_CRIMSON_HYPHAE",
+      "Blocks.STRIPPED_MANGROVE_WOOD",
+      "Blocks.STRIPPED_CHERRY_WOOD",
+      "Blocks.LEAVES#0",
+      "Blocks.LEAVES#1",
+      "Blocks.LEAVES#2",
+      "Blocks.LEAVES#3",
+      "Blocks.LEAVES2#0",
+      "Blocks.LEAVES2#1",
+      "Blocks.MANGROVE_LEAVES",
+      "Blocks.AZALEA_LEAVES",
+      "Blocks.FLOWERING_AZALEA_LEAVES",
+      "Blocks.CHERRY_LEAVES",
+      "Blocks.SPONGE#0",
+      "Blocks.SPONGE#1",
+      "Blocks.SANDSTONE#0",
+      "Blocks.SANDSTONE#1",
+      "Blocks.SANDSTONE#2",
+      "Blocks.SANDSTONE_STAIRS",
+      "Blocks.SMOOTH_SANDSTONE",
+      "Blocks.SMOOTH_SANDSTONE_STAIRS",
+      "Blocks.SMOOTH_SANDSTONE_SLAB",
+      "Blocks.CUT_SANDSTONE_SLAB",
+      "Blocks.SANDSTONE_WALL",
+      "Blocks.RED_SANDSTONE#0",
+      "Blocks.RED_SANDSTONE#1",
+      "Blocks.RED_SANDSTONE#2",
+      "Blocks.RED_SANDSTONE_STAIRS",
+      "Blocks.SMOOTH_RED_SANDSTONE",
+      "Blocks.SMOOTH_RED_SANDSTONE_STAIRS",
+      "Blocks.SMOOTH_RED_SANDSTONE_SLAB",
+      "Blocks.CUT_RED_SANDSTONE_SLAB",
+      "Blocks.RED_SANDSTONE_WALL",
+      "Blocks.NOTEBLOCK",
+      "Blocks.RAIL",
+      "Blocks.GOLDEN_RAIL",
+      "Blocks.DETECTOR_RAIL",
+      "Blocks.ACTIVATOR_RAIL",
+      "Blocks.BED",
+      "Blocks.ORANGE_BED",
+      "Blocks.MAGENTA_BED",
+      "Blocks.LIGHT_BLUE_BED",
+      "Blocks.YELLOW_BED",
+      "Blocks.LIME_BED",
+      "Blocks.PINK_BED",
+      "Blocks.GRAY_BED",
+      "Blocks.LIGHT_GRAY_BED",
+      "Blocks.CYAN_BED",
+      "Blocks.PURPLE_BED",
+      "Blocks.BLUE_BED",
+      "Blocks.BROWN_BED",
+      "Blocks.GREEN_BED",
+      "Blocks.RED_BED",
+      "Blocks.BLACK_BED",
+      "Blocks.WEB",
+      "Blocks.DEADBUSH",
+      "Blocks.TALLGRASS#0",
+      "Blocks.TALLGRASS#1",
+      "Blocks.TALLGRASS#2",
+      "Blocks.PISTON",
+      "Blocks.STICKY_PISTON",
+      "Blocks.PISTON_HEAD",
+      "Blocks.PISTON_EXTENSION",
+      "Blocks.YELLOW_FLOWER",
+      "Blocks.RED_FLOWER#0",
+      "Blocks.RED_FLOWER#1",
+      "Blocks.RED_FLOWER#2",
+      "Blocks.RED_FLOWER#3",
+      "Blocks.RED_FLOWER#4",
+      "Blocks.RED_FLOWER#5",
+      "Blocks.RED_FLOWER#6",
+      "Blocks.RED_FLOWER#7",
+      "Blocks.RED_FLOWER#8",
+      "Blocks.CORNFLOWER",
+      "Blocks.LILY_OF_THE_VALLEY",
+      "Blocks.WITHER_ROSE",
+      "Blocks.TORCHFLOWER",
+      "Blocks.PINK_PETALS",
+      "Blocks.DOUBLE_PLANT#0",
+      "Blocks.DOUBLE_PLANT#1",
+      "Blocks.DOUBLE_PLANT#2",
+      "Blocks.DOUBLE_PLANT#3",
+      "Blocks.DOUBLE_PLANT#4",
+      "Blocks.DOUBLE_PLANT#5",
+      "Blocks.PITCHER_PLANT",
+      "Blocks.BROWN_MUSHROOM",
+      "Blocks.RED_MUSHROOM",
+      "Blocks.WARPED_FUNGUS",
+      "Blocks.CRIMSON_FUNGUS",
+      "Blocks.BROWN_MUSHROOM_BLOCK",
+      "Blocks.RED_MUSHROOM_BLOCK",
+      "Blocks.WARPED_WART_BLOCK",
+      "Blocks.MUSHROOM_STEM",
+      "Blocks.BRICK_BLOCK",
+      "Blocks.BRICK_WALL",
+      "Blocks.TNT",
+      "Blocks.BOOKSHELF",
+      "Blocks.CHISELED_BOOKSHELF",
+      "Blocks.TORCH",
+      "Blocks.WALL_TORCH",
+      "Blocks.SOUL_TORCH",
+      "Blocks.SOUL_WALL_TORCH",
+      "Blocks.FIRE",
+      "Blocks.SOUL_FIRE",
+      "Blocks.LANTERN",
+      "Blocks.SOUL_LANTERN",
+      "Blocks.CHAIN",
+      "Blocks.CAMPFIRE",
+      "Blocks.SOUL_CAMPFIRE",
+      "Blocks.CANDLE#0",
+      "Blocks.CANDLE#1",
+      "Blocks.CANDLE#2",
+      "Blocks.CANDLE#3",
+      "Blocks.CANDLE#4",
+      "Blocks.CANDLE#5",
+      "Blocks.CANDLE#6",
+      "Blocks.CANDLE#7",
+      "Blocks.CANDLE#8",
+      "Blocks.CANDLE#9",
+      "Blocks.CANDLE#10",
+      "Blocks.CANDLE#11",
+      "Blocks.CANDLE#12",
+      "Blocks.CANDLE#13",
+      "Blocks.CANDLE#14",
+      "Blocks.CANDLE#15",
+      "Blocks.CANDLE#16",
+      "Blocks.LIGHT",
+      "Blocks.MOB_SPAWNER",
+      "Blocks.OAK_STAIRS",
+      "Blocks.SPRUCE_STAIRS",
+      "Blocks.BIRCH_STAIRS",
+      "Blocks.JUNGLE_STAIRS",
+      "Blocks.ACACIA_STAIRS",
+      "Blocks.DARK_OAK_STAIRS",
+      "Blocks.CRIMSON_STAIRS",
+      "Blocks.WARPED_STAIRS",
+      "Blocks.MANGROVE_STAIRS",
+      "Blocks.CHERRY_STAIRS",
+      "Blocks.BAMBOO_STAIRS",
+      "Blocks.BAMBOO_MOSAIC_STAIRS",
+      "Blocks.STONE_STAIRS",
+      "Blocks.BRICK_STAIRS",
+      "Blocks.STONE_BRICK_STAIRS",
+      "Blocks.NETHER_BRICK_STAIRS",
+      "Blocks.QUARTZ_STAIRS",
+      "Blocks.PURPUR_STAIRS",
+      "Blocks.CHEST",
+      "Blocks.TRAPPED_CHEST",
+      "Blocks.ENDER_CHEST",
+      "Blocks.CRAFTING_TABLE",
+      "Blocks.WHEAT",
+      "Blocks.FARMLAND",
+      "Blocks.FURNACE",
+      "Blocks.STANDING_SIGN",
+      "Blocks.SPRUCE_SIGN",
+      "Blocks.BIRCH_SIGN",
+      "Blocks.ACACIA_SIGN",
+      "Blocks.JUNGLE_SIGN",
+      "Blocks.DARK_OAK_SIGN",
+      "Blocks.CRIMSON_SIGN",
+      "Blocks.WARPED_SIGN",
+      "Blocks.MANGROVE_SIGN",
+      "Blocks.CHERRY_SIGN",
+      "Blocks.BAMBOO_SIGN",
+      "Blocks.WALL_SIGN",
+      "Blocks.SPRUCE_WALL_SIGN",
+      "Blocks.BIRCH_WALL_SIGN",
+      "Blocks.ACACIA_WALL_SIGN",
+      "Blocks.JUNGLE_WALL_SIGN",
+      "Blocks.DARK_OAK_WALL_SIGN",
+      "Blocks.CRIMSON_WALL_SIGN",
+      "Blocks.WARPED_WALL_SIGN",
+      "Blocks.MANGROVE_WALL_SIGN",
+      "Blocks.CHERRY_WALL_SIGN",
+      "Blocks.BAMBOO_WALL_SIGN",
+      "Blocks.OAK_HANGING_SIGN",
+      "Blocks.SPRUCE_HANGING_SIGN",
+      "Blocks.BIRCH_HANGING_SIGN",
+      "Blocks.ACACIA_HANGING_SIGN",
+      "Blocks.JUNGLE_HANGING_SIGN",
+      "Blocks.DARK_OAK_HANGING_SIGN",
+      "Blocks.CRIMSON_HANGING_SIGN",
+      "Blocks.WARPED_HANGING_SIGN",
+      "Blocks.MANGROVE_HANGING_SIGN",
+      "Blocks.CHERRY_HANGING_SIGN",
+      "Blocks.BAMBOO_HANGING_SIGN",
+      "Blocks.OAK_WALL_HANGING_SIGN",
+      "Blocks.SPRUCE_WALL_HANGING_SIGN",
+      "Blocks.BIRCH_WALL_HANGING_SIGN",
+      "Blocks.ACACIA_WALL_HANGING_SIGN",
+      "Blocks.JUNGLE_WALL_HANGING_SIGN",
+      "Blocks.DARK_OAK_WALL_HANGING_SIGN",
+      "Blocks.CRIMSON_WALL_HANGING_SIGN",
+      "Blocks.WARPED_WALL_HANGING_SIGN",
+      "Blocks.MANGROVE_WALL_HANGING_SIGN",
+      "Blocks.CHERRY_WALL_HANGING_SIGN",
+      "Blocks.BAMBOO_WALL_HANGING_SIGN",
+      "Blocks.OAK_DOOR",
+      "Blocks.SPRUCE_DOOR",
+      "Blocks.BIRCH_DOOR",
+      "Blocks.JUNGLE_DOOR",
+      "Blocks.ACACIA_DOOR",
+      "Blocks.DARK_OAK_DOOR",
+      "Blocks.CRIMSON_DOOR",
+      "Blocks.WARPED_DOOR",
+      "Blocks.MANGROVE_DOOR",
+      "Blocks.CHERRY_DOOR",
+      "Blocks.BAMBOO_DOOR",
+      "Blocks.IRON_DOOR",
+      "Blocks.COPPER_DOOR",
+      "Blocks.EXPOSED_COPPER_DOOR",
+      "Blocks.OXIDIZED_COPPER_DOOR",
+      "Blocks.WEATHERED_COPPER_DOOR",
+      "Blocks.WAXED_COPPER_DOOR",
+      "Blocks.WAXED_EXPOSED_COPPER_DOOR",
+      "Blocks.WAXED_OXIDIZED_COPPER_DOOR",
+      "Blocks.WAXED_WEATHERED_COPPER_DOOR",
+      "Blocks.TRAPDOOR",
+      "Blocks.SPRUCE_TRAPDOOR",
+      "Blocks.BIRCH_TRAPDOOR",
+      "Blocks.JUNGLE_TRAPDOOR",
+      "Blocks.ACACIA_TRAPDOOR",
+      "Blocks.DARK_OAK_TRAPDOOR",
+      "Blocks.CRIMSON_TRAPDOOR",
+      "Blocks.WARPED_TRAPDOOR",
+      "Blocks.MANGROVE_TRAPDOOR",
+      "Blocks.CHERRY_TRAPDOOR",
+      "Blocks.BAMBOO_TRAPDOOR",
+      "Blocks.IRON_TRAPDOOR",
+      "Blocks.COPPER_TRAPDOOR",
+      "Blocks.EXPOSED_COPPER_TRAPDOOR",
+      "Blocks.OXIDIZED_COPPER_TRAPDOOR",
+      "Blocks.WEATHERED_COPPER_TRAPDOOR",
+      "Blocks.WAXED_COPPER_TRAPDOOR",
+      "Blocks.WAXED_EXPOSED_COPPER_TRAPDOOR",
+      "Blocks.WAXED_OXIDIZED_COPPER_TRAPDOOR",
+      "Blocks.WAXED_WEATHERED_COPPER_TRAPDOOR",
+      "Blocks.COPPER_GRATE",
+      "Blocks.EXPOSED_COPPER_GRATE",
+      "Blocks.WEATHERED_COPPER_GRATE",
+      "Blocks.OXIDIZED_COPPER_GRATE",
+      "Blocks.WAXED_COPPER_GRATE",
+      "Blocks.WAXED_EXPOSED_COPPER_GRATE",
+      "Blocks.WAXED_WEATHERED_COPPER_GRATE",
+      "Blocks.WAXED_OXIDIZED_COPPER_GRATE",
+      "Blocks.COPPER_BULB",
+      "Blocks.EXPOSED_COPPER_BULB",
+      "Blocks.WEATHERED_COPPER_BULB",
+      "Blocks.OXIDIZED_COPPER_BULB",
+      "Blocks.WAXED_COPPER_BULB",
+      "Blocks.WAXED_EXPOSED_COPPER_BULB",
+      "Blocks.WAXED_WEATHERED_COPPER_BULB",
+      "Blocks.WAXED_OXIDIZED_COPPER_BULB",
+      "Blocks.LADDER",
+      "Blocks.LEVER",
+      "Blocks.STONE_BUTTON",
+      "Blocks.POLISHED_BLACKSTONE_BUTTON",
+      "Blocks.WOODEN_BUTTON",
+      "Blocks.SPRUCE_BUTTON",
+      "Blocks.BIRCH_BUTTON",
+      "Blocks.JUNGLE_BUTTON",
+      "Blocks.ACACIA_BUTTON",
+      "Blocks.DARK_OAK_BUTTON",
+      "Blocks.CRIMSON_BUTTON",
+      "Blocks.WARPED_BUTTON",
+      "Blocks.MANGROVE_BUTTON",
+      "Blocks.CHERRY_BUTTON",
+      "Blocks.BAMBOO_BUTTON",
+      "Blocks.WOODEN_PRESSURE_PLATE",
+      "Blocks.SPRUCE_PRESSURE_PLATE",
+      "Blocks.BIRCH_PRESSURE_PLATE",
+      "Blocks.JUNGLE_PRESSURE_PLATE",
+      "Blocks.ACACIA_PRESSURE_PLATE",
+      "Blocks.DARK_OAK_PRESSURE_PLATE",
+      "Blocks.CRIMSON_PRESSURE_PLATE",
+      "Blocks.WARPED_PRESSURE_PLATE",
+      "Blocks.MANGROVE_PRESSURE_PLATE",
+      "Blocks.CHERRY_PRESSURE_PLATE",
+      "Blocks.BAMBOO_PRESSURE_PLATE",
+      "Blocks.STONE_PRESSURE_PLATE",
+      "Blocks.POLISHED_BLACKSTONE_PRESSURE_PLATE",
+      "Blocks.LIGHT_WEIGHTED_PRESSURE_PLATE",
+      "Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE",
+      "Blocks.TRIPWIRE_HOOK",
+      "Blocks.TRIPWIRE",
+      "Blocks.DAYLIGHT_DETECTOR",
+      "Blocks.DAYLIGHT_DETECTOR_INVERTED",
+      "Blocks.REDSTONE_TORCH",
+      "Blocks.REDSTONE_WALL_TORCH",
+      "Blocks.UNLIT_REDSTONE_TORCH",
+      "Blocks.REDSTONE_WIRE",
+      "Blocks.UNPOWERED_REPEATER",
+      "Blocks.POWERED_REPEATER",
+      "Blocks.UNPOWERED_COMPARATOR",
+      "Blocks.POWERED_COMPARATOR",
+      "Blocks.REDSTONE_LAMP",
+      "Blocks.LIT_REDSTONE_LAMP",
+      "Blocks.DISPENSER",
+      "Blocks.DROPPER",
+      "Blocks.OBSERVER",
+      "Blocks.CRAFTER",
+      "Blocks.HOPPER",
+      "Blocks.TARGET",
+      "Blocks.LIGHTNING_ROD",
+      "Blocks.SCULK_SENSOR",
+      "Blocks.CALIBRATED_SCULK_SENSOR",
+      "Blocks.SCULK",
+      "Blocks.SCULK_CATALYST",
+      "Blocks.SCULK_VEIN",
+      "Blocks.SCULK_SHRIEKER",
+      "Blocks.COMMAND_BLOCK",
+      "Blocks.REPEATING_COMMAND_BLOCK",
+      "Blocks.CHAIN_COMMAND_BLOCK",
+      "Blocks.SNOW_LAYER",
+      "Blocks.SNOW",
+      "Blocks.POWDER_SNOW",
+      "Blocks.ICE",
+      "Blocks.PACKED_ICE",
+      "Blocks.FROSTED_ICE",
+      "Blocks.BLUE_ICE",
+      "Blocks.CACTUS",
+      "Blocks.CLAY",
+      "Blocks.JUKEBOX",
+      "Blocks.OAK_FENCE",
+      "Blocks.SPRUCE_FENCE",
+      "Blocks.BIRCH_FENCE",
+      "Blocks.JUNGLE_FENCE",
+      "Blocks.ACACIA_FENCE",
+      "Blocks.DARK_OAK_FENCE",
+      "Blocks.CRIMSON_FENCE",
+      "Blocks.WARPED_FENCE",
+      "Blocks.MANGROVE_FENCE",
+      "Blocks.CHERRY_FENCE",
+      "Blocks.BAMBOO_FENCE",
+      "Blocks.OAK_FENCE_GATE",
+      "Blocks.SPRUCE_FENCE_GATE",
+      "Blocks.BIRCH_FENCE_GATE",
+      "Blocks.JUNGLE_FENCE_GATE",
+      "Blocks.ACACIA_FENCE_GATE",
+      "Blocks.DARK_OAK_FENCE_GATE",
+      "Blocks.CRIMSON_FENCE_GATE",
+      "Blocks.WARPED_FENCE_GATE",
+      "Blocks.MANGROVE_FENCE_GATE",
+      "Blocks.CHERRY_FENCE_GATE",
+      "Blocks.BAMBOO_FENCE_GATE",
+      "Blocks.NETHER_BRICK_FENCE",
+      "Blocks.NETHER_BRICK",
+      "Blocks.CHISELED_NETHER_BRICKS",
+      "Blocks.CRACKED_NETHER_BRICKS",
+      "Blocks.RED_NETHER_BRICK",
+      "Blocks.NETHER_BRICK_WALL",
+      "Blocks.RED_NETHER_BRICK_STAIRS",
+      "Blocks.RED_NETHER_BRICK_SLAB",
+      "Blocks.RED_NETHER_BRICK_WALL",
+      "Blocks.NETHERRACK",
+      "Blocks.WARPED_NYLIUM",
+      "Blocks.CRIMSON_NYLIUM",
+      "Blocks.SOUL_SAND",
+      "Blocks.SOUL_SOIL",
+      "Blocks.GLOWSTONE",
+      "Blocks.SHROOMLIGHT",
+      "Blocks.BONE_BLOCK",
+      "Blocks.NETHER_WART",
+      "Blocks.NETHER_WART_BLOCK",
+      "Blocks.CAKE",
+      "Blocks.STONEBRICK#0",
+      "Blocks.STONE_BRICK_WALL",
+      "Blocks.STONEBRICK#1",
+      "Blocks.MOSSY_STONE_BRICK_STAIRS",
+      "Blocks.MOSSY_STONE_BRICK_SLAB",
+      "Blocks.MOSSY_STONE_BRICK_WALL",
+      "Blocks.STONEBRICK#2",
+      "Blocks.STONEBRICK#3",
+      "Blocks.IRON_BARS",
+      "Blocks.MELON_BLOCK",
+      "Blocks.MELON_STEM",
+      "Blocks.ATTACHED_MELON_STEM",
+      "Blocks.PUMPKIN",
+      "Blocks.CARVED_PUMPKIN",
+      "Blocks.LIT_PUMPKIN",
+      "Blocks.PUMPKIN_STEM",
+      "Blocks.ATTACHED_PUMPKIN_STEM",
+      "Blocks.SWEET_BERRY_BUSH",
+      "Blocks.VINE",
+      "Blocks.GLOW_LICHEN",
+      "Blocks.WATERLILY",
+      "Blocks.ENCHANTING_TABLE",
+      "Blocks.BREWING_STAND",
+      "Blocks.CAULDRON",
+      "Blocks.WATER_CAULDRON",
+      "Blocks.LAVA_CAULDRON",
+      "Blocks.POWDER_SNOW_CAULDRON",
+      "Blocks.END_PORTAL",
+      "Blocks.END_PORTAL_FRAME",
+      "Blocks.END_GATEWAY",
+      "Blocks.END_STONE",
+      "Blocks.END_BRICKS",
+      "Blocks.END_STONE_BRICK_STAIRS",
+      "Blocks.END_STONE_BRICK_SLAB",
+      "Blocks.END_STONE_BRICK_WALL",
+      "Blocks.END_ROD",
+      "Blocks.PURPUR_BLOCK",
+      "Blocks.PURPUR_PILLAR",
+      "Blocks.PURPUR_SLAB",
+      "Blocks.PURPUR_DOUBLE_SLAB",
+      "Blocks.BEETROOTS",
+      "Blocks.CHORUS_PLANT",
+      "Blocks.CHORUS_FLOWER",
+      "Blocks.DRAGON_EGG",
+      "Blocks.MONSTER_EGG#0",
+      "Blocks.MONSTER_EGG#1",
+      "Blocks.MONSTER_EGG#2",
+      "Blocks.MONSTER_EGG#3",
+      "Blocks.MONSTER_EGG#4",
+      "Blocks.MONSTER_EGG#5",
+      "Blocks.MONSTER_EGG#6",
+      "Blocks.WOODEN_SLAB#0",
+      "Blocks.WOODEN_SLAB#1",
+      "Blocks.WOODEN_SLAB#2",
+      "Blocks.WOODEN_SLAB#3",
+      "Blocks.WOODEN_SLAB#4",
+      "Blocks.WOODEN_SLAB#5",
+      "Blocks.CRIMSON_SLAB",
+      "Blocks.WARPED_SLAB",
+      "Blocks.MANGROVE_SLAB",
+      "Blocks.CHERRY_SLAB",
+      "Blocks.BAMBOO_SLAB",
+      "Blocks.BAMBOO_MOSAIC_SLAB",
+      "Blocks.STONE_SLAB#0",
+      "Blocks.STONE_SLAB#1",
+      "Blocks.STONE_SLAB#2",
+      "Blocks.STONE_SLAB#3",
+      "Blocks.STONE_SLAB#4",
+      "Blocks.STONE_SLAB#5",
+      "Blocks.STONE_SLAB#6",
+      "Blocks.STONE_SLAB#7",
+      "Blocks.STONE_SLAB2",
+      "Blocks.COCOA",
+      "Blocks.PORTAL",
+      "Blocks.ANVIL#0",
+      "Blocks.ANVIL#1",
+      "Blocks.ANVIL#2",
+      "Blocks.BEACON",
+      "Blocks.COBBLESTONE_WALL#0",
+      "Blocks.COBBLESTONE_WALL#1",
+      "Blocks.FLOWER_POT",
+      "Blocks.POTTED_OAK_SAPLING",
+      "Blocks.POTTED_SPRUCE_SAPLING",
+      "Blocks.POTTED_BIRCH_SAPLING",
+      "Blocks.POTTED_JUNGLE_SAPLING",
+      "Blocks.POTTED_ACACIA_SAPLING",
+      "Blocks.POTTED_DARK_OAK_SAPLING",
+      "Blocks.POTTED_MANGROVE_PROPAGULE",
+      "Blocks.POTTED_FERN",
+      "Blocks.POTTED_DANDELION",
+      "Blocks.POTTED_POPPY",
+      "Blocks.POTTED_BLUE_ORCHID",
+      "Blocks.POTTED_ALLIUM",
+      "Blocks.POTTED_AZURE_BLUET",
+      "Blocks.POTTED_RED_TULIP",
+      "Blocks.POTTED_ORANGE_TULIP",
+      "Blocks.POTTED_WHITE_TULIP",
+      "Blocks.POTTED_PINK_TULIP",
+      "Blocks.POTTED_OXEYE_DAISY",
+      "Blocks.POTTED_CORNFLOWER",
+      "Blocks.POTTED_LILY_OF_THE_VALLEY",
+      "Blocks.POTTED_WITHER_ROSE",
+      "Blocks.POTTED_RED_MUSHROOM",
+      "Blocks.POTTED_BROWN_MUSHROOM",
+      "Blocks.POTTED_DEAD_BUSH",
+      "Blocks.POTTED_CACTUS",
+      "Blocks.POTTED_BAMBOO",
+      "Blocks.POTTED_CRIMSON_FUNGUS",
+      "Blocks.POTTED_WARPED_FUNGUS",
+      "Blocks.POTTED_CRIMSON_ROOTS",
+      "Blocks.POTTED_WARPED_ROOTS",
+      "Blocks.POTTED_AZALEA_BUSH",
+      "Blocks.POTTED_FLOWERING_AZALEA_BUSH",
+      "Blocks.POTTED_CHERRY_SAPLING",
+      "Blocks.POTTED_TORCHFLOWER",
+      "Blocks.DECORATED_POT",
+      "Blocks.TRIAL_SPAWNER",
+      "Blocks.VAULT",
+      "Blocks.HEAVY_CORE",
+      "Blocks.CARROTS",
+      "Blocks.POTATOES",
+      "Blocks.TORCHFLOWER_CROP",
+      "Blocks.PITCHER_CROP",
+      "Blocks.HAY_BLOCK",
+      "Blocks.SKULL#0",
+      "Blocks.SKULL#1",
+      "Blocks.SKULL#2",
+      "Blocks.SKULL#3",
+      "Blocks.SKULL#4",
+      "Blocks.SKULL#5",
+      "Blocks.PIGLIN_HEAD",
+      "Blocks.SKELETON_WALL_SKULL",
+      "Blocks.WITHER_SKELETON_WALL_SKULL",
+      "Blocks.ZOMBIE_WALL_HEAD",
+      "Blocks.PLAYER_WALL_HEAD",
+      "Blocks.CREEPER_WALL_HEAD",
+      "Blocks.DRAGON_WALL_HEAD",
+      "Blocks.PIGLIN_WALL_HEAD",
+      "Blocks.WOOL#0",
+      "Blocks.WOOL#1",
+      "Blocks.WOOL#2",
+      "Blocks.WOOL#3",
+      "Blocks.WOOL#4",
+      "Blocks.WOOL#5",
+      "Blocks.WOOL#6",
+      "Blocks.WOOL#7",
+      "Blocks.WOOL#8",
+      "Blocks.WOOL#9",
+      "Blocks.WOOL#10",
+      "Blocks.WOOL#11",
+      "Blocks.WOOL#12",
+      "Blocks.WOOL#13",
+      "Blocks.WOOL#14",
+      "Blocks.WOOL#15",
+      "Blocks.HARDENED_CLAY",
+      "Blocks.STAINED_HARDENED_CLAY#0",
+      "Blocks.STAINED_HARDENED_CLAY#1",
+      "Blocks.STAINED_HARDENED_CLAY#2",
+      "Blocks.STAINED_HARDENED_CLAY#3",
+      "Blocks.STAINED_HARDENED_CLAY#4",
+      "Blocks.STAINED_HARDENED_CLAY#5",
+      "Blocks.STAINED_HARDENED_CLAY#6",
+      "Blocks.STAINED_HARDENED_CLAY#7",
+      "Blocks.STAINED_HARDENED_CLAY#8",
+      "Blocks.STAINED_HARDENED_CLAY#9",
+      "Blocks.STAINED_HARDENED_CLAY#10",
+      "Blocks.STAINED_HARDENED_CLAY#11",
+      "Blocks.STAINED_HARDENED_CLAY#12",
+      "Blocks.STAINED_HARDENED_CLAY#13",
+      "Blocks.STAINED_HARDENED_CLAY#14",
+      "Blocks.STAINED_HARDENED_CLAY#15",
+      "Blocks.WHITE_GLAZED_TERRACOTTA",
+      "Blocks.ORANGE_GLAZED_TERRACOTTA",
+      "Blocks.MAGENTA_GLAZED_TERRACOTTA",
+      "Blocks.LIGHT_BLUE_GLAZED_TERRACOTTA",
+      "Blocks.YELLOW_GLAZED_TERRACOTTA",
+      "Blocks.LIME_GLAZED_TERRACOTTA",
+      "Blocks.PINK_GLAZED_TERRACOTTA",
+      "Blocks.GRAY_GLAZED_TERRACOTTA",
+      "Blocks.SILVER_GLAZED_TERRACOTTA",
+      "Blocks.CYAN_GLAZED_TERRACOTTA",
+      "Blocks.PURPLE_GLAZED_TERRACOTTA",
+      "Blocks.BLUE_GLAZED_TERRACOTTA",
+      "Blocks.BROWN_GLAZED_TERRACOTTA",
+      "Blocks.GREEN_GLAZED_TERRACOTTA",
+      "Blocks.RED_GLAZED_TERRACOTTA",
+      "Blocks.BLACK_GLAZED_TERRACOTTA",
+      "Blocks.CONCRETE_POWDER#0",
+      "Blocks.CONCRETE_POWDER#1",
+      "Blocks.CONCRETE_POWDER#2",
+      "Blocks.CONCRETE_POWDER#3",
+      "Blocks.CONCRETE_POWDER#4",
+      "Blocks.CONCRETE_POWDER#5",
+      "Blocks.CONCRETE_POWDER#6",
+      "Blocks.CONCRETE_POWDER#7",
+      "Blocks.CONCRETE_POWDER#8",
+      "Blocks.CONCRETE_POWDER#9",
+      "Blocks.CONCRETE_POWDER#10",
+      "Blocks.CONCRETE_POWDER#11",
+      "Blocks.CONCRETE_POWDER#12",
+      "Blocks.CONCRETE_POWDER#13",
+      "Blocks.CONCRETE_POWDER#14",
+      "Blocks.CONCRETE_POWDER#15",
+      "Blocks.CONCRETE#0",
+      "Blocks.CONCRETE#1",
+      "Blocks.CONCRETE#2",
+      "Blocks.CONCRETE#3",
+      "Blocks.CONCRETE#4",
+      "Blocks.CONCRETE#5",
+      "Blocks.CONCRETE#6",
+      "Blocks.CONCRETE#7",
+      "Blocks.CONCRETE#8",
+      "Blocks.CONCRETE#9",
+      "Blocks.CONCRETE#10",
+      "Blocks.CONCRETE#11",
+      "Blocks.CONCRETE#12",
+      "Blocks.CONCRETE#13",
+      "Blocks.CONCRETE#14",
+      "Blocks.CONCRETE#15",
+      "Blocks.CARPET#0",
+      "Blocks.CARPET#1",
+      "Blocks.CARPET#2",
+      "Blocks.CARPET#3",
+      "Blocks.CARPET#4",
+      "Blocks.CARPET#5",
+      "Blocks.CARPET#6",
+      "Blocks.CARPET#7",
+      "Blocks.CARPET#8",
+      "Blocks.CARPET#9",
+      "Blocks.CARPET#10",
+      "Blocks.CARPET#11",
+      "Blocks.CARPET#12",
+      "Blocks.CARPET#13",
+      "Blocks.CARPET#14",
+      "Blocks.CARPET#15",
+      "Blocks.GLASS",
+      "Blocks.TINTED_GLASS",
+      "Blocks.STAINED_GLASS#0",
+      "Blocks.STAINED_GLASS#1",
+      "Blocks.STAINED_GLASS#2",
+      "Blocks.STAINED_GLASS#3",
+      "Blocks.STAINED_GLASS#4",
+      "Blocks.STAINED_GLASS#5",
+      "Blocks.STAINED_GLASS#6",
+      "Blocks.STAINED_GLASS#7",
+      "Blocks.STAINED_GLASS#8",
+      "Blocks.STAINED_GLASS#9",
+      "Blocks.STAINED_GLASS#10",
+      "Blocks.STAINED_GLASS#11",
+      "Blocks.STAINED_GLASS#12",
+      "Blocks.STAINED_GLASS#13",
+      "Blocks.STAINED_GLASS#14",
+      "Blocks.STAINED_GLASS#15",
+      "Blocks.GLASS_PANE",
+      "Blocks.STAINED_GLASS_PANE#0",
+      "Blocks.STAINED_GLASS_PANE#1",
+      "Blocks.STAINED_GLASS_PANE#2",
+      "Blocks.STAINED_GLASS_PANE#3",
+      "Blocks.STAINED_GLASS_PANE#4",
+      "Blocks.STAINED_GLASS_PANE#5",
+      "Blocks.STAINED_GLASS_PANE#6",
+      "Blocks.STAINED_GLASS_PANE#7",
+      "Blocks.STAINED_GLASS_PANE#8",
+      "Blocks.STAINED_GLASS_PANE#9",
+      "Blocks.STAINED_GLASS_PANE#10",
+      "Blocks.STAINED_GLASS_PANE#11",
+      "Blocks.STAINED_GLASS_PANE#12",
+      "Blocks.STAINED_GLASS_PANE#13",
+      "Blocks.STAINED_GLASS_PANE#14",
+      "Blocks.STAINED_GLASS_PANE#15",
+      "Blocks.SEA_LANTERN",
+      "Blocks.PRISMARINE#0",
+      "Blocks.PRISMARINE#1",
+      "Blocks.PRISMARINE#2",
+      "Blocks.PRISMARINE_STAIRS",
+      "Blocks.PRISMARINE_BRICK_STAIRS",
+      "Blocks.DARK_PRISMARINE_STAIRS",
+      "Blocks.PRISMARINE_SLAB",
+      "Blocks.PRISMARINE_BRICK_SLAB",
+      "Blocks.DARK_PRISMARINE_SLAB",
+      "Blocks.PRISMARINE_WALL",
+      "Blocks.SHULKER_BOX",
+      "Blocks.WHITE_SHULKER_BOX",
+      "Blocks.ORANGE_SHULKER_BOX",
+      "Blocks.MAGENTA_SHULKER_BOX",
+      "Blocks.LIGHT_BLUE_SHULKER_BOX",
+      "Blocks.YELLOW_SHULKER_BOX",
+      "Blocks.LIME_SHULKER_BOX",
+      "Blocks.PINK_SHULKER_BOX",
+      "Blocks.GRAY_SHULKER_BOX",
+      "Blocks.SILVER_SHULKER_BOX",
+      "Blocks.CYAN_SHULKER_BOX",
+      "Blocks.PURPLE_SHULKER_BOX",
+      "Blocks.BLUE_SHULKER_BOX",
+      "Blocks.BROWN_SHULKER_BOX",
+      "Blocks.GREEN_SHULKER_BOX",
+      "Blocks.RED_SHULKER_BOX",
+      "Blocks.BLACK_SHULKER_BOX",
+      "Blocks.STANDING_BANNER",
+      "Blocks.WHITE_BANNER",
+      "Blocks.ORANGE_BANNER",
+      "Blocks.MAGENTA_BANNER",
+      "Blocks.LIGHT_BLUE_BANNER",
+      "Blocks.YELLOW_BANNER",
+      "Blocks.LIME_BANNER",
+      "Blocks.PINK_BANNER",
+      "Blocks.GRAY_BANNER",
+      "Blocks.LIGHT_GRAY_BANNER",
+      "Blocks.CYAN_BANNER",
+      "Blocks.PURPLE_BANNER",
+      "Blocks.BLUE_BANNER",
+      "Blocks.BROWN_BANNER",
+      "Blocks.GREEN_BANNER",
+      "Blocks.RED_BANNER",
+      "Blocks.BLACK_BANNER",
+      "Blocks.WALL_BANNER",
+      "Blocks.WHITE_WALL_BANNER",
+      "Blocks.ORANGE_WALL_BANNER",
+      "Blocks.MAGENTA_WALL_BANNER",
+      "Blocks.LIGHT_BLUE_WALL_BANNER",
+      "Blocks.YELLOW_WALL_BANNER",
+      "Blocks.LIME_WALL_BANNER",
+      "Blocks.PINK_WALL_BANNER",
+      "Blocks.GRAY_WALL_BANNER",
+      "Blocks.LIGHT_GRAY_WALL_BANNER",
+      "Blocks.CYAN_WALL_BANNER",
+      "Blocks.PURPLE_WALL_BANNER",
+      "Blocks.BLUE_WALL_BANNER",
+      "Blocks.BROWN_WALL_BANNER",
+      "Blocks.GREEN_WALL_BANNER",
+      "Blocks.RED_WALL_BANNER",
+      "Blocks.BLACK_WALL_BANNER",
+      "Blocks.BARRIER",
+      "Blocks.STRUCTURE_VOID",
+      "Blocks.STRUCTURE_BLOCK",
+      "Blocks.STRUCTURE_BLOCK#1",
+      "Blocks.STRUCTURE_BLOCK#2",
+      "Blocks.STRUCTURE_BLOCK#3",
+      "Blocks.STRUCTURE_BLOCK#4",
+      "Blocks.JIGSAW",
+      "Blocks.KELP",
+      "Blocks.KELP_PLANT",
+      "Blocks.SEAGRASS",
+      "Blocks.TALL_SEAGRASS",
+      "Blocks.SEA_PICKLE",
+      "Blocks.TURTLE_EGG",
+      "Blocks.SNIFFER_EGG",
+      "Blocks.BAMBOO_SAPLING",
+      "Blocks.BAMBOO",
+      "Blocks.DEAD_TUBE_CORAL_BLOCK",
+      "Blocks.DEAD_BRAIN_CORAL_BLOCK",
+      "Blocks.DEAD_BUBBLE_CORAL_BLOCK",
+      "Blocks.DEAD_FIRE_CORAL_BLOCK",
+      "Blocks.DEAD_HORN_CORAL_BLOCK",
+      "Blocks.TUBE_CORAL_BLOCK",
+      "Blocks.BRAIN_CORAL_BLOCK",
+      "Blocks.BUBBLE_CORAL_BLOCK",
+      "Blocks.FIRE_CORAL_BLOCK",
+      "Blocks.HORN_CORAL_BLOCK",
+      "Blocks.DEAD_TUBE_CORAL",
+      "Blocks.DEAD_BRAIN_CORAL",
+      "Blocks.DEAD_BUBBLE_CORAL",
+      "Blocks.DEAD_FIRE_CORAL",
+      "Blocks.DEAD_HORN_CORAL",
+      "Blocks.TUBE_CORAL",
+      "Blocks.BRAIN_CORAL",
+      "Blocks.BUBBLE_CORAL",
+      "Blocks.FIRE_CORAL",
+      "Blocks.HORN_CORAL",
+      "Blocks.DEAD_TUBE_CORAL_FAN",
+      "Blocks.DEAD_BRAIN_CORAL_FAN",
+      "Blocks.DEAD_BUBBLE_CORAL_FAN",
+      "Blocks.DEAD_FIRE_CORAL_FAN",
+      "Blocks.DEAD_HORN_CORAL_FAN",
+      "Blocks.TUBE_CORAL_FAN",
+      "Blocks.BRAIN_CORAL_FAN",
+      "Blocks.BUBBLE_CORAL_FAN",
+      "Blocks.FIRE_CORAL_FAN",
+      "Blocks.HORN_CORAL_FAN",
+      "Blocks.DEAD_TUBE_CORAL_WALL_FAN",
+      "Blocks.DEAD_BRAIN_CORAL_WALL_FAN",
+      "Blocks.DEAD_BUBBLE_CORAL_WALL_FAN",
+      "Blocks.DEAD_FIRE_CORAL_WALL_FAN",
+      "Blocks.DEAD_HORN_CORAL_WALL_FAN",
+      "Blocks.TUBE_CORAL_WALL_FAN",
+      "Blocks.BRAIN_CORAL_WALL_FAN",
+      "Blocks.BUBBLE_CORAL_WALL_FAN",
+      "Blocks.FIRE_CORAL_WALL_FAN",
+      "Blocks.HORN_CORAL_WALL_FAN",
+      "Blocks.DRIED_KELP_BLOCK",
+      "Blocks.CONDUIT",
+      "Blocks.SCAFFOLDING",
+      "Blocks.BELL",
+      "Blocks.LOOM",
+      "Blocks.BARREL",
+      "Blocks.SMOKER",
+      "Blocks.BLAST_FURNACE",
+      "Blocks.CARTOGRAPHY_TABLE",
+      "Blocks.FLETCHING_TABLE",
+      "Blocks.GRINDSTONE",
+      "Blocks.LECTERN",
+      "Blocks.SMITHING_TABLE",
+      "Blocks.STONECUTTER",
+      "Blocks.COMPOSTER",
+      "Blocks.BEEHIVE",
+      "Blocks.BEE_NEST",
+      "Blocks.HONEY_BLOCK",
+      "Blocks.HONEYCOMB_BLOCK",
+      "Blocks.BASALT",
+      "Blocks.POLISHED_BASALT",
+      "Blocks.SMOOTH_BASALT",
+      "Blocks.WARPED_ROOTS",
+      "Blocks.NETHER_SPROUTS",
+      "Blocks.WEEPING_VINES",
+      "Blocks.WEEPING_VINES_PLANT",
+      "Blocks.TWISTING_VINES",
+      "Blocks.TWISTING_VINES_PLANT",
+      "Blocks.CRIMSON_ROOTS",
+      "Blocks.RESPAWN_ANCHOR",
+      "Blocks.LODESTONE",
+      "Blocks.CAVE_VINES",
+      "Blocks.CAVE_VINES_PLANT",
+      "Blocks.SPORE_BLOSSOM",
+      "Blocks.AZALEA",
+      "Blocks.FLOWERING_AZALEA",
+      "Blocks.BIG_DRIPLEAF",
+      "Blocks.BIG_DRIPLEAF_STEM",
+      "Blocks.SMALL_DRIPLEAF",
+      "Blocks.HANGING_ROOTS",
+      "Blocks.OCHRE_FROGLIGHT",
+      "Blocks.VERDANT_FROGLIGHT",
+      "Blocks.PEARLESCENT_FROGLIGHT",
+      "Blocks.FROGSPAWN",
+      "Blocks.CANDLE_CAKE#0",
+      "Blocks.CANDLE_CAKE#1",
+      "Blocks.CANDLE_CAKE#2",
+      "Blocks.CANDLE_CAKE#3",
+      "Blocks.CANDLE_CAKE#4",
+      "Blocks.CANDLE_CAKE#5",
+      "Blocks.CANDLE_CAKE#6",
+      "Blocks.CANDLE_CAKE#7",
+      "Blocks.CANDLE_CAKE#8",
+      "Blocks.CANDLE_CAKE#9",
+      "Blocks.CANDLE_CAKE#10",
+      "Blocks.CANDLE_CAKE#11",
+      "Blocks.CANDLE_CAKE#12",
+      "Blocks.CANDLE_CAKE#13",
+      "Blocks.CANDLE_CAKE#14",
+      "Blocks.CANDLE_CAKE#15",
+      "Blocks.CANDLE_CAKE#16"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:CosmiRodPower",
+      "~CUSTOM:CosmiRod"
+    ]
+  },
+  "tab_element_order": {
+    "CUSTOM:MinefinityCreativeTab": [
+      "InfinityGauntlet",
+      "CosmiRod",
+      "CosmiRodPower",
+      "UniversalLawTestitem"
+    ]
+  },
+  "language_map": {
+    "en_us": {
+      "gui.minefinity_gauntlet.s_4_gui.tppy": "Y: ",
+      "gui.minefinity_gauntlet.s_4_gui.tppx": "X:",
+      "gui.minefinity_gauntlet.s_4_gui.tppz": "Z: ",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_timeline_erasu": "Timeline Erasure",
+      "gui.minefinity_gauntlet.s_4_gui.button_confirm_d": "Confirm",
+      "gui.minefinity_gauntlet.select_ability_space.button_block_telekinesis": "Block Telekinesis",
+      "gui.minefinity_gauntlet.law_creation_gui.button_event_create": "Event Create",
+      "item.minefinity_gauntlet.test_item": "P1",
+      "death.attack.vampiric.item": "%1$s was drained by %2$s using %3$s",
+      "item.minefinity_gauntlet.mind_stone": "Mind Stone",
+      "gui.minefinity_gauntlet.select_ability_reality.button_block_telekinesis": "Block Telekinesis",
+      "item.minefinity_gauntlet.s_2": "S 2 (set anchor)",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_6": "6",
+      "item.minefinity_gauntlet.s_3": "S 3 (tp anchor)",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_5": "5",
+      "gui.minefinity_gauntlet.select_ability_power.button_launch": "launch",
+      "item.minefinity_gauntlet.s_4": "S 4 (tp to anywhere)",
+      "gui.minefinity_gauntlet.find_tp_gui.button_empty": "",
+      "item.minefinity_gauntlet.s_5": "S 5 (block telekinesis)",
+      "entity.minefinity_gauntlet.fake_block_entity": "block",
+      "gui.minefinity_gauntlet.universal_law_gui.label_empty4": "empty",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_2": "2",
+      "gui.minefinity_gauntlet.universal_law_gui.label_empty3": "empty",
+      "gui.minefinity_gauntlet.find_tp_gui.type": "Entity:",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_1": "1",
+      "gui.minefinity_gauntlet.universal_law_gui.label_empty2": "empty",
+      "gui.minefinity_gauntlet.universal_law_gui.label_empty1": "empty",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_4": "4",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_3": "3",
+      "gui.minefinity_gauntlet.universal_law_gui.button_create_law": "Create New Law",
+      "item.minefinity_gauntlet.r_1": "R1 (projectile neg)",
+      "item.minefinity_gauntlet.r_2": "R 2",
+      "gui.minefinity_gauntlet.select_ability_soul.button_soul_s": "Soul Swap",
+      "entity.minefinity_gauntlet.here_portal": "Portal",
+      "death.attack.vampiric.player": "%1$s dried whilst trying to escape %2$s",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_universal": "Universal Law",
+      "gui.minefinity_gauntlet.select_ability_reality.button_block_sh": "Block Shift",
+      "item.minefinity_gauntlet.cosmi_rod_power": "Cosmi-Rod (Power Stone)",
+      "gui.minefinity_gauntlet.universal_law_gui.button_cre3": "Create",
+      "gui.minefinity_gauntlet.universal_law_gui.button_cre4": "Create",
+      "gui.minefinity_gauntlet.law_creation_gui.lawNameField": "Enter Law Name",
+      "gui.minefinity_gauntlet.universal_law_gui.button_cre1": "Create",
+      "gui.minefinity_gauntlet.universal_law_gui.label_empty": "empty",
+      "gui.minefinity_gauntlet.universal_law_gui.button_cre2": "Create",
+      "item.minefinity_gauntlet.soul_stone": "Soul Stone",
+      "gui.minefinity_gauntlet.universal_law_gui.button_empty1": "X",
+      "gui.minefinity_gauntlet.select_ability_space.button_5": "5",
+      "gui.minefinity_gauntlet.select_ability_soul.button_vampiric_b": "Vampiric Beam",
+      "gui.minefinity_gauntlet.select_ability_space.button_vacuum_portal": "Vacuum Portal",
+      "gui.minefinity_gauntlet.select_ability_space.button_6": "6",
+      "gui.minefinity_gauntlet.select_ability_space.button_3": "3",
+      "gui.minefinity_gauntlet.select_ability_space.button_4": "4",
+      "key.minefinity_gauntlet.quick_slot_5": "Quick Slot 5",
+      "gui.minefinity_gauntlet.universal_law_gui.button_empty2": "X",
+      "key.minefinity_gauntlet.quick_slot_6": "Quick Slot 6",
+      "gui.minefinity_gauntlet.universal_law_gui.button_empty3": "X",
+      "gui.minefinity_gauntlet.universal_law_gui.button_empty4": "X",
+      "gui.minefinity_gauntlet.find_tp_gui.rad": "Radius:",
+      "effect.minefinity_gauntlet.decay": "Decay",
+      "gui.minefinity_gauntlet.select_ability_space.button_1": "1",
+      "gui.minefinity_gauntlet.select_ability_reality.button_h": "Heal",
+      "gui.minefinity_gauntlet.select_ability_space.button_2": "2",
+      "item.minefinity_gauntlet.universal_law_testitem": "Universal Law Testitem",
+      "death.attack.vampiric": "%1$s was drained.",
+      "gui.minefinity_gauntlet.select_ability_space.button_warp": "Warp",
+      "effect.minefinity_gauntlet.screen_shake": "Screen Shake",
+      "key.minefinity_gauntlet.quick_slot_1": "Quick Slot 1",
+      "item.minefinity_gauntlet.exp_spawn_egg": "Exp Spawn Egg",
+      "key.minefinity_gauntlet.quick_slot_2": "Quick Slot 2",
+      "key.minefinity_gauntlet.quick_slot_3": "Quick Slot 3",
+      "key.minefinity_gauntlet.quick_slot_4": "Quick Slot 4",
+      "gui.minefinity_gauntlet.find_tp_gui.dur": "Duration:",
+      "item_group.minefinity_gauntlet.minefinity_creative_tab": "Minefinity - Weapons",
+      "gui.minefinity_gauntlet.select_ability_soul.button_barri": "Barrier",
+      "gui.minefinity_gauntlet.universal_law_gui.button_cre": "Create",
+      "gui.minefinity_gauntlet.select_ability_mind.button_2": "2",
+      "gui.minefinity_gauntlet.select_ability_mind.button_1": "1",
+      "item.minefinity_gauntlet.infinity_gauntlet": "Infinity Gauntlet (temp)",
+      "entity.minefinity_gauntlet.exp": "Exp",
+      "gui.minefinity_gauntlet.select_ability_mind.button_4": "4",
+      "gui.minefinity_gauntlet.select_ability_mind.button_3": "3",
+      "item.minefinity_gauntlet.cosmi_rod": "Cosmi-Rod",
+      "gui.minefinity_gauntlet.select_ability_mind.button_6": "6",
+      "gui.minefinity_gauntlet.select_ability_time.button_6": "6",
+      "gui.minefinity_gauntlet.select_ability_mind.button_5": "5",
+      "gui.minefinity_gauntlet.select_ability_reality.button_4": "4",
+      "gui.minefinity_gauntlet.select_ability_time.button_5": "5",
+      "gui.minefinity_gauntlet.select_ability_reality.button_3": "3",
+      "gui.minefinity_gauntlet.select_ability_time.button_4": "4",
+      "gui.minefinity_gauntlet.select_ability_reality.button_2": "2",
+      "gui.minefinity_gauntlet.select_ability_time.button_3": "3",
+      "gui.minefinity_gauntlet.select_ability_reality.button_1": "1",
+      "gui.minefinity_gauntlet.select_ability_time.button_2": "2",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_infinity_b": "Infinity Beam",
+      "gui.minefinity_gauntlet.select_ability_time.button_1": "1",
+      "gui.minefinity_gauntlet.select_ability_time.button_time_slow": "Time Slow",
+      "gui.minefinity_gauntlet.select_ability_reality.button_tp": "Tp",
+      "gui.minefinity_gauntlet.select_ability_time.button_time_stop": "Time Stop",
+      "gui.minefinity_gauntlet.select_ability_space.button_anchor_set": "Anchor Set",
+      "item.minefinity_gauntlet.fake_block_entity_spawn_egg": "block Spawn Egg",
+      "gui.minefinity_gauntlet.law_creation_gui.button_event_cancel": "Event Cancel",
+      "gui.minefinity_gauntlet.select_ability_power.button_1": "1",
+      "item.minefinity_gauntlet.p_2": "P2",
+      "gui.minefinity_gauntlet.select_ability_power.button_powerpunch": "powerpunch",
+      "item.minefinity_gauntlet.p_3": "P3",
+      "gui.minefinity_gauntlet.select_ability_power.button_6": "6",
+      "gui.minefinity_gauntlet.select_ability_power.button_3": "3",
+      "gui.minefinity_gauntlet.select_ability_power.button_2": "2",
+      "gui.minefinity_gauntlet.select_ability_power.button_5": "5",
+      "gui.minefinity_gauntlet.select_ability_reality.button_6": "6",
+      "gui.minefinity_gauntlet.select_ability_power.button_4": "4",
+      "gui.minefinity_gauntlet.select_ability_reality.button_5": "5",
+      "key.minefinity_gauntlet.select_ability": "Select Ability",
+      "key.minefinity_gauntlet.select_stone": "Select Stone",
+      "item_group.minefinity_gauntlet.minefinity_creative_tab_3": "Minefinity - Misc",
+      "item.minefinity_gauntlet.minefinity_tab": "Minefinity Tab",
+      "item_group.minefinity_gauntlet.minefinity_creative_tab_2": "Minefinity - Stones",
+      "item.minefinity_gauntlet.reality_stone": "Reality Stone",
+      "gui.minefinity_gauntlet.universal_law_gui.button_empty": "X",
+      "gui.minefinity_gauntlet.select_ability_reality.button_warp": "Warp",
+      "gui.minefinity_gauntlet.s_4_gui.tooltip_confirm_the_portal": "Confirm the Portal",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_snap": "Snap",
+      "gui.minefinity_gauntlet.find_tp_gui.tppz": "Z: ",
+      "item.minefinity_gauntlet.time_stone": "Time Stone",
+      "gui.minefinity_gauntlet.select_ability_reality.button_athmosphere_shi": "Athmosphere Shift",
+      "gui.minefinity_gauntlet.find_tp_gui.tooltip_confirm_the_portal": "Confirm the Portal",
+      "gui.minefinity_gauntlet.select_ability_soul.button_5": "5",
+      "gui.minefinity_gauntlet.law_creation_gui.label_law_creation": "Law Creation",
+      "gui.minefinity_gauntlet.select_ability_soul.button_4": "4",
+      "gui.minefinity_gauntlet.find_tp_gui.tppx": "X:",
+      "gui.minefinity_gauntlet.select_ability_soul.button_6": "6",
+      "gui.minefinity_gauntlet.find_tp_gui.tppy": "Y: ",
+      "gui.minefinity_gauntlet.select_ability_soul.button_1": "1",
+      "gui.minefinity_gauntlet.select_ability_reality.button_detailed_teleport": "Detailed Teleport",
+      "gui.minefinity_gauntlet.select_ability_soul.button_3": "3",
+      "gui.minefinity_gauntlet.select_ability_soul.button_2": "2",
+      "gui.minefinity_gauntlet.universal_law_gui.label_universal_law": "Universal Law",
+      "gui.minefinity_gauntlet.select_ability_reality.button_projectile_nega": "Projectile negation",
+      "item.minefinity_gauntlet.space_stone": "Space Stone",
+      "gui.minefinity_gauntlet.select_ability_space.button_tp": "Tp",
+      "item.minefinity_gauntlet.teserract": "Teserract",
+      "gui.minefinity_gauntlet.select_ability_power.button_powerbeam": "PowerBeam",
+      "item.minefinity_gauntlet.s_1": "S 1 (warp)",
+      "gui.minefinity_gauntlet.s_4_gui.button_empty": "",
+      "gui.minefinity_gauntlet.select_ability_reality.button_anchor_set": "Anchor Set",
+      "entity.minefinity_gauntlet.portal": "Portal",
+      "gui.minefinity_gauntlet.select_ability_space.button_detailed_teleport": "Detailed Teleport",
+      "item.minefinity_gauntlet.power_stone": "Power Stone"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Gauntlet",
+        "children": [
+          {
+            "name": "Powers",
+            "children": [
+              {
+                "name": "Space",
+                "children": [
+                  {
+                    "name": "Warp",
+                    "children": []
+                  },
+                  {
+                    "name": "AnchorWarp",
+                    "children": []
+                  },
+                  {
+                    "name": "Teleport",
+                    "children": []
+                  },
+                  {
+                    "name": "TelekinesisBlock",
+                    "children": []
+                  },
+                  {
+                    "name": "FindAndTeleport",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Power",
+                "children": [
+                  {
+                    "name": "PowerPunch",
+                    "children": []
+                  },
+                  {
+                    "name": "PowerLaunch",
+                    "children": []
+                  },
+                  {
+                    "name": "PowerBeam",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Time",
+                "children": [
+                  {
+                    "name": "Slow Time",
+                    "children": []
+                  },
+                  {
+                    "name": "Stop Time",
+                    "children": []
+                  },
+                  {
+                    "name": "TimeAnchorSet",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Soul",
+                "children": [
+                  {
+                    "name": "SoulBarrier",
+                    "children": []
+                  },
+                  {
+                    "name": "VampireBeam",
+                    "children": []
+                  },
+                  {
+                    "name": "SoulSwap",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Reality",
+                "children": [
+                  {
+                    "name": "ProjectileNegation",
+                    "children": []
+                  },
+                  {
+                    "name": "AtmospehereShift",
+                    "children": []
+                  },
+                  {
+                    "name": "Heal",
+                    "children": []
+                  },
+                  {
+                    "name": "BlockShift",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Mind",
+                "children": [
+                  {
+                    "name": "Brain Shutdown",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "Infinity",
+                "children": [
+                  {
+                    "name": "UniversalLaw",
+                    "children": [
+                      {
+                        "name": "GUIs",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Gauntlet",
+            "children": [
+              {
+                "name": "SelectionKeybinds",
+                "children": []
+              },
+              {
+                "name": "StoneSelect",
+                "children": []
+              },
+              {
+                "name": "PowerSelect",
+                "children": [
+                  {
+                    "name": "Power",
+                    "children": []
+                  },
+                  {
+                    "name": "Space",
+                    "children": []
+                  },
+                  {
+                    "name": "Reality",
+                    "children": []
+                  },
+                  {
+                    "name": "Time",
+                    "children": []
+                  },
+                  {
+                    "name": "Soul",
+                    "children": []
+                  },
+                  {
+                    "name": "Mind",
+                    "children": []
+                  },
+                  {
+                    "name": "Infinity",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "SelectedPowerText",
+                "children": []
+              },
+              {
+                "name": "slotselect",
+                "children": []
+              },
+              {
+                "name": "StoneCycleThroughGUI",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Particles",
+        "children": []
+      },
+      {
+        "name": "Effects",
+        "children": [
+          {
+            "name": "ScreenShake",
+            "children": []
+          },
+          {
+            "name": "Decay",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Misc",
+        "children": [
+          {
+            "name": "Tab",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Entities",
+        "children": [
+          {
+            "name": "Portal",
+            "children": []
+          },
+          {
+            "name": "FakeBlockEntity",
+            "children": []
+          },
+          {
+            "name": "HerePortal",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "InfinityStones",
+        "children": [
+          {
+            "name": "Power",
+            "children": []
+          },
+          {
+            "name": "Space",
+            "children": []
+          },
+          {
+            "name": "Time",
+            "children": []
+          },
+          {
+            "name": "Soul",
+            "children": []
+          },
+          {
+            "name": "Reality",
+            "children": []
+          },
+          {
+            "name": "Mind",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Overlay",
+        "children": []
+      },
+      {
+        "name": "Weapons",
+        "children": [
+          {
+            "name": "CosmiRod",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "minefinity_gauntlet",
+    "modName": "minefinity gauntlet",
+    "version": "1.0.1",
+    "description": "infinity gauntlet hell yeah",
+    "author": "Efkrdnz",
+    "websiteURL": "https://mcreator.net",
+    "license": "Apache License version 2.0",
+    "serverSideOnly": false,
+    "requiredMods": [
+      "geckolib"
+    ],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "efkrdnz",
+    "modElementsPackage": "net.mcreator.minefinitygauntlet"
+  },
+  "mcreatorVersion": 202400342716
+}

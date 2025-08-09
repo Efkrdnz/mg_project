@@ -1,0 +1,240 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 168,
+    "height": 178,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower2"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 67
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower3"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 90
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower4"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 114
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_5",
+          "text": "5",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower5"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_6",
+          "text": "6",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower6"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 160
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_powerstone",
+          "image": "button_powerstone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCyclePower"
+          },
+          "x": 135,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_realitystone",
+          "image": "button_space.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleSpace"
+          },
+          "x": 167,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_timestone",
+          "image": "button_timestone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleTime"
+          },
+          "x": 199,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_mindstone",
+          "image": "button_mindstone.png",
+          "hoveredImage": "",
+          "x": 231,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_soulstone",
+          "image": "button_soulstone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleSoul"
+          },
+          "x": 263,
+          "y": 36
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_projectile_nega",
+          "text": "Projectile negation",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectReality"
+          },
+          "width": 103,
+          "height": 20,
+          "x": 135,
+          "y": 72
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_athmosphere_shi",
+          "text": "Athmosphere Shift",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectReality2"
+          },
+          "width": 103,
+          "height": 20,
+          "x": 135,
+          "y": 95
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_h",
+          "text": "Heal",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectReality3"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 249,
+          "y": 72
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_block_sh",
+          "text": "Block Shift",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectReality4"
+          },
+          "width": 66,
+          "height": 20,
+          "x": 135,
+          "y": 118
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "SelectAbilityThisGUIIsClosed"
+    },
+    "onClosed": {
+      "name": "SelectAbilityThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

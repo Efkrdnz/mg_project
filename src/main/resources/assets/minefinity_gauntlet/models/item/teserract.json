@@ -1,0 +1,7 @@
+{
+  "parent": "minefinity_gauntlet:custom/tesseract",
+  "textures": {
+    "0": "minefinity_gauntlet:block/tesseract",
+    "particle": "minefinity_gauntlet:item/tesseract"
+  }
+}

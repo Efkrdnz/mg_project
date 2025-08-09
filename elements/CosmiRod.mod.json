@@ -1,0 +1,37 @@
+{
+  "_fv": 69,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "cosmirodempty",
+    "customModelName": "cosmi-rodcosmirod:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Cosmi-Rod",
+    "specialInformation": {
+      "fixedValue": [
+        "This hammer seems to have a space for stone in the middle."
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MinefinityCreativeTab"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 9.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

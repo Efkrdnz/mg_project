@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "never",
+    "effects": "hurt",
+    "normalDeathMessage": "%1$s was drained.",
+    "itemDeathMessage": "%1$s was drained by %2$s using %3$s",
+    "playerDeathMessage": "%1$s dried whilst trying to escape %2$s"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 86,
+    "height": 152,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Radius:",
+          "name": "rad",
+          "width": 120,
+          "height": 20,
+          "x": 177,
+          "y": 50
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Entity:",
+          "name": "type",
+          "width": 120,
+          "height": 20,
+          "x": 177,
+          "y": 72
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Duration:",
+          "name": "dur",
+          "width": 120,
+          "height": 20,
+          "x": 177,
+          "y": 94
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_gate.png",
+          "use1Xscale": true,
+          "x": 202,
+          "y": 161
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "",
+          "isUndecorated": true,
+          "onClick": {
+            "name": "TpHerePortalPlace"
+          },
+          "width": 25,
+          "height": 20,
+          "x": 202,
+          "y": 163
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_confirm_the_portal",
+          "text": {
+            "fixedValue": "Confirm the Portal"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 203,
+          "y": 162
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "2",
+    "keyBindingName": "Quick Slot 2",
+    "keyBindingCategoryKey": "minefinity_gauntlet",
+    "onKeyPressed": {
+      "name": "QuickSlot2OnKeyPressed"
+    }
+  }
+}

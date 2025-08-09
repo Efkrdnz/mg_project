@@ -1,0 +1,30 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "power": 0.0,
+    "damage": 0.0,
+    "knockback": 0,
+    "entityModel": "Modelinv",
+    "customModelTexture": "inv.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsBlock": {
+      "name": "InvProjectileHitsBlock"
+    },
+    "onHitsEntity": {
+      "name": "InvProjectileHitsBlock"
+    },
+    "onFlyingTick": {
+      "name": "InvWhileProjectileFlyingTick"
+    }
+  }
+}

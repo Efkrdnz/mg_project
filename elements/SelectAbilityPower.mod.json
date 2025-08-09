@@ -1,0 +1,225 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 168,
+    "height": 178,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_powerpunch",
+          "text": "powerpunch",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectPower1"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 137,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_launch",
+          "text": "launch",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectPower2"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 230,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_powerbeam",
+          "text": "PowerBeam",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectPower3"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 137,
+          "y": 96
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 41
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower2"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 65
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower3"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower4"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_5",
+          "text": "5",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower5"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_6",
+          "text": "6",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower6"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 160
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_space",
+          "image": "button_space.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleSpace"
+          },
+          "x": 135,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_realitystone",
+          "image": "button_realitystone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleReality"
+          },
+          "x": 167,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_timestone",
+          "image": "button_timestone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleTime"
+          },
+          "x": 199,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_mindstone",
+          "image": "button_mindstone.png",
+          "hoveredImage": "",
+          "x": 231,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_soulstone",
+          "image": "button_soulstone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleSoul"
+          },
+          "x": 263,
+          "y": 36
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "SelectAbilityThisGUIIsClosed"
+    },
+    "onClosed": {
+      "name": "SelectAbilityThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

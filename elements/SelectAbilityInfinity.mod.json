@@ -1,0 +1,79 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 168,
+    "height": 178,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_snap",
+          "text": "Snap",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectInfinity"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 135,
+          "y": 39
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_timeline_erasu",
+          "text": "Timeline Erasure",
+          "isUndecorated": false,
+          "width": 98,
+          "height": 20,
+          "x": 193,
+          "y": 39
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_infinity_b",
+          "text": "Infinity Beam",
+          "isUndecorated": false,
+          "width": 77,
+          "height": 20,
+          "x": 135,
+          "y": 63
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_universal",
+          "text": "Universal Law",
+          "isUndecorated": false,
+          "width": 77,
+          "height": 20,
+          "x": 214,
+          "y": 63
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "SelectAbilityThisGUIIsClosed"
+    },
+    "onClosed": {
+      "name": "SelectAbilityThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

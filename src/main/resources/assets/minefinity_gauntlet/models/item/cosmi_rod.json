@@ -1,0 +1,7 @@
+{
+  "parent": "minefinity_gauntlet:custom/cosmi-rodcosmirod",
+  "textures": {
+    "0": "minefinity_gauntlet:block/cosmirodempty",
+    "particle": "minefinity_gauntlet:item/cosmirodempty"
+  }
+}

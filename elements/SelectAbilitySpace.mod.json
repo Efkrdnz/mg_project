@@ -1,0 +1,270 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 168,
+    "height": 178,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_warp",
+          "text": "Warp",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSpace1"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 135,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_anchor_set",
+          "text": "Anchor Set",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSpace2"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 182,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_tp",
+          "text": "Tp",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSpace3"
+          },
+          "width": 35,
+          "height": 20,
+          "x": 260,
+          "y": 68
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_detailed_teleport",
+          "text": "Detailed Teleport",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSpace4"
+          },
+          "width": 114,
+          "height": 20,
+          "x": 135,
+          "y": 91
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_block_telekinesis",
+          "text": "Block Telekinesis",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSpace5"
+          },
+          "width": 114,
+          "height": 20,
+          "x": 135,
+          "y": 114
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower2"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 67
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower3"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 90
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower4"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 114
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_5",
+          "text": "5",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower5"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_6",
+          "text": "6",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower6"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 160
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_powerstone",
+          "image": "button_powerstone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCyclePower"
+          },
+          "x": 135,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_realitystone",
+          "image": "button_realitystone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleReality"
+          },
+          "x": 167,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_timestone",
+          "image": "button_timestone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleTime"
+          },
+          "x": 199,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_mindstone",
+          "image": "button_mindstone.png",
+          "hoveredImage": "",
+          "x": 231,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_button_soulstone",
+          "image": "button_soulstone.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleSoul"
+          },
+          "x": 263,
+          "y": 36
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_vacuum_portal",
+          "text": "Vacuum Portal",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSpace6"
+          },
+          "width": 93,
+          "height": 20,
+          "x": 135,
+          "y": 137
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "SelectAbilityThisGUIIsClosed"
+    },
+    "onClosed": {
+      "name": "SelectAbilityThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}
