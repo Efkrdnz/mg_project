@@ -220,6 +220,9 @@
           "name": "imagebutton_button_mindstone",
           "image": "button_mindstone.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleMind"
+          },
           "x": 231,
           "y": 36
         }
@@ -250,6 +253,36 @@
           "height": 20,
           "x": 135,
           "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_singularity",
+          "text": "Singularity",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSpace7"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 135,
+          "y": 160
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_normalize_space",
+          "text": "Normalize Space",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSpace8"
+          },
+          "width": 103,
+          "height": 20,
+          "x": 135,
+          "y": 183
         }
       }
     ],

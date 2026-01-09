@@ -22,6 +22,7 @@ import net.mcreator.minefinitygauntlet.procedures.StoneCycleSpaceProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCycleSoulProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCycleRealityProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCyclePowerProcedure;
+import net.mcreator.minefinitygauntlet.procedures.StoneCycleMindProcedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPowerProcedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower6Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower5Procedure;
@@ -128,6 +129,10 @@ public record SelectAbilityTimeButtonMessage(int buttonID, int x, int y, int z, 
 		if (buttonID == 10) {
 
 			StoneCycleRealityProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 11) {
+
+			StoneCycleMindProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 12) {
 

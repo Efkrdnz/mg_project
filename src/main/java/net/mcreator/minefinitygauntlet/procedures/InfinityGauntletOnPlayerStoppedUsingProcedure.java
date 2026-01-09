@@ -10,5 +10,7 @@ public class InfinityGauntletOnPlayerStoppedUsingProcedure {
 		R1OnPlayerStoppedUsingProcedure.execute(entity);
 		So1UseFinishRCProcedure.execute(entity);
 		So2VampiricBeamStopUsingProcedure.execute(entity);
+		DisableSingularityProcedure.execute(entity);
+		DisableSingularityShrinkProcedure.execute(entity);
 	}
 }

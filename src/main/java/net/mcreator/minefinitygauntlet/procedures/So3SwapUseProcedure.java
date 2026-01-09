@@ -11,7 +11,7 @@ import net.minecraft.server.level.ServerPlayer;
 import java.util.Comparator;
 
 public class So3SwapUseProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		Entity ent = null;
@@ -23,7 +23,7 @@ public class So3SwapUseProcedure {
 		String found_entity_name = "";
 		raytrace_distance = 0;
 		entity_found = false;
-		for (int index0 = 0; index0 < 15; index0++) {
+		for (int index0 = 0; index0 < 50; index0++) {
 			if (!world
 					.getEntitiesOfClass(LivingEntity.class,
 							AABB.ofSize(new Vec3(
@@ -90,9 +90,38 @@ public class So3SwapUseProcedure {
 										.getBlockPos().getZ())))
 						.findFirst().orElse(null)) == (null))) {
 					if (entity_found) {
-						old_x = x;
-						old_y = y;
-						old_z = z;
+						ent = (Entity) world
+								.getEntitiesOfClass(LivingEntity.class,
+										AABB.ofSize(
+												new Vec3(
+														(entity.level()
+																.clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,
+																		entity))
+																.getBlockPos().getX()),
+														(entity.level()
+																.clip(new ClipContext(
+																		entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
+																.getBlockPos().getY()),
+														(entity.level().clip(
+																new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
+																.getBlockPos().getZ())),
+												1, 1, 1),
+										e -> true)
+								.stream().sorted(new Object() {
+									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+									}
+								}.compareDistOf(
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
+												.getBlockPos().getX()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
+												.getBlockPos().getY()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(raytrace_distance)), ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, entity))
+												.getBlockPos().getZ())))
+								.findFirst().orElse(null);
+						old_x = entity.getX();
+						old_y = entity.getY();
+						old_z = entity.getZ();
 						{
 							Entity _ent = entity;
 							_ent.teleportTo((ent.getX()), (ent.getY()), (ent.getZ()));

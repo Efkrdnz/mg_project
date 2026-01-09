@@ -1,0 +1,362 @@
+{
+  "_fv": 69,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 190,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease0"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 25
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon1",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease1"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon2",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease2"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon3",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease3"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 81
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon4",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease4"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 100
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon5",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease5"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 119
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon6",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease6"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 138
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon7",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease7"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 157
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon8",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease8"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 176
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_summon9",
+          "text": "Summon",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoulStorageRelease9"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 258,
+          "y": 195
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "Up",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoStorageButtonScrollUp"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 313,
+          "y": 25
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "Down",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SoStorageButtonScrollDown"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 313,
+          "y": 195
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_0",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel0"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 31
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_1",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 50
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_2",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel2"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_3",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel3"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 87
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_4",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 106
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_5",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_6",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel6"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 144
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_7",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel7"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 163
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_8",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel8"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 182
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_storage_label_9",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulStorageLabel9"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 122,
+          "y": 201
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -13,6 +13,8 @@ import net.minecraft.core.registries.Registries;
 
 import net.mcreator.minefinitygauntlet.world.inventory.UniversalLawGuiMenu;
 import net.mcreator.minefinitygauntlet.world.inventory.StoneSelectGuiMenu;
+import net.mcreator.minefinitygauntlet.world.inventory.SoulStorageMenu;
+import net.mcreator.minefinitygauntlet.world.inventory.SoulStoneGUIMenu;
 import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilityTimeMenu;
 import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilitySpaceMenu;
 import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilitySoulMenu;
@@ -39,4 +41,6 @@ public class MinefinityGauntletModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<UniversalLawGuiMenu>> UNIVERSAL_LAW_GUI = REGISTRY.register("universal_law_gui", () -> IMenuTypeExtension.create(UniversalLawGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<LawCreationGuiMenu>> LAW_CREATION_GUI = REGISTRY.register("law_creation_gui", () -> IMenuTypeExtension.create(LawCreationGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<FindTpGUIMenu>> FIND_TP_GUI = REGISTRY.register("find_tp_gui", () -> IMenuTypeExtension.create(FindTpGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<SoulStoneGUIMenu>> SOUL_STONE_GUI = REGISTRY.register("soul_stone_gui", () -> IMenuTypeExtension.create(SoulStoneGUIMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<SoulStorageMenu>> SOUL_STORAGE = REGISTRY.register("soul_storage", () -> IMenuTypeExtension.create(SoulStorageMenu::new));
 }

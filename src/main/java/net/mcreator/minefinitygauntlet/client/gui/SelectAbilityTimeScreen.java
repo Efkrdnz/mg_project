@@ -201,6 +201,10 @@ public class SelectAbilityTimeScreen extends AbstractContainerScreen<SelectAbili
 		this.addRenderableWidget(imagebutton_button_timestone);
 		imagebutton_button_mindstone = new ImageButton(this.leftPos + 101, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_mindstone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_mindstone.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new SelectAbilityTimeButtonMessage(11, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilityTimeButtonMessage.handleButtonAction(entity, 11, x, y, z, getEditBoxAndCheckBoxValues());
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {

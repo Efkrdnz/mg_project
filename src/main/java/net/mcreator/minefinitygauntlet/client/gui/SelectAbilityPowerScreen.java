@@ -35,6 +35,7 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 	Button button_4;
 	Button button_5;
 	Button button_6;
+	Button button_world_sunder;
 	ImageButton imagebutton_button_space;
 	ImageButton imagebutton_button_realitystone;
 	ImageButton imagebutton_button_timestone;
@@ -104,7 +105,7 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 				PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
 				SelectAbilityPowerButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
 			}
-		}).bounds(this.leftPos + 7, this.topPos + 37, 77, 20).build();
+		}).bounds(this.leftPos + 6, this.topPos + 40, 77, 20).build();
 		guistate.put("button:button_powerpunch", button_powerpunch);
 		this.addRenderableWidget(button_powerpunch);
 		button_launch = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_power.button_launch"), e -> {
@@ -112,7 +113,7 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 				PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(1, x, y, z, getEditBoxAndCheckBoxValues()));
 				SelectAbilityPowerButtonMessage.handleButtonAction(entity, 1, x, y, z, getEditBoxAndCheckBoxValues());
 			}
-		}).bounds(this.leftPos + 100, this.topPos + 37, 56, 20).build();
+		}).bounds(this.leftPos + 88, this.topPos + 40, 56, 20).build();
 		guistate.put("button:button_launch", button_launch);
 		this.addRenderableWidget(button_launch);
 		button_powerbeam = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_power.button_powerbeam"), e -> {
@@ -120,7 +121,7 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 				PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(2, x, y, z, getEditBoxAndCheckBoxValues()));
 				SelectAbilityPowerButtonMessage.handleButtonAction(entity, 2, x, y, z, getEditBoxAndCheckBoxValues());
 			}
-		}).bounds(this.leftPos + 7, this.topPos + 65, 72, 20).build();
+		}).bounds(this.leftPos + 4, this.topPos + 64, 72, 20).build();
 		guistate.put("button:button_powerbeam", button_powerbeam);
 		this.addRenderableWidget(button_powerbeam);
 		button_1 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_power.button_1"), e -> {
@@ -128,7 +129,7 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 				PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(3, x, y, z, getEditBoxAndCheckBoxValues()));
 				SelectAbilityPowerButtonMessage.handleButtonAction(entity, 3, x, y, z, getEditBoxAndCheckBoxValues());
 			}
-		}).bounds(this.leftPos + -32, this.topPos + 10, 30, 20).build();
+		}).bounds(this.leftPos + -32, this.topPos + 13, 30, 20).build();
 		guistate.put("button:button_1", button_1);
 		this.addRenderableWidget(button_1);
 		button_2 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_power.button_2"), e -> {
@@ -136,7 +137,7 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 				PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(4, x, y, z, getEditBoxAndCheckBoxValues()));
 				SelectAbilityPowerButtonMessage.handleButtonAction(entity, 4, x, y, z, getEditBoxAndCheckBoxValues());
 			}
-		}).bounds(this.leftPos + -32, this.topPos + 34, 30, 20).build();
+		}).bounds(this.leftPos + -32, this.topPos + 36, 30, 20).build();
 		guistate.put("button:button_2", button_2);
 		this.addRenderableWidget(button_2);
 		button_3 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_power.button_3"), e -> {
@@ -144,7 +145,7 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 				PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(5, x, y, z, getEditBoxAndCheckBoxValues()));
 				SelectAbilityPowerButtonMessage.handleButtonAction(entity, 5, x, y, z, getEditBoxAndCheckBoxValues());
 			}
-		}).bounds(this.leftPos + -32, this.topPos + 58, 30, 20).build();
+		}).bounds(this.leftPos + -32, this.topPos + 59, 30, 20).build();
 		guistate.put("button:button_3", button_3);
 		this.addRenderableWidget(button_3);
 		button_4 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_power.button_4"), e -> {
@@ -152,7 +153,7 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 				PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(6, x, y, z, getEditBoxAndCheckBoxValues()));
 				SelectAbilityPowerButtonMessage.handleButtonAction(entity, 6, x, y, z, getEditBoxAndCheckBoxValues());
 			}
-		}).bounds(this.leftPos + -32, this.topPos + 82, 30, 20).build();
+		}).bounds(this.leftPos + -32, this.topPos + 83, 30, 20).build();
 		guistate.put("button:button_4", button_4);
 		this.addRenderableWidget(button_4);
 		button_5 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_power.button_5"), e -> {
@@ -171,11 +172,19 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 		}).bounds(this.leftPos + -32, this.topPos + 129, 30, 20).build();
 		guistate.put("button:button_6", button_6);
 		this.addRenderableWidget(button_6);
+		button_world_sunder = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_power.button_world_sunder"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(9, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilityPowerButtonMessage.handleButtonAction(entity, 9, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + 77, this.topPos + 64, 87, 20).build();
+		guistate.put("button:button_world_sunder", button_world_sunder);
+		this.addRenderableWidget(button_world_sunder);
 		imagebutton_button_space = new ImageButton(this.leftPos + 5, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_space.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_space.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(9, x, y, z, getEditBoxAndCheckBoxValues()));
-						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 9, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(10, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 10, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -188,8 +197,8 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 		imagebutton_button_realitystone = new ImageButton(this.leftPos + 37, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_realitystone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_realitystone.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(10, x, y, z, getEditBoxAndCheckBoxValues()));
-						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 10, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(11, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 11, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -202,8 +211,8 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 		imagebutton_button_timestone = new ImageButton(this.leftPos + 69, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_timestone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_timestone.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(11, x, y, z, getEditBoxAndCheckBoxValues()));
-						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 11, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(12, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 12, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -215,6 +224,10 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 		this.addRenderableWidget(imagebutton_button_timestone);
 		imagebutton_button_mindstone = new ImageButton(this.leftPos + 101, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_mindstone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_mindstone.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(13, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 13, x, y, z, getEditBoxAndCheckBoxValues());
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
@@ -226,8 +239,8 @@ public class SelectAbilityPowerScreen extends AbstractContainerScreen<SelectAbil
 		imagebutton_button_soulstone = new ImageButton(this.leftPos + 133, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_soulstone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_soulstone.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(13, x, y, z, getEditBoxAndCheckBoxValues()));
-						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 13, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new SelectAbilityPowerButtonMessage(14, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilityPowerButtonMessage.handleButtonAction(entity, 14, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override

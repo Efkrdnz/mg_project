@@ -145,6 +145,9 @@
           "name": "imagebutton_button_mindstone",
           "image": "button_mindstone.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleMind"
+          },
           "x": 231,
           "y": 36
         }
@@ -205,6 +208,36 @@
           "height": 20,
           "x": 139,
           "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_soul_capture",
+          "text": "Soul Capture",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSoul4"
+          },
+          "width": 87,
+          "height": 20,
+          "x": 201,
+          "y": 98
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_soul_storage",
+          "text": "Soul Storage",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectSoul5"
+          },
+          "width": 87,
+          "height": 20,
+          "x": 139,
+          "y": 124
         }
       }
     ],

@@ -53,6 +53,7 @@ public class MinefinityGauntletModTabs {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
 
 			tabData.accept(MinefinityGauntletModItems.FAKE_BLOCK_ENTITY_SPAWN_EGG.get());
+			tabData.accept(MinefinityGauntletModItems.BLACKHOLE_SPAWN_EGG.get());
 
 		}
 	}

@@ -20,6 +20,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilityMindMenu;
 import net.mcreator.minefinitygauntlet.procedures.StoneCycleTimeProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCycleSpaceProcedure;
+import net.mcreator.minefinitygauntlet.procedures.StoneCycleSoulProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCycleRealityProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCyclePowerProcedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPowerProcedure;
@@ -29,7 +30,7 @@ import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower4Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower3Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower2Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SelectAbilityThisGUIIsClosedProcedure;
-import net.mcreator.minefinitygauntlet.procedures.AbilitySelectSoul1Procedure;
+import net.mcreator.minefinitygauntlet.procedures.AbilitySelectMind1Procedure;
 import net.mcreator.minefinitygauntlet.MinefinityGauntletMod;
 
 import java.util.Map;
@@ -110,23 +111,27 @@ public record SelectAbilityMindButtonMessage(int buttonID, int x, int y, int z, 
 		}
 		if (buttonID == 6) {
 
-			StoneCyclePowerProcedure.execute(world, x, y, z, entity);
+			AbilitySelectMind1Procedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			StoneCycleSpaceProcedure.execute(world, x, y, z, entity);
+			StoneCyclePowerProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 8) {
 
-			StoneCycleTimeProcedure.execute(world, x, y, z, entity);
+			StoneCycleSpaceProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 9) {
 
-			StoneCycleRealityProcedure.execute(world, x, y, z, entity);
+			StoneCycleTimeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 10) {
 
-			AbilitySelectSoul1Procedure.execute(entity);
+			StoneCycleRealityProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 11) {
+
+			StoneCycleSoulProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

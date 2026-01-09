@@ -60,6 +60,7 @@ public class MinefinityGauntletModItems {
 	public static final DeferredItem<Item> COSMI_ROD = REGISTRY.register("cosmi_rod", CosmiRodItem::new);
 	public static final DeferredItem<Item> COSMI_ROD_POWER = REGISTRY.register("cosmi_rod_power", CosmiRodPowerItem::new);
 	public static final DeferredItem<Item> UNIVERSAL_LAW_TESTITEM = REGISTRY.register("universal_law_testitem", UniversalLawTestitemItem::new);
+	public static final DeferredItem<Item> BLACKHOLE_SPAWN_EGG = REGISTRY.register("blackhole_spawn_egg", () -> new DeferredSpawnEggItem(MinefinityGauntletModEntities.BLACKHOLE, -1, -1, new Item.Properties()));
 	// Start of user code block custom items
 	// End of user code block custom items
 }

@@ -11,6 +11,8 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.minefinitygauntlet.client.gui.UniversalLawGuiScreen;
 import net.mcreator.minefinitygauntlet.client.gui.StoneSelectGuiScreen;
+import net.mcreator.minefinitygauntlet.client.gui.SoulStorageScreen;
+import net.mcreator.minefinitygauntlet.client.gui.SoulStoneGUIScreen;
 import net.mcreator.minefinitygauntlet.client.gui.SelectAbilityTimeScreen;
 import net.mcreator.minefinitygauntlet.client.gui.SelectAbilitySpaceScreen;
 import net.mcreator.minefinitygauntlet.client.gui.SelectAbilitySoulScreen;
@@ -38,5 +40,7 @@ public class MinefinityGauntletModScreens {
 		event.register(MinefinityGauntletModMenus.UNIVERSAL_LAW_GUI.get(), UniversalLawGuiScreen::new);
 		event.register(MinefinityGauntletModMenus.LAW_CREATION_GUI.get(), LawCreationGuiScreen::new);
 		event.register(MinefinityGauntletModMenus.FIND_TP_GUI.get(), FindTpGUIScreen::new);
+		event.register(MinefinityGauntletModMenus.SOUL_STONE_GUI.get(), SoulStoneGUIScreen::new);
+		event.register(MinefinityGauntletModMenus.SOUL_STORAGE.get(), SoulStorageScreen::new);
 	}
 }

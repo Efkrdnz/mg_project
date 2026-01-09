@@ -38,6 +38,8 @@ public class SelectAbilitySpaceScreen extends AbstractContainerScreen<SelectAbil
 	Button button_5;
 	Button button_6;
 	Button button_vacuum_portal;
+	Button button_singularity;
+	Button button_normalize_space;
 	ImageButton imagebutton_button_powerstone;
 	ImageButton imagebutton_button_realitystone;
 	ImageButton imagebutton_button_timestone;
@@ -193,11 +195,27 @@ public class SelectAbilitySpaceScreen extends AbstractContainerScreen<SelectAbil
 		}).bounds(this.leftPos + 5, this.topPos + 106, 93, 20).build();
 		guistate.put("button:button_vacuum_portal", button_vacuum_portal);
 		this.addRenderableWidget(button_vacuum_portal);
+		button_singularity = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_space.button_singularity"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(12, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 12, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + 5, this.topPos + 129, 82, 20).build();
+		guistate.put("button:button_singularity", button_singularity);
+		this.addRenderableWidget(button_singularity);
+		button_normalize_space = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_space.button_normalize_space"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(13, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 13, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + 5, this.topPos + 152, 103, 20).build();
+		guistate.put("button:button_normalize_space", button_normalize_space);
+		this.addRenderableWidget(button_normalize_space);
 		imagebutton_button_powerstone = new ImageButton(this.leftPos + 5, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_powerstone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_powerstone.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(12, x, y, z, getEditBoxAndCheckBoxValues()));
-						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 12, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(14, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 14, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -210,8 +228,8 @@ public class SelectAbilitySpaceScreen extends AbstractContainerScreen<SelectAbil
 		imagebutton_button_realitystone = new ImageButton(this.leftPos + 37, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_realitystone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_realitystone.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(13, x, y, z, getEditBoxAndCheckBoxValues()));
-						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 13, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(15, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 15, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -224,8 +242,8 @@ public class SelectAbilitySpaceScreen extends AbstractContainerScreen<SelectAbil
 		imagebutton_button_timestone = new ImageButton(this.leftPos + 69, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_timestone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_timestone.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(14, x, y, z, getEditBoxAndCheckBoxValues()));
-						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 14, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(16, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 16, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override
@@ -237,6 +255,10 @@ public class SelectAbilitySpaceScreen extends AbstractContainerScreen<SelectAbil
 		this.addRenderableWidget(imagebutton_button_timestone);
 		imagebutton_button_mindstone = new ImageButton(this.leftPos + 101, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_mindstone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_mindstone.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(17, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 17, x, y, z, getEditBoxAndCheckBoxValues());
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
@@ -248,8 +270,8 @@ public class SelectAbilitySpaceScreen extends AbstractContainerScreen<SelectAbil
 		imagebutton_button_soulstone = new ImageButton(this.leftPos + 133, this.topPos + 5, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_soulstone.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_soulstone.png")), e -> {
 					if (true) {
-						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(16, x, y, z, getEditBoxAndCheckBoxValues()));
-						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 16, x, y, z, getEditBoxAndCheckBoxValues());
+						PacketDistributor.sendToServer(new SelectAbilitySpaceButtonMessage(18, x, y, z, getEditBoxAndCheckBoxValues()));
+						SelectAbilitySpaceButtonMessage.handleButtonAction(entity, 18, x, y, z, getEditBoxAndCheckBoxValues());
 					}
 				}) {
 			@Override

@@ -11,6 +11,8 @@ import net.neoforged.bus.api.Event;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.GameRenderer;
@@ -194,7 +196,7 @@ public class P3BeamEffectProcedure {
 			RenderSystem.enableBlend();
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-			execute(event, entity, event.getPartialTick().getGameTimeDeltaPartialTick(false), event.getRenderTick());
+			execute(event, level, entity, event.getPartialTick().getGameTimeDeltaPartialTick(false), event.getRenderTick());
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
@@ -202,11 +204,11 @@ public class P3BeamEffectProcedure {
 		}
 	}
 
-	public static void execute(Entity entity, double partialTick, double ticks) {
-		execute(null, entity, partialTick, ticks);
+	public static void execute(LevelAccessor world, Entity entity, double partialTick, double ticks) {
+		execute(null, world, entity, partialTick, ticks);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity, double partialTick, double ticks) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, double partialTick, double ticks) {
 		if (entity == null)
 			return;
 		double width = 0;
@@ -226,42 +228,48 @@ public class P3BeamEffectProcedure {
 			} else {
 				sneak = 1.5;
 			}
-			if (target(2)) {
-				yaw = entity.getYRot() * 0.0174533 + Math.toRadians(145);
-				pitch = entity.getXRot() * 0.0174533;
-				speed = 0.2;
-				width = 0.15;
-				length = 15;
-				RenderSystem.setShaderTexture(0, ResourceLocation.parse(("minecraft" + ":textures/" + "entity/beacon_beam" + ".png")));
-				if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, (!Minecraft.getInstance().isPaused()))) {
-					i = width / (-2);
-					j = width / 2;
-					k = length - 0.5;
-					l = (ticks + partialTick) * speed;
-					m = length + l;
-					add((float) i, (float) i, (float) k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) i, (float) i, (float) i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) j, (float) i, (float) i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) j, (float) i, (float) k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) j, (float) j, (float) k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) j, (float) j, (float) i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) i, (float) j, (float) i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) i, (float) j, (float) k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) j, (float) i, (float) k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) j, (float) i, (float) i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) j, (float) j, (float) i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) j, (float) j, (float) k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) i, (float) j, (float) k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) i, (float) j, (float) i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) i, (float) i, (float) i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					add((float) i, (float) i, (float) k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
-					end();
+			if (world instanceof ClientLevel) {
+				for (Entity entityiterator : ((ClientLevel) world).entitiesForRendering()) {
+					if (entityiterator instanceof Player) {
+						if (target(2)) {
+							yaw = entity.getYRot() * 0.0174533 + Math.toRadians(145);
+							pitch = entity.getXRot() * 0.0174533;
+							speed = 0.2;
+							width = 0.15;
+							length = 15;
+							RenderSystem.setShaderTexture(0, ResourceLocation.parse(("minecraft" + ":textures/" + "entity/beacon_beam" + ".png")));
+							if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, (!Minecraft.getInstance().isPaused()))) {
+								i = width / (-2);
+								j = width / 2;
+								k = length - 0.5;
+								l = (ticks + partialTick) * speed;
+								m = length + l;
+								add((float) i, (float) i, (float) k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) i, (float) i, (float) i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) j, (float) i, (float) i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) j, (float) i, (float) k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) j, (float) j, (float) k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) j, (float) j, (float) i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) i, (float) j, (float) i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) i, (float) j, (float) k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) j, (float) i, (float) k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) j, (float) i, (float) i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) j, (float) j, (float) i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) j, (float) j, (float) k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) i, (float) j, (float) k, 0, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) i, (float) j, (float) i, 0, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) i, (float) i, (float) i, 1, (float) m, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								add((float) i, (float) i, (float) k, 1, (float) l, 255 << 24 | 255 << 16 | 255 << 8 | 255);
+								end();
+							}
+							renderShape(shape(), (entity.getX() + 0.2 * Math.cos(yaw) * Math.cos(pitch)), (entity.getY() + sneak + 0.2 * Math.sin((-1) * pitch)), (entity.getZ() + 0.2 * Math.sin(yaw) * Math.cos(pitch)),
+									(float) (entity.getYRot() + 0.25), entity.getXRot(), 0, (float) (-1.6), (float) 1.6, 1, 32 << 24 | 191 << 16 | 64 << 8 | 191);
+							renderShape(shape(), (entity.getX() + 0.2 * Math.cos(yaw) * Math.cos(pitch)), (entity.getY() + sneak + 0.2 * Math.sin((-1) * pitch)), (entity.getZ() + 0.2 * Math.sin(yaw) * Math.cos(pitch)),
+									(float) (entity.getYRot() + 0.25), entity.getXRot(), 0, 1, 1, 1, 255 << 24 | 191 << 16 | 64 << 8 | 191);
+							release();
+						}
+					}
 				}
-				renderShape(shape(), (entity.getX() + 0.2 * Math.cos(yaw) * Math.cos(pitch)), (entity.getY() + sneak + 0.2 * Math.sin((-1) * pitch)), (entity.getZ() + 0.2 * Math.sin(yaw) * Math.cos(pitch)), (float) (entity.getYRot() + 0.25),
-						entity.getXRot(), 0, (float) (-1.6), (float) 1.6, 1, 32 << 24 | 191 << 16 | 64 << 8 | 191);
-				renderShape(shape(), (entity.getX() + 0.2 * Math.cos(yaw) * Math.cos(pitch)), (entity.getY() + sneak + 0.2 * Math.sin((-1) * pitch)), (entity.getZ() + 0.2 * Math.sin(yaw) * Math.cos(pitch)), (float) (entity.getYRot() + 0.25),
-						entity.getXRot(), 0, 1, 1, 1, 255 << 24 | 191 << 16 | 64 << 8 | 191);
-				release();
 			}
 		}
 	}

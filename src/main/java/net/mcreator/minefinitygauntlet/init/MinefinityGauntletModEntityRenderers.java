@@ -14,6 +14,7 @@ import net.mcreator.minefinitygauntlet.client.renderer.InvRenderer;
 import net.mcreator.minefinitygauntlet.client.renderer.HerePortalRenderer;
 import net.mcreator.minefinitygauntlet.client.renderer.FakeBlockEntityRenderer;
 import net.mcreator.minefinitygauntlet.client.renderer.ExpRenderer;
+import net.mcreator.minefinitygauntlet.client.renderer.BlackholeRenderer;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class MinefinityGauntletModEntityRenderers {
@@ -24,5 +25,6 @@ public class MinefinityGauntletModEntityRenderers {
 		event.registerEntityRenderer(MinefinityGauntletModEntities.PORTAL.get(), PortalRenderer::new);
 		event.registerEntityRenderer(MinefinityGauntletModEntities.FAKE_BLOCK_ENTITY.get(), FakeBlockEntityRenderer::new);
 		event.registerEntityRenderer(MinefinityGauntletModEntities.HERE_PORTAL.get(), HerePortalRenderer::new);
+		event.registerEntityRenderer(MinefinityGauntletModEntities.BLACKHOLE.get(), BlackholeRenderer::new);
 	}
 }

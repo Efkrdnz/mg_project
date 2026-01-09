@@ -146,9 +146,9 @@
       "registry_name": "exp",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/renderer/ExpRenderer.java",
           "src/main/resources/assets/minefinity_gauntlet/models/item/exp_spawn_egg.json",
-          "src/main/java/net/mcreator/minefinitygauntlet/entity/ExpEntity.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/client/renderer/ExpRenderer.java"
+          "src/main/java/net/mcreator/minefinitygauntlet/entity/ExpEntity.java"
         ]
       },
       "path": "~/Gauntlet/Powers/Power/PowerPunch"
@@ -944,7 +944,7 @@
       "name": "PortalPlayerCollidesWithThisEntity",
       "type": "procedure",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "portal_player_collides_with_this_entity",
       "metadata": {
         "files": [
@@ -2133,8 +2133,8 @@
       "registry_name": "select_ability_reality",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityRealityButtonMessage.java",
           "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityRealityMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityRealityButtonMessage.java",
           "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityRealityScreen.java"
         ]
       },
@@ -2254,8 +2254,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityTimeMenu.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityTimeButtonMessage.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityTimeScreen.java"
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityTimeScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityTimeButtonMessage.java"
         ]
       },
       "path": "~/Gauntlet/Gauntlet/PowerSelect/Time"
@@ -2268,9 +2268,9 @@
       "registry_name": "select_ability_soul",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilitySoulScreen.java",
           "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilitySoulButtonMessage.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilitySoulMenu.java"
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilitySoulMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilitySoulScreen.java"
         ]
       },
       "path": "~/Gauntlet/Gauntlet/PowerSelect/Soul"
@@ -2283,9 +2283,9 @@
       "registry_name": "select_ability_mind",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityMindButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityMindMenu.java",
           "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityMindScreen.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityMindMenu.java"
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityMindButtonMessage.java"
         ]
       },
       "path": "~/Gauntlet/Gauntlet/PowerSelect/Mind"
@@ -2627,6 +2627,10 @@
           {
             "name": "ticks",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3325,18 +3329,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -3825,6 +3817,979 @@
         ]
       },
       "path": "~/Gauntlet/Powers/Space/FindAndTeleport"
+    },
+    {
+      "name": "PlayerVariables",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "player_variables",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/PlayerVariables.java"
+        ]
+      }
+    },
+    {
+      "name": "SoulCaptureSystem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "soul_capture_system",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulCaptureSystemProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage"
+    },
+    {
+      "name": "SoulGUIHandler",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "soul_gui_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulGUIHandlerProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage"
+    },
+    {
+      "name": "SoulCaptureUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_capture_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulCaptureUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage"
+    },
+    {
+      "name": "SoulStoneGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "soul_stone_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SoulStoneGUIMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SoulStoneGUIScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SoulStoneGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage"
+    },
+    {
+      "name": "SoulStorageOpen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageOpenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage"
+    },
+    {
+      "name": "AbilitySelectSoul4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_soul_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSoul4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Soul"
+    },
+    {
+      "name": "AbilitySelectSoul5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_soul_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSoul5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Soul"
+    },
+    {
+      "name": "PlayerTrackerGUI",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "player_tracker_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/PlayerTrackerGUI.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Mind/Know All"
+    },
+    {
+      "name": "StoneCycleMind",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_cycle_mind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/StoneCycleMindProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/StoneCycleThroughGUI"
+    },
+    {
+      "name": "AbilitySelectMind1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_mind_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectMind1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Mind"
+    },
+    {
+      "name": "PlayerTrackerOpen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "player_tracker_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/PlayerTrackerOpenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Mind/Know All"
+    },
+    {
+      "name": "SoStorageButtonScrollUp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_storage_button_scroll_up",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoStorageButtonScrollUpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulGUIScrollManager",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "soul_gui_scroll_manager",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulGUIScrollManagerProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage"
+    },
+    {
+      "name": "SoStorageButtonScrollDown",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "so_storage_button_scroll_down",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoStorageButtonScrollDownProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorage",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SoulStorageScreen.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SoulStorageMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SoulStorageButtonMessage.java"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_0",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageRelease9",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_release_9",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageRelease9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel0",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_0",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel0Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_1",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_2",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_3",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_4",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_5",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel6",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_6",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_7",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_8",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "SoulStorageLabel9",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_storage_label_9",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SoulStorageLabel9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Soul/Soul Storage/Soul Database"
+    },
+    {
+      "name": "Blackhole",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blackhole",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/client/renderer/BlackholeRenderer.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/entity/BlackholeEntity.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/blackhole_spawn_egg.json"
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Singularity"
+    },
+    {
+      "name": "BlackHoleClientShader",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "black_hole_client_shader",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/BlackHoleClientShader.java"
+        ]
+      }
+    },
+    {
+      "name": "WorldSunderRenderer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "world_sunder_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/WorldSunderRendererProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Power/World Sunder"
+    },
+    {
+      "name": "WorldSunderActivation",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "world_sunder_activation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/WorldSunderActivationProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Power/World Sunder"
+    },
+    {
+      "name": "WorldSunderUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_sunder_use",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/WorldSunderUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/World Sunder"
+    },
+    {
+      "name": "AbilitySelectPower4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_power_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectPower4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Power"
+    },
+    {
+      "name": "WorldSunderTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_sunder_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/WorldSunderTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Power/World Sunder"
+    },
+    {
+      "name": "EnableSingularity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enable_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/EnableSingularityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Singularity"
+    },
+    {
+      "name": "DisableSingularity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/DisableSingularityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Singularity"
+    },
+    {
+      "name": "SingularityTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "singularity_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/SingularityTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Singularity"
+    },
+    {
+      "name": "AbilitySelectSpace7",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_space_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSpace7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "ShrinkSingularity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "shrink_singularity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/ShrinkSingularityProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Gauntlet/Powers/Space/Singularity"
+    },
+    {
+      "name": "EnableSingularityShrink",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "enable_singularity_shrink",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/EnableSingularityShrinkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Singularity"
+    },
+    {
+      "name": "DisableSingularityShrink",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "disable_singularity_shrink",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/DisableSingularityShrinkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Space/Singularity"
+    },
+    {
+      "name": "AbilitySelectSpace8",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_space_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectSpace8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
     }
   ],
   "variable_elements": [
@@ -4007,6 +4972,24 @@
       "type": "datamap",
       "scope": "map",
       "value": "new CompoundTag()"
+    },
+    {
+      "name": "WorldSunderBlocks",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "singularity",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "singularityShrink",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -5111,10 +6094,12 @@
       "gui.minefinity_gauntlet.s_4_gui.button_confirm_d": "Confirm",
       "gui.minefinity_gauntlet.select_ability_space.button_block_telekinesis": "Block Telekinesis",
       "gui.minefinity_gauntlet.law_creation_gui.button_event_create": "Event Create",
-      "item.minefinity_gauntlet.test_item": "P1",
+      "gui.minefinity_gauntlet.select_ability_mind.button_know_all": "Know All",
       "death.attack.vampiric.item": "%1$s was drained by %2$s using %3$s",
+      "item.minefinity_gauntlet.test_item": "P1",
       "item.minefinity_gauntlet.mind_stone": "Mind Stone",
       "gui.minefinity_gauntlet.select_ability_reality.button_block_telekinesis": "Block Telekinesis",
+      "gui.minefinity_gauntlet.select_ability_space.button_normalize_space": "Normalize Space",
       "item.minefinity_gauntlet.s_2": "S 2 (set anchor)",
       "gui.minefinity_gauntlet.select_ability_infinity.button_6": "6",
       "item.minefinity_gauntlet.s_3": "S 3 (tp anchor)",
@@ -5140,15 +6125,19 @@
       "entity.minefinity_gauntlet.here_portal": "Portal",
       "death.attack.vampiric.player": "%1$s dried whilst trying to escape %2$s",
       "gui.minefinity_gauntlet.select_ability_infinity.button_universal": "Universal Law",
+      "gui.minefinity_gauntlet.soul_storage.button_empty1": "Down",
       "gui.minefinity_gauntlet.select_ability_reality.button_block_sh": "Block Shift",
       "item.minefinity_gauntlet.cosmi_rod_power": "Cosmi-Rod (Power Stone)",
       "gui.minefinity_gauntlet.universal_law_gui.button_cre3": "Create",
       "gui.minefinity_gauntlet.universal_law_gui.button_cre4": "Create",
+      "gui.minefinity_gauntlet.soul_stone_gui.button_empty": "",
       "gui.minefinity_gauntlet.law_creation_gui.lawNameField": "Enter Law Name",
       "gui.minefinity_gauntlet.universal_law_gui.button_cre1": "Create",
       "gui.minefinity_gauntlet.universal_law_gui.label_empty": "empty",
       "gui.minefinity_gauntlet.universal_law_gui.button_cre2": "Create",
       "item.minefinity_gauntlet.soul_stone": "Soul Stone",
+      "entity.minefinity_gauntlet.blackhole": "Blackhole",
+      "gui.minefinity_gauntlet.select_ability_soul.button_soul_storage": "Soul Storage",
       "gui.minefinity_gauntlet.universal_law_gui.button_empty1": "X",
       "gui.minefinity_gauntlet.select_ability_space.button_5": "5",
       "gui.minefinity_gauntlet.select_ability_soul.button_vampiric_b": "Vampiric Beam",
@@ -5178,7 +6167,17 @@
       "gui.minefinity_gauntlet.find_tp_gui.dur": "Duration:",
       "item_group.minefinity_gauntlet.minefinity_creative_tab": "Minefinity - Weapons",
       "gui.minefinity_gauntlet.select_ability_soul.button_barri": "Barrier",
+      "gui.minefinity_gauntlet.soul_storage.button_summon9": "Summon",
+      "gui.minefinity_gauntlet.soul_stone_gui.label_captured_entities": "Captured Entities",
+      "gui.minefinity_gauntlet.soul_storage.button_summon5": "Summon",
+      "gui.minefinity_gauntlet.soul_storage.button_summon6": "Summon",
+      "gui.minefinity_gauntlet.soul_storage.button_summon7": "Summon",
+      "gui.minefinity_gauntlet.soul_storage.button_summon8": "Summon",
+      "gui.minefinity_gauntlet.soul_storage.button_summon1": "Summon",
+      "gui.minefinity_gauntlet.soul_storage.button_summon2": "Summon",
       "gui.minefinity_gauntlet.universal_law_gui.button_cre": "Create",
+      "gui.minefinity_gauntlet.soul_storage.button_summon3": "Summon",
+      "gui.minefinity_gauntlet.soul_storage.button_summon4": "Summon",
       "gui.minefinity_gauntlet.select_ability_mind.button_2": "2",
       "gui.minefinity_gauntlet.select_ability_mind.button_1": "1",
       "item.minefinity_gauntlet.infinity_gauntlet": "Infinity Gauntlet (temp)",
@@ -5222,6 +6221,7 @@
       "item.minefinity_gauntlet.minefinity_tab": "Minefinity Tab",
       "item_group.minefinity_gauntlet.minefinity_creative_tab_2": "Minefinity - Stones",
       "item.minefinity_gauntlet.reality_stone": "Reality Stone",
+      "gui.minefinity_gauntlet.select_ability_soul.button_soul_capture": "Soul Capture",
       "gui.minefinity_gauntlet.universal_law_gui.button_empty": "X",
       "gui.minefinity_gauntlet.select_ability_reality.button_warp": "Warp",
       "gui.minefinity_gauntlet.s_4_gui.tooltip_confirm_the_portal": "Confirm the Portal",
@@ -5241,7 +6241,10 @@
       "gui.minefinity_gauntlet.select_ability_soul.button_3": "3",
       "gui.minefinity_gauntlet.select_ability_soul.button_2": "2",
       "gui.minefinity_gauntlet.universal_law_gui.label_universal_law": "Universal Law",
+      "gui.minefinity_gauntlet.soul_storage.button_empty": "Up",
+      "gui.minefinity_gauntlet.select_ability_power.button_world_sunder": "World Sunder",
       "gui.minefinity_gauntlet.select_ability_reality.button_projectile_nega": "Projectile negation",
+      "gui.minefinity_gauntlet.soul_storage.button_summon": "Summon",
       "item.minefinity_gauntlet.space_stone": "Space Stone",
       "gui.minefinity_gauntlet.select_ability_space.button_tp": "Tp",
       "item.minefinity_gauntlet.teserract": "Teserract",
@@ -5249,9 +6252,11 @@
       "item.minefinity_gauntlet.s_1": "S 1 (warp)",
       "gui.minefinity_gauntlet.s_4_gui.button_empty": "",
       "gui.minefinity_gauntlet.select_ability_reality.button_anchor_set": "Anchor Set",
+      "gui.minefinity_gauntlet.select_ability_space.button_singularity": "Singularity",
       "entity.minefinity_gauntlet.portal": "Portal",
       "gui.minefinity_gauntlet.select_ability_space.button_detailed_teleport": "Detailed Teleport",
-      "item.minefinity_gauntlet.power_stone": "Power Stone"
+      "item.minefinity_gauntlet.power_stone": "Power Stone",
+      "item.minefinity_gauntlet.blackhole_spawn_egg": "Blackhole Spawn Egg"
     }
   },
   "foldersRoot": {
@@ -5285,6 +6290,10 @@
                   {
                     "name": "FindAndTeleport",
                     "children": []
+                  },
+                  {
+                    "name": "Singularity",
+                    "children": []
                   }
                 ]
               },
@@ -5301,6 +6310,10 @@
                   },
                   {
                     "name": "PowerBeam",
+                    "children": []
+                  },
+                  {
+                    "name": "World Sunder",
                     "children": []
                   }
                 ]
@@ -5336,6 +6349,15 @@
                   {
                     "name": "SoulSwap",
                     "children": []
+                  },
+                  {
+                    "name": "Soul Storage",
+                    "children": [
+                      {
+                        "name": "Soul Database",
+                        "children": []
+                      }
+                    ]
                   }
                 ]
               },
@@ -5364,7 +6386,19 @@
                 "name": "Mind",
                 "children": [
                   {
-                    "name": "Brain Shutdown",
+                    "name": "Mind Annihilation",
+                    "children": []
+                  },
+                  {
+                    "name": "Know All",
+                    "children": []
+                  },
+                  {
+                    "name": "Fear",
+                    "children": []
+                  },
+                  {
+                    "name": "Confuse",
                     "children": []
                   }
                 ]
@@ -5446,10 +6480,6 @@
         ]
       },
       {
-        "name": "Particles",
-        "children": []
-      },
-      {
         "name": "Effects",
         "children": [
           {
@@ -5518,6 +6548,10 @@
         ]
       },
       {
+        "name": "Particles",
+        "children": []
+      },
+      {
         "name": "Overlay",
         "children": []
       },
@@ -5535,7 +6569,7 @@
   "workspaceSettings": {
     "modid": "minefinity_gauntlet",
     "modName": "minefinity gauntlet",
-    "version": "1.0.1",
+    "version": "2",
     "description": "infinity gauntlet hell yeah",
     "author": "Efkrdnz",
     "websiteURL": "https://mcreator.net",

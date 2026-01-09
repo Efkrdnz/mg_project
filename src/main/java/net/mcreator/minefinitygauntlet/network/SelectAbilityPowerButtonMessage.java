@@ -22,6 +22,7 @@ import net.mcreator.minefinitygauntlet.procedures.StoneCycleTimeProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCycleSpaceProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCycleSoulProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneCycleRealityProcedure;
+import net.mcreator.minefinitygauntlet.procedures.StoneCycleMindProcedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPowerProcedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower6Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower5Procedure;
@@ -29,6 +30,7 @@ import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower4Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower3Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower2Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SelectAbilityThisGUIIsClosedProcedure;
+import net.mcreator.minefinitygauntlet.procedures.AbilitySelectPower4Procedure;
 import net.mcreator.minefinitygauntlet.procedures.AbilitySelectPower3Procedure;
 import net.mcreator.minefinitygauntlet.procedures.AbilitySelectPower2Procedure;
 import net.mcreator.minefinitygauntlet.procedures.AbilitySelectPower1Procedure;
@@ -124,17 +126,25 @@ public record SelectAbilityPowerButtonMessage(int buttonID, int x, int y, int z,
 		}
 		if (buttonID == 9) {
 
-			StoneCycleSpaceProcedure.execute(world, x, y, z, entity);
+			AbilitySelectPower4Procedure.execute(entity);
 		}
 		if (buttonID == 10) {
 
-			StoneCycleRealityProcedure.execute(world, x, y, z, entity);
+			StoneCycleSpaceProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 11) {
+
+			StoneCycleRealityProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 12) {
 
 			StoneCycleTimeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 13) {
+
+			StoneCycleMindProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 14) {
 
 			StoneCycleSoulProcedure.execute(world, x, y, z, entity);
 		}

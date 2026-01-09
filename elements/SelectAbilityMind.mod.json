@@ -159,10 +159,25 @@
           "image": "button_soulstone.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "AbilitySelectSoul1"
+            "name": "StoneCycleSoul"
           },
           "x": 263,
           "y": 36
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_know_all",
+          "text": "Know All",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectMind1"
+          },
+          "width": 66,
+          "height": 20,
+          "x": 136,
+          "y": 71
         }
       }
     ],

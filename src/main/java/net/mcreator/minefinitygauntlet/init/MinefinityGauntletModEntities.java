@@ -21,6 +21,7 @@ import net.mcreator.minefinitygauntlet.entity.InvEntity;
 import net.mcreator.minefinitygauntlet.entity.HerePortalEntity;
 import net.mcreator.minefinitygauntlet.entity.FakeBlockEntityEntity;
 import net.mcreator.minefinitygauntlet.entity.ExpEntity;
+import net.mcreator.minefinitygauntlet.entity.BlackholeEntity;
 import net.mcreator.minefinitygauntlet.MinefinityGauntletMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -36,6 +37,8 @@ public class MinefinityGauntletModEntities {
 			EntityType.Builder.<FakeBlockEntityEntity>of(FakeBlockEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<HerePortalEntity>> HERE_PORTAL = register("here_portal",
 			EntityType.Builder.<HerePortalEntity>of(HerePortalEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BlackholeEntity>> BLACKHOLE = register("blackhole",
+			EntityType.Builder.<BlackholeEntity>of(BlackholeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.4f, 0.4f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -49,6 +52,7 @@ public class MinefinityGauntletModEntities {
 		PortalEntity.init(event);
 		FakeBlockEntityEntity.init(event);
 		HerePortalEntity.init(event);
+		BlackholeEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -57,5 +61,6 @@ public class MinefinityGauntletModEntities {
 		event.put(PORTAL.get(), PortalEntity.createAttributes().build());
 		event.put(FAKE_BLOCK_ENTITY.get(), FakeBlockEntityEntity.createAttributes().build());
 		event.put(HERE_PORTAL.get(), HerePortalEntity.createAttributes().build());
+		event.put(BLACKHOLE.get(), BlackholeEntity.createAttributes().build());
 	}
 }

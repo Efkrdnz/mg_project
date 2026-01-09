@@ -21,8 +21,8 @@
           },
           "width": 77,
           "height": 20,
-          "x": 137,
-          "y": 68
+          "x": 136,
+          "y": 71
         }
       },
       {
@@ -36,8 +36,8 @@
           },
           "width": 56,
           "height": 20,
-          "x": 230,
-          "y": 68
+          "x": 218,
+          "y": 71
         }
       },
       {
@@ -51,8 +51,8 @@
           },
           "width": 72,
           "height": 20,
-          "x": 137,
-          "y": 96
+          "x": 134,
+          "y": 95
         }
       },
       {
@@ -67,7 +67,7 @@
           "width": 30,
           "height": 20,
           "x": 98,
-          "y": 41
+          "y": 44
         }
       },
       {
@@ -82,7 +82,7 @@
           "width": 30,
           "height": 20,
           "x": 98,
-          "y": 65
+          "y": 67
         }
       },
       {
@@ -97,7 +97,7 @@
           "width": 30,
           "height": 20,
           "x": 98,
-          "y": 89
+          "y": 90
         }
       },
       {
@@ -112,7 +112,7 @@
           "width": 30,
           "height": 20,
           "x": 98,
-          "y": 113
+          "y": 114
         }
       },
       {
@@ -190,6 +190,9 @@
           "name": "imagebutton_button_mindstone",
           "image": "button_mindstone.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "StoneCycleMind"
+          },
           "x": 231,
           "y": 36
         }
@@ -205,6 +208,21 @@
           },
           "x": 263,
           "y": 36
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_world_sunder",
+          "text": "World Sunder",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectPower4"
+          },
+          "width": 87,
+          "height": 20,
+          "x": 207,
+          "y": 95
         }
       }
     ],

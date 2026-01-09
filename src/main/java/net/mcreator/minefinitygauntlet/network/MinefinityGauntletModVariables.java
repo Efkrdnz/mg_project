@@ -31,6 +31,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.HolderLookup;
 
+import net.mcreator.minefinitygauntlet.PlayerVariables;
 import net.mcreator.minefinitygauntlet.MinefinityGauntletMod;
 
 import java.util.function.Supplier;
@@ -96,6 +97,8 @@ public class MinefinityGauntletModVariables {
 				clone.teleblock = original.teleblock;
 				clone.apending = original.apending;
 				clone.beamSoul = original.beamSoul;
+				clone.singularity = original.singularity;
+				clone.singularityShrink = original.singularityShrink;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -169,6 +172,7 @@ public class MinefinityGauntletModVariables {
 		public static final String DATA_NAME = "minefinity_gauntlet_mapvars";
 		public boolean colorshift = false;
 		public CompoundTag UniversalLaws = new CompoundTag();
+		public String WorldSunderBlocks = "\"\"";
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -179,12 +183,14 @@ public class MinefinityGauntletModVariables {
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			colorshift = nbt.getBoolean("colorshift");
 			this.UniversalLaws = nbt.get("UniversalLaws") instanceof CompoundTag UniversalLaws ? UniversalLaws : new CompoundTag();
+			WorldSunderBlocks = nbt.getString("WorldSunderBlocks");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			nbt.putBoolean("colorshift", colorshift);
 			nbt.put("UniversalLaws", this.UniversalLaws);
+			nbt.putString("WorldSunderBlocks", WorldSunderBlocks);
 			return nbt;
 		}
 
@@ -270,6 +276,8 @@ public class MinefinityGauntletModVariables {
 		public BlockState block_to_telekinesis = Blocks.AIR.defaultBlockState();
 		public boolean soul_barrier = false;
 		public boolean beamSoul = false;
+		public boolean singularity = false;
+		public boolean singularityShrink = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -298,6 +306,8 @@ public class MinefinityGauntletModVariables {
 			nbt.put("block_to_telekinesis", NbtUtils.writeBlockState(block_to_telekinesis));
 			nbt.putBoolean("soul_barrier", soul_barrier);
 			nbt.putBoolean("beamSoul", beamSoul);
+			nbt.putBoolean("singularity", singularity);
+			nbt.putBoolean("singularityShrink", singularityShrink);
 			return nbt;
 		}
 
@@ -327,6 +337,8 @@ public class MinefinityGauntletModVariables {
 			block_to_telekinesis = NbtUtils.readBlockState(lookupProvider.lookupOrThrow(BuiltInRegistries.BLOCK.key()), nbt.getCompound("block_to_telekinesis"));
 			soul_barrier = nbt.getBoolean("soul_barrier");
 			beamSoul = nbt.getBoolean("beamSoul");
+			singularity = nbt.getBoolean("singularity");
+			singularityShrink = nbt.getBoolean("singularityShrink");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

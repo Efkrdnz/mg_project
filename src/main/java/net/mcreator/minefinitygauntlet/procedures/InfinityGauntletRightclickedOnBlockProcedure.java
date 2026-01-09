@@ -19,6 +19,10 @@ public class InfinityGauntletRightclickedOnBlockProcedure {
 				S4RightclickedProcedure.execute(world, x, y, z, entity);
 			} else if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 5) {
 				S5RCOnBlockProcedure.execute(world, x, y, z, blockstate, entity);
+			} else if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 7) {
+				EnableSingularityProcedure.execute(entity);
+			} else if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 8) {
+				EnableSingularityShrinkProcedure.execute(entity);
 			}
 		}
 		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedStone == 1) {
@@ -27,6 +31,9 @@ public class InfinityGauntletRightclickedOnBlockProcedure {
 			}
 			if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 2) {
 				PowerLaunchProcedure.execute(world, entity);
+			}
+			if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 4) {
+				WorldSunderUseProcedure.execute(world, x, y, z, entity);
 			}
 		}
 		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedStone == 2) {
@@ -47,6 +54,13 @@ public class InfinityGauntletRightclickedOnBlockProcedure {
 		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedStone == 4) {
 			if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 1) {
 				So1UseRCProcedure.execute(entity);
+			} else if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 5) {
+				SoulStorageOpenProcedure.execute(world, x, y, z, entity);
+			}
+		}
+		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedStone == 5) {
+			if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 1) {
+				PlayerTrackerOpenProcedure.execute(world, entity);
 			}
 		}
 	}

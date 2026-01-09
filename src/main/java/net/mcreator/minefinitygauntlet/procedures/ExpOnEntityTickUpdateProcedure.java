@@ -40,6 +40,35 @@ public class ExpOnEntityTickUpdateProcedure {
 				entity.discard();
 		}
 		if (entity.getPersistentData().getDouble("life") % 4 == 0) {
+			rand = Mth.nextInt(RandomSource.create(), 1, 4);
+			rand2 = Mth.nextInt(RandomSource.create(), 1, 4);
+			if (rand2 == 1) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 10, 5, 5, 5, 0);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 5, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 5, 1, false);
+					}
+				}
+			}
+			if (rand == 1) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (MinefinityGauntletModParticleTypes.POWER_EXP_1.get()), x, y, z, 10, 5, 5, 5, 0);
+			}
+			if (rand == 2) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (MinefinityGauntletModParticleTypes.POWER_EXP_2.get()), x, y, z, 10, 5, 5, 5, 0);
+			}
+			if (rand == 3) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (MinefinityGauntletModParticleTypes.POWER_EXP_3.get()), x, y, z, 10, 5, 5, 5, 0);
+			}
+			if (rand == 4) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (MinefinityGauntletModParticleTypes.POWER_EXP_4.get()), x, y, z, 10, 5, 5, 5, 0);
+			}
 			entity.getPersistentData().putDouble("rad", (entity.getPersistentData().getDouble("rad") + 1));
 			int horizontalRadiusSphere = (int) (entity.getPersistentData().getDouble("rad")) - 1;
 			int verticalRadiusSphere = (int) (entity.getPersistentData().getDouble("rad")) - 1;
@@ -51,35 +80,6 @@ public class ExpOnEntityTickUpdateProcedure {
 								+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 						if (distanceSq <= 1.0) {
 							if (world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)).getDestroySpeed(world, BlockPos.containing(x + xi, y + i, z + zi)) != -1) {
-								rand = Mth.nextInt(RandomSource.create(), 1, 4);
-								rand2 = Mth.nextInt(RandomSource.create(), 1, 4);
-								if (rand2 == 1) {
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles(ParticleTypes.EXPLOSION, x + xi, y + i, z + zi, 1, 2, 2, 2, 0);
-									if (world instanceof Level _level) {
-										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 5, 1);
-										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 5, 1, false);
-										}
-									}
-								}
-								if (rand == 1) {
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (MinefinityGauntletModParticleTypes.POWER_EXP_1.get()), x + xi, y + i, z + zi, 2, 0.2, 0.2, 0.2, 0);
-								}
-								if (rand == 2) {
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (MinefinityGauntletModParticleTypes.POWER_EXP_2.get()), x + xi, y + i, z + zi, 2, 0.2, 0.2, 0.2, 0);
-								}
-								if (rand == 3) {
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (MinefinityGauntletModParticleTypes.POWER_EXP_3.get()), x + xi, y + i, z + zi, 2, 0.2, 0.2, 0.2, 0);
-								}
-								if (rand == 4) {
-									if (world instanceof ServerLevel _level)
-										_level.sendParticles((SimpleParticleType) (MinefinityGauntletModParticleTypes.POWER_EXP_4.get()), x + xi, y + i, z + zi, 2, 0.2, 0.2, 0.2, 0);
-								}
 								{
 									final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(35 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
