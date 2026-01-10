@@ -9,6 +9,8 @@ import net.neoforged.bus.api.Event;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
@@ -191,7 +193,7 @@ public class So1RenderProcedure {
 			RenderSystem.enableBlend();
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-			execute(event, entity);
+			execute(event, level);
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
@@ -199,43 +201,45 @@ public class So1RenderProcedure {
 		}
 	}
 
-	public static void execute(Entity entity) {
-		execute(null, entity);
+	public static void execute(LevelAccessor world) {
+		execute(null, world);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity) {
-		if (entity == null)
-			return;
+	private static void execute(@Nullable Event event, LevelAccessor world) {
 		double i = 0;
 		double j = 0;
 		double k = 0;
 		double l = 0;
-		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).soul_barrier) {
-			if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, (!Minecraft.getInstance().isPaused()))) {
-				for (int index0 = 0; index0 < 90; index0++) {
-					for (int index1 = 0; index1 < 45; index1++) {
-						k = 255 - (j / 180) * 95;
-						l = 255 - ((j + 4) / 180) * 95;
-						add((float) (Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5),
-								255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
-						add((float) (Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
-								255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
-						add((float) (Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
-								255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
-						add((float) (Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5),
-								255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
-						j = j + 4;
+		if (world instanceof ClientLevel) {
+			for (Entity entityiterator : ((ClientLevel) world).entitiesForRendering()) {
+				if (entityiterator instanceof Player && entityiterator.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).soul_barrier) {
+					if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, (!Minecraft.getInstance().isPaused()))) {
+						for (int index0 = 0; index0 < 90; index0++) {
+							for (int index1 = 0; index1 < 45; index1++) {
+								k = 255 - (j / 180) * 95;
+								l = 255 - ((j + 4) / 180) * 95;
+								add((float) (Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5),
+										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
+								add((float) (Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
+										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
+								add((float) (Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
+										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
+								add((float) (Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5),
+										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
+								j = j + 4;
+							}
+							j = 0;
+							i = i + 4;
+						}
+						i = 0;
+						end();
 					}
-					j = 0;
-					i = i + 4;
+					if (target(2)) {
+						renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + entityiterator.getBbHeight() / 2), (entityiterator.getZ()), 0, 0, 0, (float) (2 * entityiterator.getBbWidth() + 2),
+								(float) (entityiterator.getBbHeight() + 2), (float) (2 * entityiterator.getBbWidth() + 2), 96 << 24 | 255 << 16 | 172 << 8 | 28);
+						release();
+					}
 				}
-				i = 0;
-				end();
-			}
-			if (target(2)) {
-				renderShape(shape(), (entity.getX()), (entity.getY() + entity.getBbHeight() / 2), (entity.getZ()), 0, 0, 0, (float) (2 * entity.getBbWidth() + 2), (float) (entity.getBbHeight() + 2), (float) (2 * entity.getBbWidth() + 2),
-						96 << 24 | 255 << 16 | 172 << 8 | 28);
-				release();
 			}
 		}
 	}

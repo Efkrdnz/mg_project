@@ -14,10 +14,12 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.client.Minecraft;
 
 import net.mcreator.minefinitygauntlet.procedures.CosmiRodPowerHasItemGlowingEffectProcedure;
 import net.mcreator.minefinitygauntlet.init.MinefinityGauntletModItems;
@@ -77,6 +79,7 @@ public class CosmiRodPowerItem extends SwordItem {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public boolean isFoil(ItemStack itemstack) {
-		return CosmiRodPowerHasItemGlowingEffectProcedure.execute();
+		Entity entity = Minecraft.getInstance().player;
+		return CosmiRodPowerHasItemGlowingEffectProcedure.execute(entity.level(), entity);
 	}
 }

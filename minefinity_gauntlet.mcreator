@@ -2605,8 +2605,8 @@
       "registry_name": "cosmi_rod_power",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minefinity_gauntlet/models/item/cosmi_rod_power.json",
-          "src/main/java/net/mcreator/minefinitygauntlet/item/CosmiRodPowerItem.java"
+          "src/main/java/net/mcreator/minefinitygauntlet/item/CosmiRodPowerItem.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/cosmi_rod_power.json"
         ]
       },
       "path": "~/Weapons/CosmiRod"
@@ -2622,7 +2622,16 @@
         "files": [
           "src/main/java/net/mcreator/minefinitygauntlet/procedures/CosmiRodPowerHasItemGlowingEffectProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Weapons/CosmiRod"
     },
@@ -2637,10 +2646,6 @@
           "src/main/java/net/mcreator/minefinitygauntlet/procedures/P3BeamEffectProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "partialTick",
             "type": "number"
@@ -3014,8 +3019,8 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3172,16 +3177,16 @@
         ],
         "dependencies": [
           {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
             "name": "partialTick",
             "type": "number"
           },
           {
             "name": "ticks",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
