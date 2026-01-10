@@ -1617,7 +1617,28 @@
         "files": [
           "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfinityGauntletEntitySwingsItemProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       },
       "path": "~/Gauntlet/Gauntlet"
     },

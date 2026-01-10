@@ -57,7 +57,7 @@ public class InfinityGauntletItem extends Item {
 	@Override
 	public boolean onEntitySwing(ItemStack itemstack, LivingEntity entity, InteractionHand hand) {
 		boolean retval = super.onEntitySwing(itemstack, entity, hand);
-		InfinityGauntletEntitySwingsItemProcedure.execute();
+		InfinityGauntletEntitySwingsItemProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		return retval;
 	}
 
