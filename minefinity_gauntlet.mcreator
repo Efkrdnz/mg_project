@@ -4902,6 +4902,56 @@
         ]
       },
       "path": "~/Dimensions/Corridor"
+    },
+    {
+      "name": "InfiniteCorridorInit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infinite_corridor_init",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfiniteCorridorInitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Corridor"
+    },
+    {
+      "name": "InfiniteCorridorLoopSpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "infinite_corridor_loop_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfiniteCorridorLoopSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Dimensions/Corridor"
     }
   ],
   "variable_elements": [
@@ -5102,6 +5152,18 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "corridor_init",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    },
+    {
+      "name": "corridor_loop_count",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
     }
   ],
   "sound_elements": [],

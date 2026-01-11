@@ -130,6 +130,8 @@ public class MinefinityGauntletModVariables {
 		public boolean TimeSlow = false;
 		public boolean TimeStop = false;
 		public CompoundTag universal_laws = new CompoundTag();
+		public boolean corridor_init = false;
+		public double corridor_loop_count = 0;
 
 		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			WorldVariables data = new WorldVariables();
@@ -141,6 +143,8 @@ public class MinefinityGauntletModVariables {
 			TimeSlow = nbt.getBoolean("TimeSlow");
 			TimeStop = nbt.getBoolean("TimeStop");
 			this.universal_laws = nbt.get("universal_laws") instanceof CompoundTag universal_laws ? universal_laws : new CompoundTag();
+			corridor_init = nbt.getBoolean("corridor_init");
+			corridor_loop_count = nbt.getDouble("corridor_loop_count");
 		}
 
 		@Override
@@ -148,6 +152,8 @@ public class MinefinityGauntletModVariables {
 			nbt.putBoolean("TimeSlow", TimeSlow);
 			nbt.putBoolean("TimeStop", TimeStop);
 			nbt.put("universal_laws", this.universal_laws);
+			nbt.putBoolean("corridor_init", corridor_init);
+			nbt.putDouble("corridor_loop_count", corridor_loop_count);
 			return nbt;
 		}
 
