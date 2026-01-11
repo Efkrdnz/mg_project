@@ -13,52 +13,106 @@
       {
         "type": "button",
         "data": {
-          "name": "button_snap",
-          "text": "Snap",
+          "name": "button_1",
+          "text": "1",
           "isUndecorated": false,
           "onClick": {
-            "name": "AbilitySelectInfinity"
+            "name": "SlotSelectPower"
           },
-          "width": 46,
+          "width": 30,
           "height": 20,
-          "x": 135,
-          "y": 39
+          "x": 98,
+          "y": 44
         }
       },
       {
         "type": "button",
         "data": {
-          "name": "button_timeline_erasu",
-          "text": "Timeline Erasure",
+          "name": "button_2",
+          "text": "2",
           "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower2"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 67
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower3"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 90
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower4"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 114
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_5",
+          "text": "5",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower5"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_6",
+          "text": "6",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SlotSelectPower6"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 98,
+          "y": 160
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_reset_universe",
+          "text": "Reset Universe",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectInfinity1"
+          },
           "width": 98,
           "height": 20,
-          "x": 193,
-          "y": 39
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_infinity_b",
-          "text": "Infinity Beam",
-          "isUndecorated": false,
-          "width": 77,
-          "height": 20,
-          "x": 135,
-          "y": 63
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_universal",
-          "text": "Universal Law",
-          "isUndecorated": false,
-          "width": 77,
-          "height": 20,
-          "x": 214,
-          "y": 63
+          "x": 165,
+          "y": 42
         }
       }
     ],

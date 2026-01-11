@@ -24,6 +24,7 @@ import net.mcreator.minefinitygauntlet.procedures.StoneSelectSoulProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneSelectRealityProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneSelectPowerProcedure;
 import net.mcreator.minefinitygauntlet.procedures.StoneSelectMindProcedure;
+import net.mcreator.minefinitygauntlet.procedures.StoneSelectAllProcedure;
 import net.mcreator.minefinitygauntlet.MinefinityGauntletMod;
 
 import java.util.Map;
@@ -97,6 +98,10 @@ public record StoneSelectGuiButtonMessage(int buttonID, int x, int y, int z, Has
 		if (buttonID == 5) {
 
 			StoneSelectSoulProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			StoneSelectAllProcedure.execute(entity);
 		}
 	}
 

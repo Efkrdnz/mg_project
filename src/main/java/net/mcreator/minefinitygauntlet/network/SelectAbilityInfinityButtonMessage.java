@@ -18,8 +18,14 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilityInfinityMenu;
+import net.mcreator.minefinitygauntlet.procedures.SlotSelectPowerProcedure;
+import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower6Procedure;
+import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower5Procedure;
+import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower4Procedure;
+import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower3Procedure;
+import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower2Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SelectAbilityThisGUIIsClosedProcedure;
-import net.mcreator.minefinitygauntlet.procedures.AbilitySelectInfinityProcedure;
+import net.mcreator.minefinitygauntlet.procedures.AbilitySelectInfinity1Procedure;
 import net.mcreator.minefinitygauntlet.MinefinityGauntletMod;
 
 import java.util.Map;
@@ -76,7 +82,31 @@ public record SelectAbilityInfinityButtonMessage(int buttonID, int x, int y, int
 		}
 		if (buttonID == 0) {
 
-			AbilitySelectInfinityProcedure.execute(entity);
+			SlotSelectPowerProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			SlotSelectPower2Procedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			SlotSelectPower3Procedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			SlotSelectPower4Procedure.execute(entity);
+		}
+		if (buttonID == 4) {
+
+			SlotSelectPower5Procedure.execute(entity);
+		}
+		if (buttonID == 5) {
+
+			SlotSelectPower6Procedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			AbilitySelectInfinity1Procedure.execute(entity);
 		}
 	}
 

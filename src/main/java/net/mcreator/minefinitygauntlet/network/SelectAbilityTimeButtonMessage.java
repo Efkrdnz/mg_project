@@ -30,6 +30,8 @@ import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower4Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower3Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SlotSelectPower2Procedure;
 import net.mcreator.minefinitygauntlet.procedures.SelectAbilityThisGUIIsClosedProcedure;
+import net.mcreator.minefinitygauntlet.procedures.AbilitySelectTime4Procedure;
+import net.mcreator.minefinitygauntlet.procedures.AbilitySelectTime3Procedure;
 import net.mcreator.minefinitygauntlet.procedures.AbilitySelectTime2Procedure;
 import net.mcreator.minefinitygauntlet.procedures.AbilitySelectTime1Procedure;
 import net.mcreator.minefinitygauntlet.MinefinityGauntletMod;
@@ -120,21 +122,29 @@ public record SelectAbilityTimeButtonMessage(int buttonID, int x, int y, int z, 
 		}
 		if (buttonID == 8) {
 
-			StoneCyclePowerProcedure.execute(world, x, y, z, entity);
+			AbilitySelectTime3Procedure.execute(entity);
 		}
 		if (buttonID == 9) {
 
-			StoneCycleSpaceProcedure.execute(world, x, y, z, entity);
+			AbilitySelectTime4Procedure.execute(entity);
 		}
 		if (buttonID == 10) {
 
-			StoneCycleRealityProcedure.execute(world, x, y, z, entity);
+			StoneCyclePowerProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 11) {
 
-			StoneCycleMindProcedure.execute(world, x, y, z, entity);
+			StoneCycleSpaceProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 12) {
+
+			StoneCycleRealityProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 13) {
+
+			StoneCycleMindProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 14) {
 
 			StoneCycleSoulProcedure.execute(world, x, y, z, entity);
 		}

@@ -17,6 +17,7 @@ import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilitySoulMenu;
 import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilityRealityMenu;
 import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilityPowerMenu;
 import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilityMindMenu;
+import net.mcreator.minefinitygauntlet.world.inventory.SelectAbilityInfinityMenu;
 import net.mcreator.minefinitygauntlet.network.MinefinityGauntletModVariables;
 
 import io.netty.buffer.Unpooled;
@@ -147,6 +148,27 @@ public class SelectAbilityOnKeyPressedProcedure {
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 						return new SelectAbilityMindMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		}
+		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedStone == 6) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				_ent.openMenu(new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("SelectAbilityInfinity");
+					}
+
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new SelectAbilityInfinityMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

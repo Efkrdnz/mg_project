@@ -36,11 +36,11 @@ public class MinefinityGauntletModScreens {
 		event.register(MinefinityGauntletModMenus.SELECT_ABILITY_TIME.get(), SelectAbilityTimeScreen::new);
 		event.register(MinefinityGauntletModMenus.SELECT_ABILITY_SOUL.get(), SelectAbilitySoulScreen::new);
 		event.register(MinefinityGauntletModMenus.SELECT_ABILITY_MIND.get(), SelectAbilityMindScreen::new);
-		event.register(MinefinityGauntletModMenus.SELECT_ABILITY_INFINITY.get(), SelectAbilityInfinityScreen::new);
 		event.register(MinefinityGauntletModMenus.UNIVERSAL_LAW_GUI.get(), UniversalLawGuiScreen::new);
 		event.register(MinefinityGauntletModMenus.LAW_CREATION_GUI.get(), LawCreationGuiScreen::new);
 		event.register(MinefinityGauntletModMenus.FIND_TP_GUI.get(), FindTpGUIScreen::new);
 		event.register(MinefinityGauntletModMenus.SOUL_STONE_GUI.get(), SoulStoneGUIScreen::new);
 		event.register(MinefinityGauntletModMenus.SOUL_STORAGE.get(), SoulStorageScreen::new);
+		event.register(MinefinityGauntletModMenus.SELECT_ABILITY_INFINITY.get(), SelectAbilityInfinityScreen::new);
 	}
 }

@@ -177,6 +177,10 @@ public class StoneSelectGuiScreen extends AbstractContainerScreen<StoneSelectGui
 		this.addRenderableWidget(imagebutton_button_soulstone);
 		imagebutton_button_infinity = new ImageButton(this.leftPos + 45, this.topPos + 46, 30, 30,
 				new WidgetSprites(ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_infinity.png"), ResourceLocation.parse("minefinity_gauntlet:textures/screens/button_infinity.png")), e -> {
+					if (true) {
+						PacketDistributor.sendToServer(new StoneSelectGuiButtonMessage(6, x, y, z, getEditBoxAndCheckBoxValues()));
+						StoneSelectGuiButtonMessage.handleButtonAction(entity, 6, x, y, z, getEditBoxAndCheckBoxValues());
+					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {

@@ -94,6 +94,9 @@
           "name": "imagebutton_button_infinity",
           "image": "button_infinity.png",
           "hoveredImage": "",
+          "onClick": {
+            "name": "StoneSelectAll"
+          },
           "x": 199,
           "y": 106
         }

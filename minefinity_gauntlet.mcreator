@@ -1290,9 +1290,9 @@
       "registry_name": "stone_select_gui",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/StoneSelectGuiMenu.java",
           "src/main/java/net/mcreator/minefinitygauntlet/client/gui/StoneSelectGuiScreen.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/network/StoneSelectGuiButtonMessage.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/StoneSelectGuiMenu.java"
+          "src/main/java/net/mcreator/minefinitygauntlet/network/StoneSelectGuiButtonMessage.java"
         ]
       },
       "path": "~/Gauntlet/Gauntlet/StoneSelect"
@@ -3467,40 +3467,6 @@
       "path": "~/Gauntlet/Gauntlet/StoneSelect"
     },
     {
-      "name": "SelectAbilityInfinity",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "select_ability_infinity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityInfinityButtonMessage.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityInfinityMenu.java",
-          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityInfinityScreen.java"
-        ]
-      },
-      "path": "~/Gauntlet/Gauntlet/PowerSelect/Infinity"
-    },
-    {
-      "name": "AbilitySelectInfinity",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ability_select_infinity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectInfinityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Gauntlet/Gauntlet/PowerSelect/Infinity"
-    },
-    {
       "name": "SoulBarrierCancelDamage",
       "type": "procedure",
       "compiles": true,
@@ -4965,6 +4931,162 @@
         ]
       },
       "path": "~/Dimensions/Corridor"
+    },
+    {
+      "name": "TimeAnchorSet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_anchor_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/TimeAnchorSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Time/TimeAnchorSet"
+    },
+    {
+      "name": "TimeAnchorReturn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_anchor_return",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/TimeAnchorReturnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Time/TimeAnchorSet"
+    },
+    {
+      "name": "AbilitySelectTime3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_time_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectTime3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Time"
+    },
+    {
+      "name": "AbilitySelectTime4",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_time_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectTime4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Time"
+    },
+    {
+      "name": "ResetUniverse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_universe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/ResetUniverseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Infinity/Reset Universe"
+    },
+    {
+      "name": "UniverseSave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "universe_save",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/UniverseSaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Powers/Infinity/Reset Universe"
+    },
+    {
+      "name": "SelectAbilityInfinity",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "select_ability_infinity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/world/inventory/SelectAbilityInfinityMenu.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/network/SelectAbilityInfinityButtonMessage.java",
+          "src/main/java/net/mcreator/minefinitygauntlet/client/gui/SelectAbilityInfinityScreen.java"
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Infinity"
+    },
+    {
+      "name": "AbilitySelectInfinity1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_infinity_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectInfinity1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Infinity"
     }
   ],
   "variable_elements": [
@@ -5177,6 +5299,12 @@
       "type": "number",
       "scope": "world",
       "value": "0"
+    },
+    {
+      "name": "world_backup_taken",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -6281,7 +6409,6 @@
       "gui.minefinity_gauntlet.s_4_gui.tppy": "Y: ",
       "gui.minefinity_gauntlet.s_4_gui.tppx": "X:",
       "gui.minefinity_gauntlet.s_4_gui.tppz": "Z: ",
-      "gui.minefinity_gauntlet.select_ability_infinity.button_timeline_erasu": "Timeline Erasure",
       "gui.minefinity_gauntlet.s_4_gui.button_confirm_d": "Confirm",
       "gui.minefinity_gauntlet.select_ability_space.button_block_telekinesis": "Block Telekinesis",
       "gui.minefinity_gauntlet.law_creation_gui.button_event_create": "Event Create",
@@ -6315,7 +6442,6 @@
       "gui.minefinity_gauntlet.select_ability_soul.button_soul_s": "Soul Swap",
       "entity.minefinity_gauntlet.here_portal": "Portal",
       "death.attack.vampiric.player": "%1$s dried whilst trying to escape %2$s",
-      "gui.minefinity_gauntlet.select_ability_infinity.button_universal": "Universal Law",
       "gui.minefinity_gauntlet.soul_storage.button_empty1": "Down",
       "gui.minefinity_gauntlet.select_ability_reality.button_block_sh": "Block Shift",
       "item.minefinity_gauntlet.cosmi_rod_power": "Cosmi-Rod (Power Stone)",
@@ -6330,6 +6456,7 @@
       "entity.minefinity_gauntlet.blackhole": "Blackhole",
       "gui.minefinity_gauntlet.select_ability_soul.button_soul_storage": "Soul Storage",
       "gui.minefinity_gauntlet.universal_law_gui.button_empty1": "X",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_reset_universe": "Reset Universe",
       "gui.minefinity_gauntlet.select_ability_space.button_5": "5",
       "gui.minefinity_gauntlet.select_ability_soul.button_vampiric_b": "Vampiric Beam",
       "gui.minefinity_gauntlet.select_ability_space.button_vacuum_portal": "Vacuum Portal",
@@ -6354,6 +6481,7 @@
       "item.minefinity_gauntlet.exp_spawn_egg": "Exp Spawn Egg",
       "key.minefinity_gauntlet.quick_slot_2": "Quick Slot 2",
       "key.minefinity_gauntlet.quick_slot_3": "Quick Slot 3",
+      "gui.minefinity_gauntlet.select_ability_time.button_anchor_go": "Anchor Go",
       "key.minefinity_gauntlet.quick_slot_4": "Quick Slot 4",
       "gui.minefinity_gauntlet.find_tp_gui.dur": "Duration:",
       "item_group.minefinity_gauntlet.minefinity_creative_tab": "Minefinity - Weapons",
@@ -6362,6 +6490,7 @@
       "gui.minefinity_gauntlet.soul_stone_gui.label_captured_entities": "Captured Entities",
       "gui.minefinity_gauntlet.soul_storage.button_summon5": "Summon",
       "gui.minefinity_gauntlet.soul_storage.button_summon6": "Summon",
+      "gui.minefinity_gauntlet.select_ability_infinity.button_know_all": "Know All",
       "gui.minefinity_gauntlet.soul_storage.button_summon7": "Summon",
       "gui.minefinity_gauntlet.soul_storage.button_summon8": "Summon",
       "gui.minefinity_gauntlet.soul_storage.button_summon1": "Summon",
@@ -6387,7 +6516,6 @@
       "gui.minefinity_gauntlet.select_ability_time.button_3": "3",
       "gui.minefinity_gauntlet.select_ability_reality.button_1": "1",
       "gui.minefinity_gauntlet.select_ability_time.button_2": "2",
-      "gui.minefinity_gauntlet.select_ability_infinity.button_infinity_b": "Infinity Beam",
       "gui.minefinity_gauntlet.select_ability_time.button_1": "1",
       "gui.minefinity_gauntlet.select_ability_time.button_time_slow": "Time Slow",
       "gui.minefinity_gauntlet.select_ability_reality.button_tp": "Tp",
@@ -6416,7 +6544,6 @@
       "gui.minefinity_gauntlet.universal_law_gui.button_empty": "X",
       "gui.minefinity_gauntlet.select_ability_reality.button_warp": "Warp",
       "gui.minefinity_gauntlet.s_4_gui.tooltip_confirm_the_portal": "Confirm the Portal",
-      "gui.minefinity_gauntlet.select_ability_infinity.button_snap": "Snap",
       "gui.minefinity_gauntlet.find_tp_gui.tppz": "Z: ",
       "item.minefinity_gauntlet.time_stone": "Time Stone",
       "gui.minefinity_gauntlet.select_ability_reality.button_athmosphere_shi": "Athmosphere Shift",
@@ -6428,6 +6555,7 @@
       "gui.minefinity_gauntlet.select_ability_soul.button_6": "6",
       "gui.minefinity_gauntlet.find_tp_gui.tppy": "Y: ",
       "gui.minefinity_gauntlet.select_ability_soul.button_1": "1",
+      "gui.minefinity_gauntlet.select_ability_time.button_anchor_set": "Anchor Set",
       "gui.minefinity_gauntlet.select_ability_reality.button_detailed_teleport": "Detailed Teleport",
       "gui.minefinity_gauntlet.select_ability_soul.button_3": "3",
       "gui.minefinity_gauntlet.select_ability_soul.button_2": "2",
@@ -6610,6 +6738,10 @@
                         "children": []
                       }
                     ]
+                  },
+                  {
+                    "name": "Reset Universe",
+                    "children": []
                   }
                 ]
               }

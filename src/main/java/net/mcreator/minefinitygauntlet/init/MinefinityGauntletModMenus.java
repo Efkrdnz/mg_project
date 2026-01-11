@@ -37,10 +37,10 @@ public class MinefinityGauntletModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<SelectAbilityTimeMenu>> SELECT_ABILITY_TIME = REGISTRY.register("select_ability_time", () -> IMenuTypeExtension.create(SelectAbilityTimeMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<SelectAbilitySoulMenu>> SELECT_ABILITY_SOUL = REGISTRY.register("select_ability_soul", () -> IMenuTypeExtension.create(SelectAbilitySoulMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<SelectAbilityMindMenu>> SELECT_ABILITY_MIND = REGISTRY.register("select_ability_mind", () -> IMenuTypeExtension.create(SelectAbilityMindMenu::new));
-	public static final DeferredHolder<MenuType<?>, MenuType<SelectAbilityInfinityMenu>> SELECT_ABILITY_INFINITY = REGISTRY.register("select_ability_infinity", () -> IMenuTypeExtension.create(SelectAbilityInfinityMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<UniversalLawGuiMenu>> UNIVERSAL_LAW_GUI = REGISTRY.register("universal_law_gui", () -> IMenuTypeExtension.create(UniversalLawGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<LawCreationGuiMenu>> LAW_CREATION_GUI = REGISTRY.register("law_creation_gui", () -> IMenuTypeExtension.create(LawCreationGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<FindTpGUIMenu>> FIND_TP_GUI = REGISTRY.register("find_tp_gui", () -> IMenuTypeExtension.create(FindTpGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<SoulStoneGUIMenu>> SOUL_STONE_GUI = REGISTRY.register("soul_stone_gui", () -> IMenuTypeExtension.create(SoulStoneGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<SoulStorageMenu>> SOUL_STORAGE = REGISTRY.register("soul_storage", () -> IMenuTypeExtension.create(SoulStorageMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<SelectAbilityInfinityMenu>> SELECT_ABILITY_INFINITY = REGISTRY.register("select_ability_infinity", () -> IMenuTypeExtension.create(SelectAbilityInfinityMenu::new));
 }

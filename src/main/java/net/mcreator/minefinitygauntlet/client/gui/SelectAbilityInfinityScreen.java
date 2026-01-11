@@ -24,10 +24,13 @@ public class SelectAbilityInfinityScreen extends AbstractContainerScreen<SelectA
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_snap;
-	Button button_timeline_erasu;
-	Button button_infinity_b;
-	Button button_universal;
+	Button button_1;
+	Button button_2;
+	Button button_3;
+	Button button_4;
+	Button button_5;
+	Button button_6;
+	Button button_reset_universe;
 
 	public SelectAbilityInfinityScreen(SelectAbilityInfinityMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -82,25 +85,61 @@ public class SelectAbilityInfinityScreen extends AbstractContainerScreen<SelectA
 	@Override
 	public void init() {
 		super.init();
-		button_snap = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_snap"), e -> {
+		button_1 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_1"), e -> {
 			if (true) {
 				PacketDistributor.sendToServer(new SelectAbilityInfinityButtonMessage(0, x, y, z, getEditBoxAndCheckBoxValues()));
 				SelectAbilityInfinityButtonMessage.handleButtonAction(entity, 0, x, y, z, getEditBoxAndCheckBoxValues());
 			}
-		}).bounds(this.leftPos + 5, this.topPos + 8, 46, 20).build();
-		guistate.put("button:button_snap", button_snap);
-		this.addRenderableWidget(button_snap);
-		button_timeline_erasu = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_timeline_erasu"), e -> {
-		}).bounds(this.leftPos + 63, this.topPos + 8, 98, 20).build();
-		guistate.put("button:button_timeline_erasu", button_timeline_erasu);
-		this.addRenderableWidget(button_timeline_erasu);
-		button_infinity_b = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_infinity_b"), e -> {
-		}).bounds(this.leftPos + 5, this.topPos + 32, 77, 20).build();
-		guistate.put("button:button_infinity_b", button_infinity_b);
-		this.addRenderableWidget(button_infinity_b);
-		button_universal = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_universal"), e -> {
-		}).bounds(this.leftPos + 84, this.topPos + 32, 77, 20).build();
-		guistate.put("button:button_universal", button_universal);
-		this.addRenderableWidget(button_universal);
+		}).bounds(this.leftPos + -32, this.topPos + 13, 30, 20).build();
+		guistate.put("button:button_1", button_1);
+		this.addRenderableWidget(button_1);
+		button_2 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_2"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilityInfinityButtonMessage(1, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilityInfinityButtonMessage.handleButtonAction(entity, 1, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + -32, this.topPos + 36, 30, 20).build();
+		guistate.put("button:button_2", button_2);
+		this.addRenderableWidget(button_2);
+		button_3 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_3"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilityInfinityButtonMessage(2, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilityInfinityButtonMessage.handleButtonAction(entity, 2, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + -32, this.topPos + 59, 30, 20).build();
+		guistate.put("button:button_3", button_3);
+		this.addRenderableWidget(button_3);
+		button_4 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_4"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilityInfinityButtonMessage(3, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilityInfinityButtonMessage.handleButtonAction(entity, 3, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + -32, this.topPos + 83, 30, 20).build();
+		guistate.put("button:button_4", button_4);
+		this.addRenderableWidget(button_4);
+		button_5 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_5"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilityInfinityButtonMessage(4, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilityInfinityButtonMessage.handleButtonAction(entity, 4, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + -32, this.topPos + 106, 30, 20).build();
+		guistate.put("button:button_5", button_5);
+		this.addRenderableWidget(button_5);
+		button_6 = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_6"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilityInfinityButtonMessage(5, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilityInfinityButtonMessage.handleButtonAction(entity, 5, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + -32, this.topPos + 129, 30, 20).build();
+		guistate.put("button:button_6", button_6);
+		this.addRenderableWidget(button_6);
+		button_reset_universe = Button.builder(Component.translatable("gui.minefinity_gauntlet.select_ability_infinity.button_reset_universe"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new SelectAbilityInfinityButtonMessage(6, x, y, z, getEditBoxAndCheckBoxValues()));
+				SelectAbilityInfinityButtonMessage.handleButtonAction(entity, 6, x, y, z, getEditBoxAndCheckBoxValues());
+			}
+		}).bounds(this.leftPos + 35, this.topPos + 11, 98, 20).build();
+		guistate.put("button:button_reset_universe", button_reset_universe);
+		this.addRenderableWidget(button_reset_universe);
 	}
 }

@@ -194,6 +194,36 @@
           "x": 137,
           "y": 71
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_anchor_set",
+          "text": "Anchor Set",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectTime3"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 137,
+          "y": 95
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_anchor_go",
+          "text": "Anchor Go",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "AbilitySelectTime4"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 217,
+          "y": 95
+        }
       }
     ],
     "onOpen": {

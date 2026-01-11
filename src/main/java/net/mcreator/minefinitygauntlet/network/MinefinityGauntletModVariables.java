@@ -179,6 +179,7 @@ public class MinefinityGauntletModVariables {
 		public boolean colorshift = false;
 		public CompoundTag UniversalLaws = new CompoundTag();
 		public String WorldSunderBlocks = "\"\"";
+		public boolean world_backup_taken = false;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -190,6 +191,7 @@ public class MinefinityGauntletModVariables {
 			colorshift = nbt.getBoolean("colorshift");
 			this.UniversalLaws = nbt.get("UniversalLaws") instanceof CompoundTag UniversalLaws ? UniversalLaws : new CompoundTag();
 			WorldSunderBlocks = nbt.getString("WorldSunderBlocks");
+			world_backup_taken = nbt.getBoolean("world_backup_taken");
 		}
 
 		@Override
@@ -197,6 +199,7 @@ public class MinefinityGauntletModVariables {
 			nbt.putBoolean("colorshift", colorshift);
 			nbt.put("UniversalLaws", this.UniversalLaws);
 			nbt.putString("WorldSunderBlocks", WorldSunderBlocks);
+			nbt.putBoolean("world_backup_taken", world_backup_taken);
 			return nbt;
 		}
 

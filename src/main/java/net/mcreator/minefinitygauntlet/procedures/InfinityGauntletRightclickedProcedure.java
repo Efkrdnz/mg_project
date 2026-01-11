@@ -45,6 +45,10 @@ public class InfinityGauntletRightclickedProcedure {
 				T1UseSlowProcedure.execute(world);
 			} else if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 2) {
 				T2UseStopProcedure.execute(world, x, y, z);
+			} else if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 3) {
+				TimeAnchorSetProcedure.execute(entity);
+			} else if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 4) {
+				TimeAnchorReturnProcedure.execute(entity);
 			}
 		}
 		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedStone == 4) {
@@ -63,6 +67,11 @@ public class InfinityGauntletRightclickedProcedure {
 		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedStone == 5) {
 			if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 1) {
 				PlayerTrackerOpenProcedure.execute(world, entity);
+			}
+		}
+		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedStone == 6) {
+			if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).SelectedPower == 1) {
+				ResetUniverseProcedure.execute(world, entity);
 			}
 		}
 	}
