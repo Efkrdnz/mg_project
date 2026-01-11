@@ -4952,6 +4952,19 @@
         ]
       },
       "path": "~/Dimensions/Corridor"
+    },
+    {
+      "name": "CorridorShapeRenderer",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "corridor_shape_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/CorridorShapeRenderer.java"
+        ]
+      },
+      "path": "~/Dimensions/Corridor"
     }
   ],
   "variable_elements": [
