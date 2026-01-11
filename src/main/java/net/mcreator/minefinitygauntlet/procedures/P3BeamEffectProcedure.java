@@ -19,8 +19,6 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.minefinitygauntlet.network.MinefinityGauntletModVariables;
-
 import javax.annotation.Nullable;
 
 import com.mojang.blaze3d.vertex.VertexFormat;
@@ -222,7 +220,7 @@ public class P3BeamEffectProcedure {
 		double sneak = 0;
 		if (world instanceof ClientLevel) {
 			for (Entity entityiterator : ((ClientLevel) world).entitiesForRendering()) {
-				if (entityiterator instanceof Player && entityiterator.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).beamPower) {
+				if (entityiterator instanceof Player && entityiterator.getPersistentData().getBoolean("beamPower")) {
 					if (entityiterator.isShiftKeyDown()) {
 						sneak = 1.2;
 					} else {
@@ -234,8 +232,12 @@ public class P3BeamEffectProcedure {
 						speed = 0.2;
 						width = 0.15;
 						length = 15;
+						if (P3BeamEffectProcedure.vertexBuffer != null) {
+							P3BeamEffectProcedure.vertexBuffer.close();
+							P3BeamEffectProcedure.vertexBuffer = null;
+						}
 						RenderSystem.setShaderTexture(0, ResourceLocation.parse(("minecraft" + ":textures/" + "entity/beacon_beam" + ".png")));
-						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, (!Minecraft.getInstance().isPaused()))) {
+						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX_COLOR, true)) {
 							i = width / (-2);
 							j = width / 2;
 							k = length - 0.5;

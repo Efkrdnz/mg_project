@@ -12,7 +12,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.minefinitygauntlet.network.MinefinityGauntletModVariables;
 import net.mcreator.minefinitygauntlet.init.MinefinityGauntletModParticleTypes;
 
 import java.util.Comparator;
@@ -25,7 +24,7 @@ public class P3BeamOnTickProcedure {
 		String found_entity_name = "";
 		Entity ent = null;
 		boolean entity_found = false;
-		if (entity.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).beamPower) {
+		if (!world.isClientSide() && entity.getPersistentData().getBoolean("beamPower")) {
 			raytrace_distance = 0;
 			entity_found = false;
 			for (int index0 = 0; index0 < 50; index0++) {

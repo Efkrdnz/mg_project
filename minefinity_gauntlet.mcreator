@@ -366,8 +366,8 @@
       "registry_name": "p_3",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minefinity_gauntlet/models/item/p_3.json",
-          "src/main/java/net/mcreator/minefinitygauntlet/item/P3Item.java"
+          "src/main/java/net/mcreator/minefinitygauntlet/item/P3Item.java",
+          "src/main/resources/assets/minefinity_gauntlet/models/item/p_3.json"
         ]
       },
       "path": "~/Gauntlet/Powers/Power/PowerBeam"
@@ -4816,6 +4816,92 @@
         ]
       },
       "path": "~/Gauntlet/Gauntlet/PowerSelect/Space"
+    },
+    {
+      "name": "InfinityWorldReset",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "infinity_world_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/InfinityWorldResetProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/sum comp shi"
+    },
+    {
+      "name": "CheckInfinityBackup",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "check_infinity_backup",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/CheckInfinityBackupProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/sum comp shi"
+    },
+    {
+      "name": "UnrealVoidBiome",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "unreal_void_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minefinity_gauntlet/worldgen/configured_feature/unreal_void_biome_tree.json",
+          "src/main/resources/data/minefinity_gauntlet/worldgen/placed_feature/unreal_void_biome_tree.json",
+          "src/main/resources/data/minefinity_gauntlet/worldgen/biome/unreal_void_biome.json"
+        ]
+      },
+      "path": "~/Dimensions/Void"
+    },
+    {
+      "name": "UnrealVoid",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "unreal_void",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/world/dimension/UnrealVoidDimension.java",
+          "src/main/resources/data/minefinity_gauntlet/dimension_type/unreal_void.json",
+          "src/main/resources/data/minefinity_gauntlet/dimension/unreal_void.json"
+        ]
+      },
+      "path": "~/Dimensions/Void"
+    },
+    {
+      "name": "UnrealVoidRenderer",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "unreal_void_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/UnrealVoidRenderer.java"
+        ]
+      },
+      "path": "~/Dimensions/Void"
+    },
+    {
+      "name": "InfiniteCorridor",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "infinite_corridor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minefinity_gauntlet/dimension_type/infinite_corridor.json",
+          "src/main/resources/data/minefinity_gauntlet/dimension/infinite_corridor.json",
+          "src/main/java/net/mcreator/minefinitygauntlet/world/dimension/InfiniteCorridorDimension.java"
+        ]
+      },
+      "path": "~/Dimensions/Corridor"
     }
   ],
   "variable_elements": [
@@ -6101,6 +6187,10 @@
     "ITEMS:minecraft:swords": [
       "~CUSTOM:CosmiRodPower",
       "~CUSTOM:CosmiRod"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.AIR",
+      "~Blocks.STONE#0"
     ]
   },
   "tab_element_order": {
@@ -6278,6 +6368,7 @@
       "item.minefinity_gauntlet.s_1": "S 1 (warp)",
       "gui.minefinity_gauntlet.s_4_gui.button_empty": "",
       "gui.minefinity_gauntlet.select_ability_reality.button_anchor_set": "Anchor Set",
+      "biome.minefinity_gauntlet.unreal_void_biome": "Unreal Void",
       "gui.minefinity_gauntlet.select_ability_space.button_singularity": "Singularity",
       "entity.minefinity_gauntlet.portal": "Portal",
       "gui.minefinity_gauntlet.select_ability_space.button_detailed_teleport": "Detailed Teleport",
@@ -6340,6 +6431,10 @@
                   },
                   {
                     "name": "World Sunder",
+                    "children": []
+                  },
+                  {
+                    "name": "Destroy",
                     "children": []
                   }
                 ]
@@ -6586,6 +6681,23 @@
         "children": [
           {
             "name": "CosmiRod",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "sum comp shi",
+        "children": []
+      },
+      {
+        "name": "Dimensions",
+        "children": [
+          {
+            "name": "Void",
+            "children": []
+          },
+          {
+            "name": "Corridor",
             "children": []
           }
         ]

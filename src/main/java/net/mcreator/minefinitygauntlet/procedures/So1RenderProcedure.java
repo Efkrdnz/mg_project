@@ -213,28 +213,32 @@ public class So1RenderProcedure {
 		if (world instanceof ClientLevel) {
 			for (Entity entityiterator : ((ClientLevel) world).entitiesForRendering()) {
 				if (entityiterator instanceof Player && entityiterator.getData(MinefinityGauntletModVariables.PLAYER_VARIABLES).soul_barrier) {
-					if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, (!Minecraft.getInstance().isPaused()))) {
-						for (int index0 = 0; index0 < 90; index0++) {
-							for (int index1 = 0; index1 < 45; index1++) {
-								k = 255 - (j / 180) * 95;
-								l = 255 - ((j + 4) / 180) * 95;
-								add((float) (Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5),
-										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
-								add((float) (Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
-										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
-								add((float) (Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
-										255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
-								add((float) (Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5),
-										255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
-								j = j + 4;
-							}
-							j = 0;
-							i = i + 4;
-						}
-						i = 0;
-						end();
-					}
 					if (target(2)) {
+						if (So1RenderProcedure.vertexBuffer != null) {
+							So1RenderProcedure.vertexBuffer.close();
+							So1RenderProcedure.vertexBuffer = null;
+						}
+						if (begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_COLOR, (!Minecraft.getInstance().isPaused()))) {
+							for (int index0 = 0; index0 < 90; index0++) {
+								for (int index1 = 0; index1 < 45; index1++) {
+									k = 255 - (j / 180) * 95;
+									l = 255 - ((j + 4) / 180) * 95;
+									add((float) (Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j)) * 0.5),
+											255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
+									add((float) (Math.sin(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(i)) * Math.sin(Math.toRadians(j + 4)) * 0.5),
+											255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
+									add((float) (Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), (float) (Math.cos(Math.toRadians(j + 4)) * 0.5),
+											(float) (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j + 4)) * 0.5), 255 << 24 | (int) l << 16 | (int) l << 8 | (int) l);
+									add((float) (Math.sin(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(j)) * 0.5), (float) (Math.cos(Math.toRadians(i + 4)) * Math.sin(Math.toRadians(j)) * 0.5),
+											255 << 24 | (int) k << 16 | (int) k << 8 | (int) k);
+									j = j + 4;
+								}
+								j = 0;
+								i = i + 4;
+							}
+							i = 0;
+							end();
+						}
 						renderShape(shape(), (entityiterator.getX()), (entityiterator.getY() + entityiterator.getBbHeight() / 2), (entityiterator.getZ()), 0, 0, 0, (float) (2 * entityiterator.getBbWidth() + 2),
 								(float) (entityiterator.getBbHeight() + 2), (float) (2 * entityiterator.getBbWidth() + 2), 96 << 24 | 255 << 16 | 172 << 8 | 28);
 						release();

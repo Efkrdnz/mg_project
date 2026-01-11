@@ -229,6 +229,10 @@ public class So2VampiricBeamProcedure {
 						sneak = 1.5;
 					}
 					if (target(2)) {
+						if (So2VampiricBeamProcedure.vertexBuffer != null) {
+							So2VampiricBeamProcedure.vertexBuffer.close();
+							So2VampiricBeamProcedure.vertexBuffer = null;
+						}
 						yaw = entityiterator.getYRot() * 0.0174533 + Math.toRadians(145);
 						pitch = entityiterator.getXRot() * 0.0174533;
 						speed = 0.2;
