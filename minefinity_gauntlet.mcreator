@@ -5087,6 +5087,25 @@
         ]
       },
       "path": "~/Gauntlet/Gauntlet/PowerSelect/Infinity"
+    },
+    {
+      "name": "AbilitySelectReality5",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_select_reality_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minefinitygauntlet/procedures/AbilitySelectReality5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Gauntlet/Gauntlet/PowerSelect/Reality"
     }
   ],
   "variable_elements": [
